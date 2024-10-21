@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "788203773735",
+    "project_id": "nanny-fairy",
+    "storage_bucket": "nanny-fairy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:788203773735:android:4e7c16b5dea8145fd61302",
+        "android_client_info": {
+          "package_name": "com.example.nanny_fairy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBUyZVjnq9IGxH9Zu6ACNRIJXtkfZ2iuQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
