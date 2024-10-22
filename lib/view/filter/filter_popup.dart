@@ -87,7 +87,7 @@ class _FilterPopUpState extends State<FilterPopUp> {
                         });
                       },
                       child: const Text(
-                        "Reset",
+                        "Resetten",
                         style: TextStyle(
                           fontFamily: 'CenturyGothic',
                           fontSize: 18,
@@ -111,7 +111,7 @@ class _FilterPopUpState extends State<FilterPopUp> {
               children: [
                 const VerticalSpeacing(16),
                 const Text(
-                  "Provider Categories",
+                  "Selecteer Diensten",
                   style: TextStyle(
                     fontFamily: 'CenturyGothic',
                     fontSize: 18,
@@ -139,7 +139,17 @@ class _FilterPopUpState extends State<FilterPopUp> {
                     );
                   }).toList(),
                 ),
-                const VerticalSpeacing(14),
+                const VerticalSpeacing(16),
+                const Text(
+                  "Selecteer Straal",
+                  style: TextStyle(
+                    fontFamily: 'CenturyGothic',
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
+                    color: AppColor.blackColor,
+                  ),
+                ),
+                const VerticalSpeacing(12),
                 RatingBar.builder(
                   initialRating: 2,
                   minRating: 1,
@@ -161,7 +171,7 @@ class _FilterPopUpState extends State<FilterPopUp> {
                     return RoundedButton(
                       buttonColor: AppColor.lavenderColor,
                       titleColor: AppColor.creamyColor,
-                      title: 'Apply Filters',
+                      title: 'Toepassen Filter',
                       onpress: () {
                         if (query.isNotEmpty) {
                           filteredViewModel.filteredFamiliesByMultipleQueries(
