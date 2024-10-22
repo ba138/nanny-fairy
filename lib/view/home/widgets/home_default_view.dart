@@ -72,7 +72,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                 ),
               ),
               Text(
-                'All reports',
+                'Alle rapporten',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(
@@ -105,7 +105,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                               txColor: AppColor.blackColor,
                               img: 'images/families.png',
                               title: '12',
-                              subTitle: 'Total Families',
+                              subTitle: 'Totaal gezinnen',
                               bgColor: AppColor.creamyColor,
                             ));
                       } else if (snapshot.hasData) {
@@ -113,7 +113,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           txColor: AppColor.blackColor,
                           img: 'images/families.png',
                           title: snapshot.data!.length.toString(),
-                          subTitle: 'Total Families',
+                          subTitle: 'Totaal gezinnen',
                           bgColor: AppColor.creamyColor,
                         );
                       } else {
@@ -138,7 +138,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                               txColor: AppColor.blackColor,
                               img: 'images/families.png',
                               title: '12',
-                              subTitle: 'Total Families',
+                              subTitle: 'Totaal gezinnen',
                               bgColor: AppColor.creamyColor,
                             ));
                       } else if (snapshot.hasData) {
@@ -146,7 +146,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           txColor: AppColor.blackColor,
                           img: 'images/chats.png',
                           title: snapshot.data!.length.toString(),
-                          subTitle: 'Total Chats',
+                          subTitle: 'Totaal aantal chats',
                           bgColor: AppColor.creamyColor,
                         );
                       } else {
@@ -154,7 +154,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           txColor: AppColor.blackColor,
                           img: 'images/chats.png',
                           title: '0',
-                          subTitle: 'Total Chats',
+                          subTitle: 'Totaal aantal chats',
                           bgColor: AppColor.creamyColor,
                         );
                       }
@@ -171,7 +171,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                               txColor: AppColor.blackColor,
                               img: 'images/families.png',
                               title: '12',
-                              subTitle: 'Total Families',
+                              subTitle: 'Totaal gezinnen',
                               bgColor: AppColor.creamyColor,
                             ));
                       } else if (snapshot.hasData) {
@@ -179,7 +179,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           txColor: AppColor.blackColor,
                           img: 'images/families.png',
                           title: snapshot.data!.length.toString(),
-                          subTitle: 'Total Posts',
+                          subTitle: 'Totaal aantal berichten',
                           bgColor: AppColor.creamyColor,
                         );
                       } else {
@@ -187,7 +187,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           txColor: AppColor.blackColor,
                           img: 'images/families.png',
                           title: '0',
-                          subTitle: 'Total Posts',
+                          subTitle: 'Totaal aantal berichten',
                           bgColor: AppColor.creamyColor,
                         );
                       }
@@ -214,12 +214,12 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'popular jobs',
+                        'Opdrachten bij jou in de buurt',
                         style: GoogleFonts.getFont(
                           "Poppins",
                           textStyle: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
                             color: AppColor.blackColor,
                           ),
                         ),
@@ -236,12 +236,12 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           );
                         },
                         child: Text(
-                          'see all',
+                          'Bekijk Alles',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
                               color: AppColor.lavenderColor,
                             ),
                           ),
@@ -271,7 +271,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                                       double averageRating =
                                           calculateAverageRating(reviews);
                                       return BookingCartWidget(
-                                        primaryButtonTxt: 'View',
+                                        primaryButtonTxt: 'Bekijk',
                                         ontapView: () {
                                           Navigator.push(
                                             context,

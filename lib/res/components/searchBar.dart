@@ -18,8 +18,8 @@ class SearchBarProvider extends StatefulWidget {
 }
 
 class _SearchBarProviderState extends State<SearchBarProvider> {
-  String selectedKM = 'All';
-  final List<String> kM = ["All", '2', '4', '8', '12'];
+  String selectedKM = 'Alle';
+  final List<String> kM = ["Alle", '2', '4', '8', '12'];
 
   final FocusNode _searchFocusNode = FocusNode();
   final FocusNode _dropdownFocusNode = FocusNode();
@@ -49,7 +49,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
     if (searchText.isNotEmpty) {
       viewModel.searchFamiliesByPassion(
           searchText, double.parse(selectedKM), context);
-    } else if (selectedKM == "All") {
+    } else if (selectedKM == "Alle") {
       viewModel.fetchFamiliesFromFirebaseData();
     } else {
       viewModel.distanceFilteredFamilies.clear();
@@ -101,7 +101,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
                             controller: searchController,
                             decoration: const InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Search Here',
+                              hintText: 'Zoek hier',
                               prefixIcon: Icon(
                                 Icons.search,
                                 color: AppColor.blackColor,
