@@ -61,7 +61,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'This month',
+                'Overzicht',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(

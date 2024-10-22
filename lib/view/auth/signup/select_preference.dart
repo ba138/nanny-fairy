@@ -23,14 +23,14 @@ class _SelectPreferenceState extends State<SelectPreference> {
 
   TextEditingController phoneController = TextEditingController();
 
-  String _btn2SelectedVal = "Animal care";
+  String _btn2SelectedVal = "Kinderoppas";
   static const menuItems = <String>[
-    'Animal care',
-    'home sitter',
-    'eiderly care',
-    'homework',
-    'cleanining',
-    'music lesson',
+    'Kinderoppas',
+    'Thuiszorg',
+    'Schoonmaakdiensten',
+    'Tuinonderhoud',
+    'Huisoppas',
+    'Dierenoppas',
   ];
   final List<DropdownMenuItem<String>> _dropDownMenuItems = menuItems
       .map(
@@ -71,7 +71,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
           },
         ),
         title: Text(
-          'Reference',
+          'Referentie',
           style: GoogleFonts.getFont(
             "Poppins",
             textStyle: const TextStyle(
@@ -96,11 +96,11 @@ class _SelectPreferenceState extends State<SelectPreference> {
                     controller: experinceController,
                     prefixIcon: const Icon(Icons.school_outlined),
                     maxLines: 1,
-                    hintText: 'Enter your experience',
+                    hintText: 'Aantal Jaar aan ervaring',
                   ),
                   const VerticalSpeacing(16.0),
                   Text(
-                    'Referance',
+                    'Referentie',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -112,7 +112,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
                   ),
                   const VerticalSpeacing(16.0),
                   Text(
-                    'Name',
+                    'Voornaam en Achternaam',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -125,10 +125,10 @@ class _SelectPreferenceState extends State<SelectPreference> {
                   TextFieldCustom(
                     controller: jobController,
                     maxLines: 1,
-                    hintText: 'Job',
+                    hintText: 'Anne van Leeuwen',
                   ),
                   Text(
-                    'Which Skill You are provided',
+                    'Diensten die je hebt aangeboden',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -203,7 +203,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
                         ),
                         maxLines: 1,
                         controller: landController,
-                        hintText: 'Land',
+                        hintText: 'Telefoonnummer',
                       )),
                       const SizedBox(width: 10.0),
                       Expanded(
@@ -228,13 +228,13 @@ class _SelectPreferenceState extends State<SelectPreference> {
                         ),
                         maxLines: 1,
                         controller: phoneController,
-                        hintText: 'Mobile Number',
+                        hintText: 'Mobiel nummer',
                       )),
                     ],
                   ),
                   const VerticalSpeacing(60.0),
                   RoundedButton(
-                      title: 'Continue',
+                      title: 'Opslaan',
                       onpress: () {
                         if (experinceController.text.isNotEmpty ||
                             jobController.text.isNotEmpty ||
