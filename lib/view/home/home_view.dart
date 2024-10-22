@@ -59,7 +59,7 @@ class _HomeViewState extends State<HomeView> {
                                     'https://play-lh.googleusercontent.com/jInS55DYPnTZq8GpylyLmK2L2cDmUoahVacfN_Js_TsOkBEoizKmAl5-p8iFeLiNjtE=w526-h296-rw'),
                               ),
                               title: Text(
-                                'WellCome',
+                                'Welkom',
                                 style: GoogleFonts.getFont(
                                   "Poppins",
                                   textStyle: const TextStyle(
@@ -99,7 +99,7 @@ class _HomeViewState extends State<HomeView> {
                                   'https://play-lh.googleusercontent.com/jInS55DYPnTZq8GpylyLmK2L2cDmUoahVacfN_Js_TsOkBEoizKmAl5-p8iFeLiNjtE=w526-h296-rw'),
                             ),
                             title: Text(
-                              'WellCome',
+                              'Welkom',
                               style: GoogleFonts.getFont(
                                 "Poppins",
                                 textStyle: const TextStyle(
@@ -123,7 +123,8 @@ class _HomeViewState extends State<HomeView> {
                           ),
                         );
                       } else {
-                        return const Center(child: Text('No data available'));
+                        return const Center(
+                            child: Text('Geen gegevens beschikbaar'));
                       }
                     },
                   ),

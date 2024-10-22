@@ -64,7 +64,7 @@ class _UploadImageState extends State<UploadImage> {
                   children: [
                     VerticalSpeacing(MediaQuery.of(context).size.height * 0.5),
                     Text(
-                      'Write an introduction to yourself',
+                      'Stel jezelf kort voor',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont(
                         "Poppins",
@@ -123,7 +123,7 @@ class _UploadImageState extends State<UploadImage> {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 8.0, left: 10.0),
                         child: Text(
-                          'Please enter less than 20 words',
+                          'Voer minder dan 20 woorden in',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -137,7 +137,7 @@ class _UploadImageState extends State<UploadImage> {
                     ),
                     const VerticalSpeacing(40),
                     RoundedButton(
-                        title: 'Continue',
+                        title: 'Opslaan',
                         onpress: () {
                           bool isValid =
                               _isWordCountValid && profilePic != null;
@@ -182,7 +182,7 @@ class _UploadImageState extends State<UploadImage> {
                     ),
                     const SizedBox(width: 50),
                     Text(
-                      'Upload Image',
+                      'Profiel Foto en Bio',
                       style: GoogleFonts.getFont(
                         "Poppins",
                         textStyle: const TextStyle(
