@@ -171,7 +171,7 @@ class _FilterPopUpState extends State<FilterPopUp> {
                     return RoundedButton(
                       buttonColor: AppColor.lavenderColor,
                       titleColor: AppColor.creamyColor,
-                      title: 'Apply Filters',
+                      title: 'Toepassen Filter',
                       onpress: () {
                         if (query.isNotEmpty) {
                           filteredViewModel.filteredFamiliesByMultipleQueries(

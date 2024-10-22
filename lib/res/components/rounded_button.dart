@@ -41,7 +41,7 @@ class RoundedButton extends StatelessWidget {
                     "Poppins",
                     textStyle: TextStyle(
                       fontSize: 16,
-                      fontWeight: FontWeight.w400,
+                      fontWeight: FontWeight.w600,
                       color: titleColor ?? AppColor.authCreamColor,
                     ),
                   ),
