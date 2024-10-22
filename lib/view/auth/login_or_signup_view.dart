@@ -59,27 +59,27 @@ class LoginOrSignupView extends StatelessWidget {
                   ]),
               const VerticalSpeacing(60.0),
               RoundedButton(
-                  title: 'Login as family',
+                  title: 'Inloggen als Hulpzoekende',
                   onpress: () {
                     Navigator.pushNamed(context, RoutesName.loginFamily);
                   }),
               const VerticalSpeacing(20.0),
               RoundedButton(
-                  title: 'register as a family',
+                  title: 'Registreren als Hulpzoekende',
                   onpress: () {
                     Navigator.pushNamed(
                         context, RoutesName.createAccountFamily);
                   }),
               const VerticalSpeacing(20.0),
               RoundedButton(
-                title: 'register as a provider',
+                title: 'Inloggen als Held',
                 onpress: () {
                   Navigator.pushNamed(context, RoutesName.createAccount);
                 },
               ),
               const VerticalSpeacing(20.0),
               RoundedButton(
-                  title: 'Login as provider',
+                  title: 'Registreren als Held',
                   onpress: () {
                     Navigator.pushNamed(context, RoutesName.loginView);
                   }),
