@@ -74,14 +74,14 @@ class LoginOrSignupView extends StatelessWidget {
               RoundedButton(
                 title: 'Inloggen als Held',
                 onpress: () {
-                  Navigator.pushNamed(context, RoutesName.createAccount);
+                  Navigator.pushNamed(context, RoutesName.loginView);
                 },
               ),
               const VerticalSpeacing(20.0),
               RoundedButton(
                   title: 'Registreren als Held',
                   onpress: () {
-                    Navigator.pushNamed(context, RoutesName.loginView);
+                    Navigator.pushNamed(context, RoutesName.createAccount);
                   }),
               const VerticalSpeacing(20.0),
             ],
