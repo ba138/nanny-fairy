@@ -133,7 +133,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>
             icon: ImageIcon(
               AssetImage('images/booked.png'),
             ),
-            label: ('Booked'),
+            label: ('Beoordelingen'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark_border_outlined),
@@ -141,7 +141,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle_outlined),
-            label: ('profile'),
+            label: ('Profiel'),
           ),
         ],
         unselectedItemColor: AppColor.grayColor,

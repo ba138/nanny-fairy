@@ -49,7 +49,7 @@ class _HomeFilterViewState extends State<HomeFilterView> {
                     // filteredViewModel.filterUsersByPassions([]);
                   },
                   child: Text(
-                    'Clear Filter',
+                    'Resetten',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
