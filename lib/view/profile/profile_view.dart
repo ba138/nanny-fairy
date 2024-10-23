@@ -39,7 +39,7 @@ class _ProfileViewState extends State<ProfileView> {
         backgroundColor: AppColor.lavenderColor,
         elevation: 0.0,
         title: const Text(
-          'Profile ',
+          'Profiel',
           style: TextStyle(
             fontFamily: 'CenturyGothic',
             fontSize: 18,
@@ -63,7 +63,8 @@ class _ProfileViewState extends State<ProfileView> {
               children: [
                 _buildCoverBar(),
                 Container(
-                  padding: const EdgeInsets.only(top: 10, left: 24.0, right: 24.0),
+                  padding:
+                      const EdgeInsets.only(top: 10, left: 24.0, right: 24.0),
                   child: _buildProfile(context),
                 ),
               ],
@@ -178,7 +179,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xffCDFF9D),
                   icon: Icons.person_outline,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'My Profile',
+                  title: 'Mijn Profiel',
                 ),
                 const Divider(),
                 ProfileWidgets(
@@ -189,7 +190,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xff6DF5FC),
                   icon: Icons.notifications_outlined,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'Notifications',
+                  title: 'Notificatie',
                 ),
                 const Divider(),
                 ProfileWidgets(
@@ -200,7 +201,7 @@ class _ProfileViewState extends State<ProfileView> {
                     bColor: const Color(0xffDF9EF5),
                     icon: Icons.settings_outlined,
                     trIcon: Icons.arrow_forward_ios,
-                    title: 'Settings'),
+                    title: 'Instellingen'),
                 const Divider(),
                 ProfileWidgets(
                   ontap: () {
@@ -215,7 +216,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xffFF9CCB),
                   icon: Icons.star,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'Ratings',
+                  title: 'Beoordeling',
                 ),
                 const Divider(),
                 ProfileWidgets(
@@ -233,7 +234,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xffFF9CCB),
                   icon: Icons.logout_outlined,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'Log Out',
+                  title: 'Uitloggen',
                 ),
                 const Divider(),
                 const VerticalSpeacing(60.0),

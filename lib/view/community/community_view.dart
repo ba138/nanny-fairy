@@ -59,14 +59,14 @@ class _CommunityViewState extends State<CommunityView> {
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Container(
                   height: 31,
-                  width: 97,
+                  width: 80,
                   decoration: BoxDecoration(
                     color: AppColor.creamyColor,
                     borderRadius: BorderRadius.circular(4),
                   ),
                   child: Center(
                     child: Text(
-                      'Upload Post',
+                      'uploaden',
                       style: GoogleFonts.getFont(
                         "Poppins",
                         textStyle: const TextStyle(
@@ -86,8 +86,8 @@ class _CommunityViewState extends State<CommunityView> {
             labelColor: AppColor.peachColor,
             unselectedLabelColor: AppColor.creamyColor,
             tabs: [
-              Tab(text: 'Topics'),
-              Tab(text: 'My Posts'),
+              Tab(text: 'Onderwerpen'),
+              Tab(text: 'Mijn berichten'),
             ],
           ),
         ),
@@ -105,7 +105,7 @@ class _CommunityViewState extends State<CommunityView> {
                     if (communityController.isLoading)
                       const Center(child: CircularProgressIndicator())
                     else if (communityController.posts.isEmpty)
-                      const Center(child: Text('No posts found'))
+                      const Center(child: Text('Geen berichten gevonden'))
                     else
                       Column(
                         children: communityController.posts
@@ -161,7 +161,7 @@ class _CommunityViewState extends State<CommunityView> {
                     if (communityController.isLoading)
                       const Center(child: CircularProgressIndicator())
                     else if (communityController.posts.isEmpty)
-                      const Center(child: Text('No posts found'))
+                      const Center(child: Text('Geen berichten gevonden'))
                     else
                       Column(
                         children: communityController.posts
