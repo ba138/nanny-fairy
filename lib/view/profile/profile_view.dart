@@ -190,7 +190,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xff6DF5FC),
                   icon: Icons.notifications_outlined,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'Notifications',
+                  title: 'Notificatie',
                 ),
                 const Divider(),
                 ProfileWidgets(
@@ -201,7 +201,7 @@ class _ProfileViewState extends State<ProfileView> {
                     bColor: const Color(0xffDF9EF5),
                     icon: Icons.settings_outlined,
                     trIcon: Icons.arrow_forward_ios,
-                    title: 'Settings'),
+                    title: 'Instellingen'),
                 const Divider(),
                 ProfileWidgets(
                   ontap: () {
@@ -216,7 +216,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xffFF9CCB),
                   icon: Icons.star,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'Ratings',
+                  title: 'Beoordeling',
                 ),
                 const Divider(),
                 ProfileWidgets(
@@ -234,7 +234,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xffFF9CCB),
                   icon: Icons.logout_outlined,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'Log Out',
+                  title: 'Uitloggen',
                 ),
                 const Divider(),
                 const VerticalSpeacing(60.0),
