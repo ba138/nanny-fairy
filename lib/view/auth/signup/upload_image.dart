@@ -108,7 +108,7 @@ class _UploadImageState extends State<UploadImage> {
                               int wordCount = _wordCount(value);
                               // Valid if word count is between 50 and 60
                               _isWordCountValid =
-                                  wordCount >= 20 && wordCount <= 30;
+                                  wordCount >= 20 && wordCount <= 5000;
                             });
                           },
                           decoration: const InputDecoration(
@@ -152,7 +152,7 @@ class _UploadImageState extends State<UploadImage> {
                                 .fetchFamiliesFromFirebaseData();
                           } else {
                             Utils.flushBarErrorMessage(
-                              "Please complete the form correctly.",
+                              "Vul het formulier correct in.",
                               context,
                             );
                           }

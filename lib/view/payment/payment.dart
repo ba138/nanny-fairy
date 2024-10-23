@@ -61,7 +61,7 @@ class _PaymentViewState extends State<PaymentView> {
                   color: AppColor.lavenderColor, size: 150),
               const VerticalSpeacing(16),
               Text(
-                'Payment Done Congratulations You\n are subscribed now',
+                'Betaling Voltooid!',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.getFont(
                   "Poppins",
@@ -74,7 +74,7 @@ class _PaymentViewState extends State<PaymentView> {
               ),
               const VerticalSpeacing(30),
               RoundedButton(
-                title: 'Continue to Chat',
+                title: 'Chat nu',
                 buttonColor: AppColor.lavenderColor,
                 titleColor: AppColor.creamyColor,
                 onpress: () {
@@ -155,9 +155,9 @@ class _PaymentViewState extends State<PaymentView> {
       await savePaymentInfo('Stripe', true); // Save payment success in Firebase
     } catch (e) {
       if (e is StripeException) {
-        Utils.flushBarErrorMessage("Payment Cancelled", context);
+        Utils.flushBarErrorMessage("Betaling geannuleerd", context);
       } else {
-        Utils.flushBarErrorMessage("Problem in Payment", context);
+        Utils.flushBarErrorMessage("Probleem bij betaling", context);
       }
       await savePaymentInfo(
           'Stripe', false); // Save payment failure in Firebase
@@ -262,7 +262,7 @@ class _PaymentViewState extends State<PaymentView> {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: const Text(
-          'Add Payment Details ',
+          'Voltooi Je Betaling',
           style: TextStyle(
             fontFamily: 'CenturyGothic',
             fontSize: 18,
@@ -292,7 +292,7 @@ class _PaymentViewState extends State<PaymentView> {
               children: [
                 const VerticalSpeacing(20),
                 const Text(
-                  'Select Payment Type',
+                  'Selecteer Betaalmethode',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     fontFamily: 'CenturyGothic',
@@ -352,7 +352,7 @@ class _PaymentViewState extends State<PaymentView> {
                                 ),
                                 const VerticalSpeacing(5),
                                 Text(
-                                  "IDLE",
+                                  "Ideal",
                                   style: TextStyle(
                                       fontFamily: 'CenturyGothic',
                                       fontSize: 14,
@@ -435,7 +435,7 @@ class _PaymentViewState extends State<PaymentView> {
                 RoundedButton(
                   buttonColor: AppColor.lavenderColor,
                   titleColor: AppColor.creamyColor,
-                  title: 'Pay',
+                  title: 'Betalen',
                   onpress: () {
                     if (firstButton) {
                       initIdlePayment();
