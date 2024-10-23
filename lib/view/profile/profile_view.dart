@@ -39,7 +39,7 @@ class _ProfileViewState extends State<ProfileView> {
         backgroundColor: AppColor.lavenderColor,
         elevation: 0.0,
         title: const Text(
-          'Profile ',
+          'Profiel',
           style: TextStyle(
             fontFamily: 'CenturyGothic',
             fontSize: 18,
@@ -63,7 +63,8 @@ class _ProfileViewState extends State<ProfileView> {
               children: [
                 _buildCoverBar(),
                 Container(
-                  padding: const EdgeInsets.only(top: 10, left: 24.0, right: 24.0),
+                  padding:
+                      const EdgeInsets.only(top: 10, left: 24.0, right: 24.0),
                   child: _buildProfile(context),
                 ),
               ],
@@ -178,7 +179,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xffCDFF9D),
                   icon: Icons.person_outline,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'My Profile',
+                  title: 'Mijn Profiel',
                 ),
                 const Divider(),
                 ProfileWidgets(

@@ -74,7 +74,7 @@ class ChatWidget extends StatelessWidget {
           height: 93,
           width: double.infinity,
           decoration: BoxDecoration(
-            color: AppColor.whiteColor,
+            color: AppColor.creamyColor,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
               strokeAlign: BorderSide.strokeAlignCenter,

@@ -133,7 +133,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>
             icon: ImageIcon(
               AssetImage('images/booked.png'),
             ),
-            label: ('Beoordelingen'),
+            label: ('Opdrachten'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark_border_outlined),
