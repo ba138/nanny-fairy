@@ -58,7 +58,7 @@ class ChatList extends StatelessWidget {
               } else if (snapshot.hasError) {
                 return Center(child: Text('Error: ${snapshot.error}'));
               } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                return const Center(child: Text('No messages found.'));
+                return const Center(child: Text('Geen berichten gevonden.'));
               } else {
                 final chats = snapshot.data!;
                 return ListView.builder(
