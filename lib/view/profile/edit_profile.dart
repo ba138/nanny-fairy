@@ -99,7 +99,7 @@ class _EditProfileState extends State<EditProfile> {
     return Scaffold(
       backgroundColor: AppColor.lavenderColor,
       appBar: PreferredSize(
-        preferredSize: const Size.square(70),
+        preferredSize: const Size.square(50),
         child: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0.0,
@@ -112,11 +112,11 @@ class _EditProfileState extends State<EditProfile> {
                 color: AppColor.creamyColor,
               )),
           title: Text(
-            'Edit Profile',
+            'Profiel bewerken',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 20,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: AppColor.creamyColor,
               ),
@@ -191,7 +191,7 @@ class _EditProfileState extends State<EditProfile> {
                 RoundedButton(
                     buttonColor: AppColor.lavenderColor,
                     titleColor: AppColor.creamyColor,
-                    title: 'Update Profile',
+                    title: 'Profiel bijwerken',
                     onpress: () {
                       _updateProfile();
                     }),

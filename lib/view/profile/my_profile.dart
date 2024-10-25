@@ -32,11 +32,11 @@ class _MyProfileState extends State<MyProfile> {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: Text(
-          'Your Profile Details',
+          'Uw profielgegevens',
           style: GoogleFonts.getFont(
             "Poppins",
             textStyle: const TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w400,
               color: AppColor.creamyColor,
             ),
@@ -105,7 +105,7 @@ class _MyProfileState extends State<MyProfile> {
                     children: [
                       ProfileItem(
                         icon: Icons.person,
-                        label: 'Name',
+                        label: 'Naam',
                         value:
                             "${provider['firstName']} ${provider['lastName']}",
                       ),
@@ -113,49 +113,49 @@ class _MyProfileState extends State<MyProfile> {
                       const VerticalSpeacing(10.0),
                       ProfileItem(
                         icon: Icons.location_on,
-                        label: 'Address',
+                        label: 'Adres',
                         value: provider['address'],
                       ),
                       const Divider(),
                       const VerticalSpeacing(10.0),
                       ProfileItem(
                         icon: Icons.phone,
-                        label: 'Telephone Number',
+                        label: 'Telefoonnummer',
                         value: provider['phoneNumber'],
                       ),
                       const Divider(),
                       const VerticalSpeacing(10.0),
                       ProfileItem(
                         icon: Icons.cake,
-                        label: 'Date of Birth',
+                        label: 'Geboortedatum',
                         value: provider['dob'],
                       ),
                       const Divider(),
                       const VerticalSpeacing(10.0),
                       ProfileItem(
                         icon: Icons.email,
-                        label: 'Email Address',
+                        label: 'E-mailadres',
                         value: provider['email'],
                       ),
                       const Divider(),
                       const VerticalSpeacing(10.0),
                       ProfileItem(
                         icon: Icons.description,
-                        label: 'Description',
+                        label: 'Bio',
                         value: provider['bio'] ?? 'null',
                       ),
                       const Divider(),
                       const VerticalSpeacing(10.0),
                       ProfileItem(
                         icon: Icons.euro_outlined,
-                        label: 'Hourly Rate',
+                        label: 'Uurtarief',
                         value: '€${provider['hoursrate']}',
                       ),
                       const Divider(),
                       const VerticalSpeacing(10.0),
                       ProfileItem(
                         icon: Icons.star_outline,
-                        label: 'Skills',
+                        label: 'Vaardigheden',
                         value: provider['Refernce']['skill'],
                       ),
                       const VerticalSpeacing(16.0),
