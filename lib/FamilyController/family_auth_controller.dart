@@ -21,7 +21,7 @@ class FamilyAuthController extends ChangeNotifier {
     try {
       if (email.isEmpty || password.isEmpty) {
         _setLoading(false);
-        Utils.snackBar('Please Fill the fields', context);
+        Utils.snackBar('Vul de velden in', context);
       } else {
         await _authRepository.createAccount(
           email: email,

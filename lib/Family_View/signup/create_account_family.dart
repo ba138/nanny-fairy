@@ -143,7 +143,8 @@ class _CreateAccountFamilyState extends State<CreateAccountFamily> {
                                   password: passwordController.text,
                                   context: context);
                             } else {
-                              Utils.toastMessage("Your password did not match");
+                              Utils.toastMessage(
+                                  "Uw wachtwoord komt niet overeen");
                             }
                           },
                         ),
