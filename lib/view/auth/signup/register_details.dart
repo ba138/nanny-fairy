@@ -8,6 +8,7 @@ import 'package:nanny_fairy/res/components/widgets/custom_text_field.dart';
 import 'package:nanny_fairy/res/components/widgets/vertical_spacing.dart';
 import 'package:nanny_fairy/utils/utils.dart';
 import 'package:nanny_fairy/view/auth/signup/search_Place_screen.dart';
+import 'package:nanny_fairy/view/chat/widgets/predicate_tile.dart';
 import 'package:provider/provider.dart';
 import '../../../res/components/colors.dart';
 import '../../../res/components/widgets/rounded_check_box.dart';
@@ -77,7 +78,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
     final distanceViewModel =
         Provider.of<PlaceViewModel>(context, listen: false);
     return Scaffold(
-      backgroundColor: AppColor.oceanColor,
+      backgroundColor: AppColor.primaryColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
@@ -86,20 +87,20 @@ class _RegisterDetailsState extends State<RegisterDetails> {
           leading: IconButton(
             icon: const Icon(
               Icons.west,
-              color: AppColor.authCreamColor,
+              color: AppColor.whiteColor,
             ),
             onPressed: () {
               Navigator.pop(context);
             },
           ),
           title: Text(
-            'Voer Je Persoonlijke Gegevens In',
+            'Welcome to  new user',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 16,
+                fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: AppColor.authCreamColor,
+                color: AppColor.whiteColor,
               ),
             ),
           ),
@@ -109,7 +110,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
         height: double.infinity,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: AppColor.authCreamColor,
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30.0),
           ),
@@ -131,14 +132,14 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                             controller: firstNameController,
                             prefixIcon: const Icon(Icons.person_outline),
                             maxLines: 1,
-                            hintText: 'Voornaam')),
+                            hintText: 'Enter Name')),
                     const SizedBox(width: 12),
                     Expanded(
                         child: TextFieldCustom(
                             controller: lastNameController,
                             prefixIcon: const Icon(Icons.person_outline),
                             maxLines: 1,
-                            hintText: 'Achternaam')),
+                            hintText: 'Enter last')),
                   ],
                 ),
                 const VerticalSpeacing(16),
@@ -158,7 +159,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                       margin: const EdgeInsets.symmetric(vertical: 10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
-                        color: AppColor.authCreamColor,
+                        color: AppColor.whiteColor,
                         border: Border.all(
                           strokeAlign: BorderSide.strokeAlignCenter,
                           color: const Color(0xff1B81BC).withOpacity(
@@ -181,7 +182,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                           children: [
                             viewModel.providerAddress == null
                                 ? const Text(
-                                    'Adres',
+                                    'Select Your Address',
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
@@ -206,6 +207,11 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                     ),
                   );
                 }),
+                // TextFieldCustom(
+                //     controller: addressController,
+                //     prefixIcon: const Icon(Icons.location_on_outlined),
+                //     maxLines: 1,
+                //     hintText: 'Enter Address'),
                 const VerticalSpeacing(16),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -216,7 +222,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                             controller: houseNumberController,
                             prefixIcon: const Icon(Icons.home_outlined),
                             maxLines: 1,
-                            hintText: 'Huisnummer')),
+                            hintText: 'House Number')),
                     const SizedBox(width: 12),
                     Expanded(
                         child: TextFieldCustom(
@@ -224,7 +230,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                             controller: postCodeController,
                             prefixIcon: const Icon(Icons.lock_outline),
                             maxLines: 1,
-                            hintText: 'Postcode')),
+                            hintText: 'Post Code')),
                   ],
                 ),
                 const VerticalSpeacing(16),
@@ -233,7 +239,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                     controller: phoneController,
                     prefixIcon: const Icon(Icons.phone),
                     maxLines: 1,
-                    hintText: 'Mobiel Nummer'),
+                    hintText: 'Enter telephone number'),
                 const VerticalSpeacing(16),
                 GestureDetector(
                   onTap: () => selectDate(context),
@@ -246,7 +252,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                         child: const Icon(Icons.calendar_month_outlined),
                       ),
                       maxLines: 1,
-                      hintText: 'Geboortedatum',
+                      hintText: 'Date of birth',
                     ),
                   ),
                 ),
@@ -258,11 +264,12 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                     RoundedCheckbox(
                       value: isChecked,
                       onChanged: _handleCheckboxChanged,
-                      activeColor: AppColor.oceanColor,
+                      activeColor: AppColor
+                          .primaryColor, // Change this to your desired color
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      'Ik ga akkoord met de voorwaarden',
+                      'I agree with the terms and condition',
                       style: GoogleFonts.getFont(
                         "Poppins",
                         textStyle: const TextStyle(
@@ -282,11 +289,11 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                     RoundedCheckbox(
                       value: isChecked2,
                       onChanged: _handleCheckboxChanged2,
-                      activeColor: AppColor.oceanColor,
+                      activeColor: AppColor.primaryColor,
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      'Ik ga akkoord met het privacybeleid',
+                      'I agree with free privacy policy',
                       style: GoogleFonts.getFont(
                         "Poppins",
                         textStyle: const TextStyle(
@@ -301,7 +308,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                 ),
                 const VerticalSpeacing(24.0),
                 RoundedButton(
-                    title: 'Registreren',
+                    title: 'Register',
                     onpress: () {
                       if (isChecked && isChecked2) {
                         authViewModel.saveDetails(

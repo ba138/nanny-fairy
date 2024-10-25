@@ -34,7 +34,7 @@ class _CreateAccountState extends State<CreateAccount> {
     final authViewModel = Provider.of<AuthViewModel>(context);
 
     return Scaffold(
-        backgroundColor: AppColor.oceanColor,
+        backgroundColor: AppColor.primaryColor,
         body: SafeArea(
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -49,20 +49,20 @@ class _CreateAccountState extends State<CreateAccount> {
                         children: [
                           IconButton(
                             icon: const Icon(Icons.west,
-                                color: AppColor.authCreamColor),
+                                color: AppColor.whiteColor),
                             onPressed: () {
                               Navigator.pop(context);
                             },
                           ),
-                          const SizedBox(width: 30),
+                          const SizedBox(width: 60),
                           Text(
-                            'Maak Wachtwoord Aan',
+                            'Create Account',
                             style: GoogleFonts.getFont(
                               "Poppins",
                               textStyle: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
-                                color: AppColor.authCreamColor,
+                                color: AppColor.whiteColor,
                               ),
                             ),
                           ),
@@ -76,25 +76,25 @@ class _CreateAccountState extends State<CreateAccount> {
                             color: AppColor.avatarColor,
                             borderRadius: BorderRadius.circular(47),
                             border: Border.all(
-                                width: 4, color: AppColor.authCreamColor)),
+                                width: 4, color: AppColor.whiteColor)),
                         child: const Center(
                           child: Icon(
                             Icons.lock_outline,
                             size: 40,
-                            color: AppColor.authCreamColor,
+                            color: AppColor.whiteColor,
                           ),
                         ),
                       ),
                       const VerticalSpeacing(10),
                       Text(
-                        'Kies een sterk wachtwoord voor \n je account',
+                        'Create Account of\n Your App',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.getFont(
                           "Poppins",
                           textStyle: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
-                            color: AppColor.authCreamColor,
+                            color: AppColor.whiteColor,
                           ),
                         ),
                       ),
@@ -106,7 +106,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   height: MediaQuery.of(context).size.height,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    color: AppColor.authCreamColor,
+                    color: AppColor.whiteColor,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30.0),
                     ),
@@ -120,22 +120,22 @@ class _CreateAccountState extends State<CreateAccount> {
                             controller: emailController,
                             prefixIcon: const Icon(Icons.mail_outline),
                             maxLines: 1,
-                            hintText: 'Voer e-mailadres in'),
+                            hintText: 'Enter Email'),
                         TextFieldCustom(
                             obscureText: true,
                             controller: passwordController,
                             prefixIcon: const Icon(Icons.lock_outline),
                             maxLines: 1,
-                            hintText: 'Voer je wachtwoord in'),
+                            hintText: 'Set A Password'),
                         TextFieldCustom(
                             obscureText: true,
                             controller: confromPasswordController,
                             prefixIcon: const Icon(Icons.lock_outline),
                             maxLines: 1,
-                            hintText: 'Bevestig je wachtwoord'),
+                            hintText: 'Confirm Password'),
                         const VerticalSpeacing(30),
                         RoundedButton(
-                            title: 'Registreren',
+                            title: 'Confirm',
                             onpress: () {
                               if (passwordController.text ==
                                   confromPasswordController.text) {

@@ -43,7 +43,7 @@ class _SelectPassionFamilyViewState extends State<SelectPassionFamilyView> {
   Widget build(BuildContext context) {
     final authViewModelFamily = Provider.of<FamilyAuthController>(context);
     return Scaffold(
-      backgroundColor: AppColor.oceanColor,
+      backgroundColor: AppColor.primaryColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
@@ -76,7 +76,7 @@ class _SelectPassionFamilyViewState extends State<SelectPassionFamilyView> {
         height: double.infinity,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: AppColor.authCreamColor,
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30.0),
           ),
@@ -113,8 +113,8 @@ class _SelectPassionFamilyViewState extends State<SelectPassionFamilyView> {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: isSelected
-                                ? AppColor.oceanColor
-                                : AppColor.authCreamColor,
+                                ? AppColor.primaryColor
+                                : AppColor.whiteColor,
                             borderRadius: BorderRadius.circular(6),
                             border: Border.all(
                               strokeAlign: BorderSide.strokeAlignCenter,

@@ -60,8 +60,6 @@ class _BookingFamilyCardState extends State<BookingFamilyCard> {
               ),
               const VerticalSpeacing(30),
               RoundedButton(
-                buttonColor: AppColor.lavenderColor,
-                titleColor: AppColor.creamyColor,
                 title: 'Subscribe and Chat',
                 onpress: () {
                   Navigator.pushNamed(context, RoutesName.paymentView);
@@ -83,7 +81,7 @@ class _BookingFamilyCardState extends State<BookingFamilyCard> {
         height: 106,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: AppColor.creamyColor,
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.circular(10.0),
           border: Border.all(
             strokeAlign: BorderSide.strokeAlignCenter,
@@ -159,7 +157,7 @@ class _BookingFamilyCardState extends State<BookingFamilyCard> {
                                 padding: const EdgeInsets.only(left: 4),
                                 child: CardButton(
                                   title: widget.passion[index],
-                                  color: AppColor.peachColor,
+                                  color: AppColor.avatarColor,
                                   onTap: () {},
                                 ),
                               );
@@ -178,7 +176,7 @@ class _BookingFamilyCardState extends State<BookingFamilyCard> {
                       width: 78,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(32),
-                        color: AppColor.lavenderColor,
+                        color: AppColor.primaryColor,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
@@ -191,7 +189,7 @@ class _BookingFamilyCardState extends State<BookingFamilyCard> {
                               textStyle: const TextStyle(
                                 fontSize: 9,
                                 fontWeight: FontWeight.w400,
-                                color: AppColor.creamyColor,
+                                color: AppColor.whiteColor,
                               ),
                             ),
                           ),

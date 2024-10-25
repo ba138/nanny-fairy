@@ -74,7 +74,7 @@ class ChatWidget extends StatelessWidget {
           height: 93,
           width: double.infinity,
           decoration: BoxDecoration(
-            color: AppColor.creamyColor,
+            color: AppColor.whiteColor,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
               strokeAlign: BorderSide.strokeAlignCenter,
@@ -144,7 +144,7 @@ class ChatWidget extends StatelessWidget {
                         width: 20,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10.0),
-                            color: AppColor.chatLavenderColor),
+                            color: AppColor.primaryColor),
                       )
                     : const SizedBox(),
               ],

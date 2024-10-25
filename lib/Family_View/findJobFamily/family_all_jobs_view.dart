@@ -45,9 +45,7 @@ class _FamilyAllJobsViewState extends State<FamilyAllJobsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.creamyColor,
       appBar: AppBar(
-        backgroundColor: AppColor.creamyColor,
         leading: IconButton(
           icon: const Icon(
             Icons.west,

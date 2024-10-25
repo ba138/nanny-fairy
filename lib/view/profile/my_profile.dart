@@ -27,7 +27,7 @@ class _MyProfileState extends State<MyProfile> {
   Widget build(BuildContext context) {
     final getProviderInfo = Provider.of<GetProviderInfoViewModel>(context);
     return Scaffold(
-      backgroundColor: AppColor.lavenderColor,
+      backgroundColor: AppColor.primaryColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
@@ -38,7 +38,7 @@ class _MyProfileState extends State<MyProfile> {
             textStyle: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w400,
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
             ),
           ),
         ),
@@ -49,7 +49,7 @@ class _MyProfileState extends State<MyProfile> {
           },
           icon: const Icon(
             Icons.west,
-            color: AppColor.creamyColor,
+            color: AppColor.whiteColor,
           ),
         ),
         actions: [
@@ -57,7 +57,7 @@ class _MyProfileState extends State<MyProfile> {
             onPressed: () async {
               final providerData = await getProviderInfo
                   .getProviderInfo(); // Await the Future to complete
-              if (providerData.isNotEmpty) {
+              if (providerData != null) {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -70,7 +70,7 @@ class _MyProfileState extends State<MyProfile> {
             },
             icon: const Icon(
               Icons.border_color_outlined,
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
             ),
           ),
         ],
@@ -79,7 +79,7 @@ class _MyProfileState extends State<MyProfile> {
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: AppColor.creamyColor,
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
           ),
@@ -179,7 +179,6 @@ class ProfileItem extends StatelessWidget {
   final String value;
 
   const ProfileItem({
-    super.key,
     required this.icon,
     required this.label,
     required this.value,
@@ -194,7 +193,7 @@ class ProfileItem extends StatelessWidget {
         children: [
           Icon(
             icon,
-            color: AppColor.lavenderColor,
+            color: AppColor.primaryColor,
             size: 20,
           ),
           const SizedBox(width: 10),

@@ -23,14 +23,14 @@ class _SelectPreferenceState extends State<SelectPreference> {
 
   TextEditingController phoneController = TextEditingController();
 
-  String _btn2SelectedVal = "Kinderoppas";
+  String _btn2SelectedVal = "Animal care";
   static const menuItems = <String>[
-    'Kinderoppas',
-    'Thuiszorg',
-    'Schoonmaakdiensten',
-    'Tuinonderhoud',
-    'Huisoppas',
-    'Dierenoppas',
+    'Animal care',
+    'home sitter',
+    'eiderly care',
+    'homework',
+    'cleanining',
+    'music lesson',
   ];
   final List<DropdownMenuItem<String>> _dropDownMenuItems = menuItems
       .map(
@@ -57,7 +57,6 @@ class _SelectPreferenceState extends State<SelectPreference> {
     final authViewModel = Provider.of<AuthViewModel>(context);
 
     return Scaffold(
-      backgroundColor: AppColor.authCreamColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
@@ -71,7 +70,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
           },
         ),
         title: Text(
-          'Referentie',
+          'Reference',
           style: GoogleFonts.getFont(
             "Poppins",
             textStyle: const TextStyle(
@@ -96,11 +95,11 @@ class _SelectPreferenceState extends State<SelectPreference> {
                     controller: experinceController,
                     prefixIcon: const Icon(Icons.school_outlined),
                     maxLines: 1,
-                    hintText: 'Aantal Jaar aan ervaring',
+                    hintText: 'Enter your experience',
                   ),
                   const VerticalSpeacing(16.0),
                   Text(
-                    'Referentie',
+                    'Referance',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -112,7 +111,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
                   ),
                   const VerticalSpeacing(16.0),
                   Text(
-                    'Voornaam en Achternaam',
+                    'Name',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -125,10 +124,10 @@ class _SelectPreferenceState extends State<SelectPreference> {
                   TextFieldCustom(
                     controller: jobController,
                     maxLines: 1,
-                    hintText: 'Anne van Leeuwen',
+                    hintText: 'Job',
                   ),
                   Text(
-                    'Diensten die je hebt aangeboden',
+                    'Which Skill You are provided',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -141,7 +140,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
                   const VerticalSpeacing(10),
                   Container(
                     decoration: BoxDecoration(
-                      color: AppColor.authCreamColor,
+                      color: AppColor.whiteColor,
                       border: Border.all(
                         strokeAlign: BorderSide.strokeAlignCenter,
                         color: const Color(0xff1B81BC)
@@ -161,7 +160,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
                     child: Padding(
                       padding: const EdgeInsets.only(left: 8, right: 8.0),
                       child: DropdownButton(
-                        dropdownColor: AppColor.authCreamColor,
+                        dropdownColor: AppColor.whiteColor,
                         isExpanded: true,
                         icon: const Icon(Icons.expand_more),
                         underline: const SizedBox(),
@@ -203,7 +202,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
                         ),
                         maxLines: 1,
                         controller: landController,
-                        hintText: 'Telefoonnummer',
+                        hintText: 'Land',
                       )),
                       const SizedBox(width: 10.0),
                       Expanded(
@@ -228,13 +227,13 @@ class _SelectPreferenceState extends State<SelectPreference> {
                         ),
                         maxLines: 1,
                         controller: phoneController,
-                        hintText: 'Mobiel nummer',
+                        hintText: 'Mobile Number',
                       )),
                     ],
                   ),
                   const VerticalSpeacing(60.0),
                   RoundedButton(
-                      title: 'Opslaan',
+                      title: 'Continue',
                       onpress: () {
                         if (experinceController.text.isNotEmpty ||
                             jobController.text.isNotEmpty ||

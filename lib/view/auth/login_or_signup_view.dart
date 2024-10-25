@@ -11,7 +11,6 @@ class LoginOrSignupView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.authCreamColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20),
@@ -50,7 +49,7 @@ class LoginOrSignupView extends StatelessWidget {
                             textStyle: const TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.w600,
-                              color: AppColor.oceanColor,
+                              color: AppColor.primaryColor,
                             ),
                           ),
                         ),
@@ -59,29 +58,29 @@ class LoginOrSignupView extends StatelessWidget {
                   ]),
               const VerticalSpeacing(60.0),
               RoundedButton(
-                  title: 'Inloggen als Hulpzoekende',
+                  title: 'Login as family',
                   onpress: () {
                     Navigator.pushNamed(context, RoutesName.loginFamily);
                   }),
               const VerticalSpeacing(20.0),
               RoundedButton(
-                  title: 'Registreren als Hulpzoekende',
+                  title: 'register as a family',
                   onpress: () {
                     Navigator.pushNamed(
                         context, RoutesName.createAccountFamily);
                   }),
               const VerticalSpeacing(20.0),
               RoundedButton(
-                title: 'Inloggen als Held',
+                title: 'register as a provider',
                 onpress: () {
-                  Navigator.pushNamed(context, RoutesName.loginView);
+                  Navigator.pushNamed(context, RoutesName.createAccount);
                 },
               ),
               const VerticalSpeacing(20.0),
               RoundedButton(
-                  title: 'Registreren als Held',
+                  title: 'Login as provider',
                   onpress: () {
-                    Navigator.pushNamed(context, RoutesName.createAccount);
+                    Navigator.pushNamed(context, RoutesName.loginView);
                   }),
               const VerticalSpeacing(20.0),
             ],

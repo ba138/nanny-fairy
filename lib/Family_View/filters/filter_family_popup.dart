@@ -3,7 +3,9 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:nanny_fairy/Family_View/homeFamily/home_view_family.dart';
 import 'package:nanny_fairy/Repository/family_home_ui_repository.dart';
 import 'package:nanny_fairy/ViewModel/family_distance_view_model.dart';
+import 'package:nanny_fairy/ViewModel/family_filter_view_model.dart';
 import 'package:nanny_fairy/res/components/rounded_button.dart';
+import 'package:nanny_fairy/res/components/widgets/family_home_ui_enums.dart';
 import 'package:provider/provider.dart';
 import '../../res/components/colors.dart';
 import '../../res/components/widgets/vertical_spacing.dart';
@@ -70,7 +72,7 @@ class _FilterPopUpFamilyState extends State<FilterPopUpFamily> {
   @override
   Widget build(BuildContext context) {
     return Dialog.fullscreen(
-      backgroundColor: AppColor.creamyColor,
+      backgroundColor: AppColor.secondaryBgColor,
       child: isLoading == true
           ? const Center(child: CircularProgressIndicator())
           : ListView(
@@ -78,7 +80,7 @@ class _FilterPopUpFamilyState extends State<FilterPopUpFamily> {
                 Container(
                   height: 116,
                   width: double.infinity,
-                  color: AppColor.lavenderColor,
+                  color: AppColor.primaryColor,
                   child: Center(
                     child: Padding(
                       padding: const EdgeInsets.only(left: 16.0, right: 16.0),
@@ -91,7 +93,7 @@ class _FilterPopUpFamilyState extends State<FilterPopUpFamily> {
                             },
                             icon: const Icon(
                               Icons.close,
-                              color: AppColor.creamyColor,
+                              color: AppColor.whiteColor,
                             ),
                           ),
                           const Text(
@@ -100,7 +102,7 @@ class _FilterPopUpFamilyState extends State<FilterPopUpFamily> {
                               fontFamily: 'CenturyGothic',
                               fontSize: 18,
                               fontWeight: FontWeight.w400,
-                              color: AppColor.creamyColor,
+                              color: AppColor.whiteColor,
                             ),
                           ),
                           InkWell(
@@ -130,7 +132,7 @@ class _FilterPopUpFamilyState extends State<FilterPopUpFamily> {
                                 fontFamily: 'CenturyGothic',
                                 fontSize: 18,
                                 fontWeight: FontWeight.w400,
-                                color: AppColor.creamyColor,
+                                color: AppColor.whiteColor,
                               ),
                             ),
                           ),
@@ -167,9 +169,8 @@ class _FilterPopUpFamilyState extends State<FilterPopUpFamily> {
                               ),
                             ),
                             RangeSlider(
-                              activeColor: AppColor.lavenderColor,
-                              inactiveColor:
-                                  AppColor.lavenderColor.withOpacity(0.2),
+                              activeColor: AppColor.primaryColor,
+                              inactiveColor: Colors.grey.shade300,
                               values: _values,
                               min: 5,
                               max: 1000,
@@ -471,8 +472,6 @@ class _FilterPopUpFamilyState extends State<FilterPopUpFamily> {
                           FamilyHomeUiRepository>(
                         builder: (context, viewModel, uiState, child) {
                           return RoundedButton(
-                            buttonColor: AppColor.lavenderColor,
-                            titleColor: AppColor.creamyColor,
                             title: 'Apply Filters',
                             onpress: () {
                               // setState(() {
@@ -547,7 +546,7 @@ class FilterButton extends StatelessWidget {
         width: 100,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6),
-          color: isSelected ? AppColor.lavenderColor : Colors.transparent,
+          color: isSelected ? AppColor.primaryColor : Colors.transparent,
           border: Border.all(color: AppColor.borderColor, width: 1),
         ),
         child: Center(
@@ -557,7 +556,7 @@ class FilterButton extends StatelessWidget {
               fontFamily: 'CenturyGothic',
               fontSize: 14,
               fontWeight: FontWeight.w400,
-              color: isSelected ? AppColor.creamyColor : AppColor.blackColor,
+              color: isSelected ? AppColor.whiteColor : AppColor.blackColor,
             ),
           ),
         ),

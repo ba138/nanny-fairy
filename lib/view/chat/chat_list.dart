@@ -15,14 +15,14 @@ class ChatList extends StatelessWidget {
     final chatController = Provider.of<ProvidersChatController>(context);
 
     return Scaffold(
-      backgroundColor: AppColor.creamyColor,
+      backgroundColor: AppColor.secondaryBgColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
-          backgroundColor: AppColor.chatLavenderColor,
+          backgroundColor: AppColor.primaryColor,
           automaticallyImplyLeading: false,
           title: Text(
-            'Bericht',
+            'Message',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(

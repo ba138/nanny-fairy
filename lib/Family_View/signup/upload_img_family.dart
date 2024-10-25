@@ -45,14 +45,14 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
     final authViewModel = Provider.of<FamilyAuthController>(context);
 
     return Scaffold(
-      backgroundColor: AppColor.oceanColor,
+      backgroundColor: AppColor.primaryColor,
       body: Stack(
         children: [
           Container(
             height: MediaQuery.of(context).size.height,
             width: double.infinity,
             decoration: const BoxDecoration(
-              color: AppColor.authCreamColor,
+              color: AppColor.whiteColor,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30.0),
               ),
@@ -81,13 +81,13 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                       height: 200,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: AppColor.authCreamColor,
+                        color: AppColor.whiteColor,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
                           strokeAlign: BorderSide.strokeAlignCenter,
                           color: !_isWordCountValid
                               ? Colors.red
-                              : AppColor.authCreamColor,
+                              : Colors.white, // Show red if invalid
                           width: 1,
                         ),
                         boxShadow: [
@@ -130,7 +130,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                             textStyle: const TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
-                              color: Colors.red,
+                              color: Colors.red, // Red color for the error text
                             ),
                           ),
                         ),
@@ -162,17 +162,17 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
           ),
           // Top container that acts as AppBar
           Container(
-            color: AppColor.oceanColor,
-            height: 250,
+            color: AppColor.primaryColor,
+            height: 250, // Adjust the height to accommodate the avatar overlap
             child: Column(
               children: [
-                const SizedBox(height: 50),
+                const SizedBox(height: 50), // Adjust to add padding at the top
                 Row(
                   children: [
                     IconButton(
                       icon: const Icon(
                         Icons.west,
-                        color: AppColor.authCreamColor,
+                        color: AppColor.whiteColor,
                       ),
                       onPressed: () {
                         Navigator.pop(context);
@@ -186,7 +186,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                         textStyle: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w400,
-                          color: AppColor.authCreamColor,
+                          color: AppColor.whiteColor,
                         ),
                       ),
                     ),
@@ -198,21 +198,22 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
           ),
           // Positioned CircleAvatar on top of all
           Positioned(
-            top: 190,
-            left: MediaQuery.of(context).size.width / 2 - 60,
+            top: 190, // Half of the avatar height to position it correctly
+            left:
+                MediaQuery.of(context).size.width / 2 - 60, // Center the avatar
             child: Container(
               height: 120,
               width: 120,
               decoration: BoxDecoration(
                   color: AppColor.avatarColor,
                   borderRadius: BorderRadius.circular(60),
-                  border: Border.all(width: 4, color: AppColor.authCreamColor)),
+                  border: Border.all(width: 4, color: AppColor.whiteColor)),
               child: Center(
                 child: profilePic == null
                     ? Image.asset(
                         'images/profile.png',
                         fit: BoxFit.cover,
-                        color: AppColor.authCreamColor,
+                        color: AppColor.whiteColor,
                       )
                     : Container(
                         height: 120,
@@ -241,7 +242,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                   width: 32,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: AppColor.oceanColor),
+                      color: AppColor.primaryColor),
                   child: Center(
                     child: IconButton(
                       onPressed: () {
@@ -250,7 +251,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                       icon: const Icon(
                         Icons.camera_alt_outlined,
                         size: 18,
-                        color: AppColor.authCreamColor,
+                        color: AppColor.whiteColor,
                       ),
                     ),
                   ),
@@ -261,7 +262,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                   width: 32,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: AppColor.oceanColor),
+                      color: AppColor.primaryColor),
                   child: Center(
                     child: IconButton(
                       onPressed: () {
@@ -270,7 +271,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                       icon: const Icon(
                         Icons.save_as_outlined,
                         size: 18,
-                        color: AppColor.authCreamColor,
+                        color: AppColor.whiteColor,
                       ),
                     ),
                   ),

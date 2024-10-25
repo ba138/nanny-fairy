@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nanny_fairy/ViewModel/provider_distance_view_model.dart';
 import 'package:nanny_fairy/ViewModel/provider_home_view_model.dart';
 import 'package:nanny_fairy/res/components/colors.dart';
+import 'package:nanny_fairy/res/components/widgets/shimmer_effect.dart';
 import 'package:nanny_fairy/res/components/widgets/vertical_spacing.dart';
 import 'package:nanny_fairy/view/booked/widgets/booking_widget.dart';
 import 'package:nanny_fairy/view/home/widgets/home_feature_widget.dart';
@@ -61,7 +62,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Overzicht',
+                'This month',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(
@@ -72,13 +73,13 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                 ),
               ),
               Text(
-                'Alle rapporten',
+                'All reports',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
-                    color: AppColor.lavenderColor,
+                    color: AppColor.primaryColor,
                   ),
                 ),
               ),
@@ -105,16 +106,16 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                               txColor: AppColor.blackColor,
                               img: 'images/families.png',
                               title: '12',
-                              subTitle: 'Totaal gezinnen',
-                              bgColor: AppColor.creamyColor,
+                              subTitle: 'Total Families',
+                              bgColor: AppColor.whiteColor,
                             ));
                       } else if (snapshot.hasData) {
                         return HomeFeatureContainer(
                           txColor: AppColor.blackColor,
                           img: 'images/families.png',
                           title: snapshot.data!.length.toString(),
-                          subTitle: 'Totaal gezinnen',
-                          bgColor: AppColor.creamyColor,
+                          subTitle: 'Total Families',
+                          bgColor: AppColor.whiteColor,
                         );
                       } else {
                         return const HomeFeatureContainer(
@@ -122,7 +123,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           img: 'images/families.png',
                           title: '0',
                           subTitle: 'Total Families',
-                          bgColor: AppColor.creamyColor,
+                          bgColor: AppColor.whiteColor,
                         );
                       }
                     }),
@@ -138,27 +139,34 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                               txColor: AppColor.blackColor,
                               img: 'images/families.png',
                               title: '12',
-                              subTitle: 'Totaal gezinnen',
-                              bgColor: AppColor.creamyColor,
+                              subTitle: 'Total Families',
+                              bgColor: AppColor.whiteColor,
                             ));
                       } else if (snapshot.hasData) {
                         return HomeFeatureContainer(
                           txColor: AppColor.blackColor,
                           img: 'images/chats.png',
                           title: snapshot.data!.length.toString(),
-                          subTitle: 'Totaal aantal chats',
-                          bgColor: AppColor.creamyColor,
+                          subTitle: 'Total Chats',
+                          bgColor: AppColor.whiteColor,
                         );
                       } else {
                         return const HomeFeatureContainer(
                           txColor: AppColor.blackColor,
                           img: 'images/chats.png',
                           title: '0',
-                          subTitle: 'Totaal aantal chats',
-                          bgColor: AppColor.creamyColor,
+                          subTitle: 'Total Chats',
+                          bgColor: AppColor.whiteColor,
                         );
                       }
                     }),
+                // const HomeFeatureContainer(
+                //   txColor: AppColor.blackColor,
+                //   bgColor: AppColor.whiteColor,
+                //   img: 'images/chats.png',
+                //   title: '10',
+                //   subTitle: 'Total Chats',
+                // ),
                 const SizedBox(width: 16),
                 FutureBuilder(
                     future: homeViewModel.getPosts(),
@@ -171,24 +179,24 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                               txColor: AppColor.blackColor,
                               img: 'images/families.png',
                               title: '12',
-                              subTitle: 'Totaal gezinnen',
-                              bgColor: AppColor.creamyColor,
+                              subTitle: 'Total Families',
+                              bgColor: AppColor.whiteColor,
                             ));
                       } else if (snapshot.hasData) {
                         return HomeFeatureContainer(
                           txColor: AppColor.blackColor,
                           img: 'images/families.png',
                           title: snapshot.data!.length.toString(),
-                          subTitle: 'Totaal aantal berichten',
-                          bgColor: AppColor.creamyColor,
+                          subTitle: 'Total Posts',
+                          bgColor: AppColor.whiteColor,
                         );
                       } else {
                         return const HomeFeatureContainer(
                           txColor: AppColor.blackColor,
                           img: 'images/families.png',
                           title: '0',
-                          subTitle: 'Totaal aantal berichten',
-                          bgColor: AppColor.creamyColor,
+                          subTitle: 'Total Posts',
+                          bgColor: AppColor.whiteColor,
                         );
                       }
                     }),
@@ -214,12 +222,12 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Opdrachten bij jou in de buurt',
+                        'popular jobs',
                         style: GoogleFonts.getFont(
                           "Poppins",
                           textStyle: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
                             color: AppColor.blackColor,
                           ),
                         ),
@@ -236,13 +244,13 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           );
                         },
                         child: Text(
-                          'Bekijk Alles',
+                          'see all',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              color: AppColor.lavenderColor,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: AppColor.primaryColor,
                             ),
                           ),
                         ),
@@ -252,7 +260,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                   const VerticalSpeacing(16.0),
                   isEmpty == false
                       ? SizedBox(
-                          height: MediaQuery.of(context).size.height / 2.7,
+                          height: MediaQuery.of(context).size.height / 2.6,
                           child: families.isEmpty
                               ? const Text(
                                   "No Families avaliable with in Range")
@@ -271,7 +279,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                                       double averageRating =
                                           calculateAverageRating(reviews);
                                       return BookingCartWidget(
-                                        primaryButtonTxt: 'Bekijk',
+                                        primaryButtonTxt: 'View',
                                         ontapView: () {
                                           Navigator.push(
                                             context,

@@ -1,5 +1,6 @@
 // ignore_for_file: file_names, use_build_context_synchronously, unnecessary_null_comparison
 import 'package:flutter/material.dart';
+import 'package:nanny_fairy/ViewModel/provider_distance_view_model.dart';
 import 'package:nanny_fairy/ViewModel/provider_home_view_model.dart';
 import 'package:nanny_fairy/view/booked/booked_view.dart';
 import 'package:nanny_fairy/view/community/community_view.dart';
@@ -36,6 +37,12 @@ class _DashBoardScreenState extends State<DashBoardScreen>
     Provider.of<ProviderHomeViewModel>(context, listen: false).getCurrentUser();
   }
 
+  // Method that should be called when Dashboard is selected
+  void _onDashboardSelected() {
+    // Check if the widget is still mounted
+    WidgetsBinding.instance.addPostFrameCallback((_) {});
+  }
+
   @override
   void dispose() {
     tabController?.dispose();
@@ -48,12 +55,12 @@ class _DashBoardScreenState extends State<DashBoardScreen>
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          backgroundColor: AppColor.creamyColor,
+          backgroundColor: AppColor.whiteColor,
           shape: const RoundedRectangleBorder(),
           icon: const Icon(
             Icons.no_accounts_outlined,
             size: 80,
-            color: AppColor.lavenderColor,
+            color: AppColor.primaryColor,
           ),
           title: const Text('You don\'t have any account, please'),
           content: Column(
@@ -62,7 +69,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColor.lavenderColor,
+                  backgroundColor: AppColor.primaryColor,
                   shape: const RoundedRectangleBorder(),
                 ),
                 onPressed: () {
@@ -70,7 +77,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>
                 },
                 child: const Text(
                   'LOGIN',
-                  style: TextStyle(color: AppColor.creamyColor),
+                  style: TextStyle(color: AppColor.whiteColor),
                 ),
               ),
               const SizedBox(height: 12.0), // Vertical spacing
@@ -80,7 +87,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>
                   elevation: 0.0,
                   shape: const RoundedRectangleBorder(),
                   side: const BorderSide(
-                    color: AppColor.lavenderColor, // Border color
+                    color: AppColor.primaryColor, // Border color
                     width: 2.0, // Border width
                   ),
                 ),
@@ -89,7 +96,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>
                 },
                 child: const Text(
                   'SIGN UP',
-                  style: TextStyle(color: AppColor.lavenderColor),
+                  style: TextStyle(color: AppColor.primaryColor),
                 ),
               ),
             ],
@@ -102,7 +109,6 @@ class _DashBoardScreenState extends State<DashBoardScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.creamyColor,
       body: TabBarView(
         physics: const NeverScrollableScrollPhysics(),
         controller: tabController,
@@ -117,7 +123,6 @@ class _DashBoardScreenState extends State<DashBoardScreen>
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
-            backgroundColor: AppColor.creamyColor,
             icon: ImageIcon(
               AssetImage('images/home.png'),
             ),
@@ -133,7 +138,7 @@ class _DashBoardScreenState extends State<DashBoardScreen>
             icon: ImageIcon(
               AssetImage('images/booked.png'),
             ),
-            label: ('Opdrachten'),
+            label: ('Booked'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark_border_outlined),
@@ -141,12 +146,12 @@ class _DashBoardScreenState extends State<DashBoardScreen>
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle_outlined),
-            label: ('Profiel'),
+            label: ('profile'),
           ),
         ],
         unselectedItemColor: AppColor.grayColor,
-        selectedItemColor: AppColor.lavenderColor,
-        backgroundColor: AppColor.creamyColor,
+        selectedItemColor: AppColor.primaryColor,
+        backgroundColor: Colors.white,
         type: BottomNavigationBarType.fixed,
         showUnselectedLabels: true,
         currentIndex: selectIndex,

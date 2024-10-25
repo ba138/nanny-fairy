@@ -33,9 +33,9 @@ class _CommunityViewState extends State<CommunityView> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        backgroundColor: AppColor.creamyColor,
+        backgroundColor: AppColor.secondaryBgColor,
         appBar: AppBar(
-          backgroundColor: AppColor.lavenderColor,
+          backgroundColor: AppColor.primaryColor,
           elevation: 0.0,
           automaticallyImplyLeading: false,
           title: Text(
@@ -45,7 +45,7 @@ class _CommunityViewState extends State<CommunityView> {
               textStyle: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w400,
-                color: AppColor.creamyColor,
+                color: AppColor.whiteColor,
               ),
             ),
           ),
@@ -59,20 +59,20 @@ class _CommunityViewState extends State<CommunityView> {
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Container(
                   height: 31,
-                  width: 80,
+                  width: 97,
                   decoration: BoxDecoration(
-                    color: AppColor.creamyColor,
+                    color: AppColor.whiteColor,
                     borderRadius: BorderRadius.circular(4),
                   ),
                   child: Center(
                     child: Text(
-                      'uploaden',
+                      'Upload Post',
                       style: GoogleFonts.getFont(
                         "Poppins",
                         textStyle: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
-                          color: AppColor.lavenderColor,
+                          color: AppColor.primaryColor,
                         ),
                       ),
                     ),
@@ -82,12 +82,12 @@ class _CommunityViewState extends State<CommunityView> {
             ),
           ],
           bottom: const TabBar(
-            indicatorColor: AppColor.peachColor,
-            labelColor: AppColor.peachColor,
-            unselectedLabelColor: AppColor.creamyColor,
+            indicatorColor: AppColor.avatarColor,
+            labelColor: AppColor.avatarColor,
+            unselectedLabelColor: AppColor.whiteColor,
             tabs: [
-              Tab(text: 'Onderwerpen'),
-              Tab(text: 'Mijn berichten'),
+              Tab(text: 'Topics'),
+              Tab(text: 'My Posts'),
             ],
           ),
         ),
@@ -105,7 +105,7 @@ class _CommunityViewState extends State<CommunityView> {
                     if (communityController.isLoading)
                       const Center(child: CircularProgressIndicator())
                     else if (communityController.posts.isEmpty)
-                      const Center(child: Text('Geen berichten gevonden'))
+                      const Center(child: Text('No posts found'))
                     else
                       Column(
                         children: communityController.posts
@@ -161,7 +161,7 @@ class _CommunityViewState extends State<CommunityView> {
                     if (communityController.isLoading)
                       const Center(child: CircularProgressIndicator())
                     else if (communityController.posts.isEmpty)
-                      const Center(child: Text('Geen berichten gevonden'))
+                      const Center(child: Text('No posts found'))
                     else
                       Column(
                         children: communityController.posts

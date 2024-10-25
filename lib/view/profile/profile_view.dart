@@ -34,17 +34,16 @@ class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.creamyColor,
       appBar: AppBar(
-        backgroundColor: AppColor.lavenderColor,
+        backgroundColor: AppColor.primaryColor,
         elevation: 0.0,
         title: const Text(
-          'Profiel',
+          'Profile ',
           style: TextStyle(
             fontFamily: 'CenturyGothic',
             fontSize: 18,
             fontWeight: FontWeight.w400,
-            color: AppColor.creamyColor,
+            color: AppColor.whiteColor,
           ),
         ),
         centerTitle: true,
@@ -63,8 +62,7 @@ class _ProfileViewState extends State<ProfileView> {
               children: [
                 _buildCoverBar(),
                 Container(
-                  padding:
-                      const EdgeInsets.only(top: 10, left: 24.0, right: 24.0),
+                  padding: EdgeInsets.only(top: 10, left: 24.0, right: 24.0),
                   child: _buildProfile(context),
                 ),
               ],
@@ -86,7 +84,7 @@ class _ProfileViewState extends State<ProfileView> {
           bottomLeft: Radius.circular(0),
           bottomRight: Radius.circular(0),
         ),
-        color: AppColor.lavenderColor,
+        color: AppColor.primaryColor,
       ),
     );
   }
@@ -127,7 +125,7 @@ class _ProfileViewState extends State<ProfileView> {
                       textStyle: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
-                        color: AppColor.creamyColor,
+                        color: AppColor.whiteColor,
                       ),
                     ),
                   ),
@@ -147,7 +145,7 @@ class _ProfileViewState extends State<ProfileView> {
       height: MediaQuery.of(context).size.height * 0.6,
       width: MediaQuery.of(context).size.width * 0.9,
       decoration: BoxDecoration(
-        color: AppColor.creamyColor,
+        color: AppColor.whiteColor,
         borderRadius: BorderRadius.circular(10.0),
         border: Border.all(
           strokeAlign: BorderSide.strokeAlignCenter,
@@ -179,7 +177,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xffCDFF9D),
                   icon: Icons.person_outline,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'Mijn Profiel',
+                  title: 'My Profile',
                 ),
                 const Divider(),
                 ProfileWidgets(
@@ -190,7 +188,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xff6DF5FC),
                   icon: Icons.notifications_outlined,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'Notificatie',
+                  title: 'Notifications',
                 ),
                 const Divider(),
                 ProfileWidgets(
@@ -201,7 +199,7 @@ class _ProfileViewState extends State<ProfileView> {
                     bColor: const Color(0xffDF9EF5),
                     icon: Icons.settings_outlined,
                     trIcon: Icons.arrow_forward_ios,
-                    title: 'Instellingen'),
+                    title: 'Settings'),
                 const Divider(),
                 ProfileWidgets(
                   ontap: () {
@@ -216,7 +214,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xffFF9CCB),
                   icon: Icons.star,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'Beoordeling',
+                  title: 'Ratings',
                 ),
                 const Divider(),
                 ProfileWidgets(
@@ -234,7 +232,7 @@ class _ProfileViewState extends State<ProfileView> {
                   bColor: const Color(0xffFF9CCB),
                   icon: Icons.logout_outlined,
                   trIcon: Icons.arrow_forward_ios,
-                  title: 'Uitloggen',
+                  title: 'Log Out',
                 ),
                 const Divider(),
                 const VerticalSpeacing(60.0),

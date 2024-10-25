@@ -22,13 +22,42 @@ class HomeViewFamily extends StatefulWidget {
 }
 
 class _HomeViewFamilyState extends State<HomeViewFamily> {
+  final bool _hasFetchedProviders = false;
+
   @override
+  void initState() {
+    super.initState();
+
+    // Adding a 2-second delay before executing the code
+    Future.delayed(const Duration(seconds: 2), () {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!_hasFetchedProviders) {
+          // Provider.of<GetFamilyInfoController>(context, listen: false)
+          //     .getFamilyInfo();
+
+          // Provider.of<FamilyDistanceViewModel>(context, listen: false)
+          //     .filterProvidersByDistance(
+          //         familyDistance == null ? 2 : double.parse(familyDistance!),
+          //         context)
+          //     .then((_) {
+          //   if (mounted) {
+          //     setState(() {
+          //       _hasFetchedProviders = true;
+          //     });
+          //   }
+          // }).catchError((e) {
+          //   debugPrint("Error filtering providers: $e");
+          // });
+        }
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final familyHomeView = Provider.of<GetFamilyInfoController>(context);
 
     return Scaffold(
-      backgroundColor: AppColor.creamyColor,
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Column(
@@ -40,7 +69,7 @@ class _HomeViewFamilyState extends State<HomeViewFamily> {
                   height: 179,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    color: AppColor.lavenderColor,
+                    color: AppColor.primaryColor,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20),
                       bottomRight: Radius.circular(20),
@@ -67,7 +96,7 @@ class _HomeViewFamilyState extends State<HomeViewFamily> {
                                   textStyle: const TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w500,
-                                    color: AppColor.creamyColor,
+                                    color: AppColor.whiteColor,
                                   ),
                                 ),
                               ),
@@ -78,7 +107,7 @@ class _HomeViewFamilyState extends State<HomeViewFamily> {
                                   textStyle: const TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500,
-                                    color: AppColor.creamyColor,
+                                    color: AppColor.whiteColor,
                                   ),
                                 ),
                               ),
@@ -106,7 +135,7 @@ class _HomeViewFamilyState extends State<HomeViewFamily> {
                                 textStyle: const TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,
-                                  color: AppColor.creamyColor,
+                                  color: AppColor.whiteColor,
                                 ),
                               ),
                             ),
@@ -117,7 +146,7 @@ class _HomeViewFamilyState extends State<HomeViewFamily> {
                                 textStyle: const TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500,
-                                  color: AppColor.creamyColor,
+                                  color: AppColor.whiteColor,
                                 ),
                               ),
                             ),

@@ -18,8 +18,8 @@ class SearchBarProvider extends StatefulWidget {
 }
 
 class _SearchBarProviderState extends State<SearchBarProvider> {
-  String selectedKM = 'Alle';
-  final List<String> kM = ["Alle", '2', '4', '8', '12'];
+  String selectedKM = 'All';
+  final List<String> kM = ["All", '2', '4', '8', '12'];
 
   final FocusNode _searchFocusNode = FocusNode();
   final FocusNode _dropdownFocusNode = FocusNode();
@@ -49,7 +49,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
     if (searchText.isNotEmpty) {
       viewModel.searchFamiliesByPassion(
           searchText, double.parse(selectedKM), context);
-    } else if (selectedKM == "Alle") {
+    } else if (selectedKM == "All") {
       viewModel.fetchFamiliesFromFirebaseData();
     } else {
       viewModel.distanceFilteredFamilies.clear();
@@ -69,7 +69,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
             height: 50,
             width: 200,
             decoration: BoxDecoration(
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
                 color: const Color(0xff1B81BC).withOpacity(0.10),
@@ -101,7 +101,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
                             controller: searchController,
                             decoration: const InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Zoek hier',
+                              hintText: 'Search Here',
                               prefixIcon: Icon(
                                 Icons.search,
                                 color: AppColor.blackColor,
@@ -131,7 +131,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
             height: 50,
             width: 56,
             decoration: BoxDecoration(
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
                 color: const Color(0xff1B81BC).withOpacity(0.10),
@@ -149,7 +149,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
             child: const Center(
               child: Icon(
                 Icons.filter_alt_outlined,
-                color: AppColor.lavenderColor,
+                color: AppColor.primaryColor,
               ),
             ),
           ),
@@ -163,7 +163,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
             height: 50,
             width: 56,
             decoration: BoxDecoration(
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
                 color: const Color(0xff1B81BC).withOpacity(0.10),
@@ -188,13 +188,12 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
                         child: DropdownButton<String>(
                           value: providerDistance ?? selectedKM,
                           icon: const SizedBox.shrink(),
-                          dropdownColor: AppColor.creamyColor,
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
-                              color: AppColor.lavenderColor,
+                              color: AppColor.primaryColor,
                             ),
                           ),
                           onChanged: (String? newValue) async {

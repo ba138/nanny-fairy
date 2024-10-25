@@ -99,7 +99,6 @@ class _LoginViewFamilyState extends State<LoginViewFamily> {
   Widget build(BuildContext context) {
     final authController = Provider.of<FamilyAuthController>(context);
     return Scaffold(
-      backgroundColor: AppColor.authCreamColor,
       body: LoadingManager(
         isLoading: _isLoading,
         child: SafeArea(
@@ -141,7 +140,7 @@ class _LoginViewFamilyState extends State<LoginViewFamily> {
                                 textStyle: const TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.w600,
-                                  color: AppColor.oceanColor,
+                                  color: AppColor.primaryColor,
                                 ),
                               ),
                             ),

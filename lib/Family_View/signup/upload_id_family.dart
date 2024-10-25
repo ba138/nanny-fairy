@@ -46,16 +46,16 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
     final authController = Provider.of<FamilyAuthController>(context);
 
     return Scaffold(
-      backgroundColor: AppColor.authCreamColor,
+      backgroundColor: AppColor.secondaryBgColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
-          backgroundColor: AppColor.oceanColor,
+          backgroundColor: AppColor.primaryColor,
           elevation: 0.0,
           leading: IconButton(
             icon: const Icon(
               Icons.west,
-              color: AppColor.authCreamColor,
+              color: AppColor.whiteColor,
             ),
             onPressed: () {
               Navigator.pop(context);
@@ -68,7 +68,7 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
               textStyle: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: AppColor.authCreamColor,
+                color: AppColor.whiteColor,
               ),
             ),
           ),
@@ -84,7 +84,7 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
               height: 193,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: AppColor.authCreamColor,
+                color: AppColor.whiteColor,
                 borderRadius: BorderRadius.circular(6),
                 border: Border.all(
                   strokeAlign: BorderSide.strokeAlignCenter,
@@ -128,11 +128,11 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
                               width: 56,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(28),
-                                  color: AppColor.oceanColor),
+                                  color: AppColor.primaryColor),
                               child: const Center(
                                 child: Icon(
                                   Icons.image,
-                                  color: AppColor.authCreamColor,
+                                  color: AppColor.whiteColor,
                                 ),
                               ),
                             ),
@@ -158,7 +158,7 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
-                color: AppColor.authCreamColor,
+                color: AppColor.whiteColor,
                 border: Border.all(
                   strokeAlign: BorderSide.strokeAlignCenter,
                   color: const Color(0xff1B81BC)
@@ -202,11 +202,11 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
                                 width: 56,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(28),
-                                    color: AppColor.oceanColor),
+                                    color: AppColor.primaryColor),
                                 child: const Center(
                                   child: Icon(
                                     Icons.image,
-                                    color: AppColor.authCreamColor,
+                                    color: AppColor.whiteColor,
                                   ),
                                 ),
                               ),
