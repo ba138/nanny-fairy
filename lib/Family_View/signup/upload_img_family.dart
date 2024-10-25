@@ -65,7 +65,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                   children: [
                     VerticalSpeacing(MediaQuery.of(context).size.height * 0.5),
                     Text(
-                      'Write an introduction to yourself',
+                      'Stel jezelf kort voor',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont(
                         "Poppins",
@@ -109,7 +109,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                               int wordCount = _wordCount(value);
                               // Valid if word count is between 50 and 60
                               _isWordCountValid =
-                                  wordCount >= 20 && wordCount <= 30;
+                                  wordCount >= 20 && wordCount <= 50000;
                             });
                           },
                           decoration: const InputDecoration(
@@ -124,7 +124,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 8.0, left: 10.0),
                         child: Text(
-                          'Please enter less than 20 words',
+                          'Please enter more than 20 words',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -138,7 +138,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                     ),
                     const VerticalSpeacing(40),
                     RoundedButton(
-                        title: 'Continue',
+                        title: 'Opslaan',
                         onpress: () {
                           bool isValid =
                               _isWordCountValid && profilePic != null;
@@ -150,7 +150,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                                 context, profilePic, bioController.text);
                           } else {
                             Utils.flushBarErrorMessage(
-                              "Please complete the form correctly.",
+                              "Vul alle verplichte velden in.",
                               context,
                             );
                           }
@@ -180,7 +180,7 @@ class _UploadImageFamilyState extends State<UploadImageFamily> {
                     ),
                     const SizedBox(width: 50),
                     Text(
-                      'Upload Image',
+                      'Profiel Foto en Bio',
                       style: GoogleFonts.getFont(
                         "Poppins",
                         textStyle: const TextStyle(
