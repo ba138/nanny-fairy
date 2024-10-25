@@ -94,11 +94,11 @@ class _RegisterDetailsState extends State<RegisterDetails> {
             },
           ),
           title: Text(
-            'Welcome to  new user',
+            'Voer Je Persoonlijke Gegevens In',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 20,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: AppColor.authCreamColor,
               ),
@@ -132,14 +132,14 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                             controller: firstNameController,
                             prefixIcon: const Icon(Icons.person_outline),
                             maxLines: 1,
-                            hintText: 'Enter Name')),
+                            hintText: 'Voornaam')),
                     const SizedBox(width: 12),
                     Expanded(
                         child: TextFieldCustom(
                             controller: lastNameController,
                             prefixIcon: const Icon(Icons.person_outline),
                             maxLines: 1,
-                            hintText: 'Enter last')),
+                            hintText: 'Achternaam')),
                   ],
                 ),
                 const VerticalSpeacing(16),
@@ -182,7 +182,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                           children: [
                             viewModel.providerAddress == null
                                 ? const Text(
-                                    'Select Your Address',
+                                    'Selecteer uw adres',
                                     style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
@@ -222,7 +222,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                             controller: houseNumberController,
                             prefixIcon: const Icon(Icons.home_outlined),
                             maxLines: 1,
-                            hintText: 'House Number')),
+                            hintText: 'Huisnummer')),
                     const SizedBox(width: 12),
                     Expanded(
                         child: TextFieldCustom(
@@ -230,7 +230,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                             controller: postCodeController,
                             prefixIcon: const Icon(Icons.lock_outline),
                             maxLines: 1,
-                            hintText: 'Post Code')),
+                            hintText: 'Postcode')),
                   ],
                 ),
                 const VerticalSpeacing(16),
@@ -239,7 +239,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                     controller: phoneController,
                     prefixIcon: const Icon(Icons.phone),
                     maxLines: 1,
-                    hintText: 'Enter telephone number'),
+                    hintText: 'Mobiel Nummer'),
                 const VerticalSpeacing(16),
                 GestureDetector(
                   onTap: () => selectDate(context),
@@ -252,7 +252,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                         child: const Icon(Icons.calendar_month_outlined),
                       ),
                       maxLines: 1,
-                      hintText: 'Date of birth',
+                      hintText: 'Geboortedatum',
                     ),
                   ),
                 ),
@@ -268,7 +268,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      'I agree with the terms and condition',
+                      'Ik ga akkoord met de voorwaarden',
                       style: GoogleFonts.getFont(
                         "Poppins",
                         textStyle: const TextStyle(
@@ -292,7 +292,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                     ),
                     const SizedBox(width: 8),
                     Text(
-                      'I agree with free privacy policy',
+                      'Ik ga akkoord met het privacybeleid',
                       style: GoogleFonts.getFont(
                         "Poppins",
                         textStyle: const TextStyle(
@@ -307,7 +307,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                 ),
                 const VerticalSpeacing(24.0),
                 RoundedButton(
-                    title: 'Register',
+                    title: 'Registreren',
                     onpress: () {
                       if (isChecked && isChecked2) {
                         authViewModel.saveDetails(
@@ -321,7 +321,8 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                             context: context);
                       } else {
                         Utils.flushBarErrorMessage(
-                            "Please select terms and Privacy Policy", context);
+                            "Selecteer de voorwaarden en het privacybeleid",
+                            context);
                       }
                     }),
                 const VerticalSpeacing(30.0),
