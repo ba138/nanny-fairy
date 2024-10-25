@@ -66,20 +66,14 @@ class CommunityRepoProvider {
         "timePost": DateTime.now().toUtc().toIso8601String()
       });
       Navigator.of(context).pop();
-      Utils.toastMessage('Images saved successfully!');
+      Utils.toastMessage('Afbeelding succesvol opgeslagen!');
       debugPrint(userId);
 
       Navigator.push(context,
           MaterialPageRoute(builder: (context) => const DashBoardScreen()));
-      // Navigator.pushNamedAndRemoveUntil(
-      //   context,
-      //   RoutesName.dashboard,
-      //   (route) => false,
-      // );
     } catch (e) {
       Navigator.of(context).pop();
 
-      // Handle any errors that occur during save
       debugPrint('Error saving images: $e');
       Utils.flushBarErrorMessage('Failed to save Images', context);
     }

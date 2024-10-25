@@ -79,7 +79,7 @@ class CommunituCartWidget extends StatelessWidget {
                     padding: const EdgeInsets.all(4.0),
                     child: Center(
                       child: Text(
-                        '$totalComments Comment',
+                        '$totalComments Opmerkingen',
                         style: GoogleFonts.getFont(
                           "Poppins",
                           textStyle: const TextStyle(
