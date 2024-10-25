@@ -9,7 +9,14 @@ import 'package:nanny_fairy/res/components/widgets/vertical_spacing.dart';
 import '../../../res/components/colors.dart';
 
 class CommunityDetailView extends StatefulWidget {
-  const CommunityDetailView({super.key, required this.img, required this.title, required this.subtitle, required this.postId, required this.userId});
+  const CommunityDetailView({
+    super.key,
+    required this.img,
+    required this.title,
+    required this.subtitle,
+    required this.postId,
+    required this.userId,
+  });
   final String img;
   final String title;
   final String subtitle;
@@ -36,7 +43,7 @@ class _CommunityDetailViewState extends State<CommunityDetailView> {
   Future<void> _fetchComments() async {
     try {
       List<Map<String, dynamic>> fetchedComments =
-      await _communityRepoProvider.getComments(widget.postId);
+          await _communityRepoProvider.getComments(widget.postId);
       setState(() {
         comments = fetchedComments;
         isLoading = false;
@@ -143,41 +150,41 @@ class _CommunityDetailViewState extends State<CommunityDetailView> {
               isLoading
                   ? const Center(child: CircularProgressIndicator())
                   : comments.isEmpty
-                  ? const Text('No comments yet.')
-                  : ListView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: comments.length,
-                itemBuilder: (context, index) {
-                  final comment = comments[index];
-                  String formattedDate =
-                  DateFormat('yyyy-MM-dd – kk:mm').format(
-                      DateTime.parse(comment['timestamp']));
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 5.0),
-                    child: ListTile(
-                      title: Text(
-                        comment['comment'] ?? '',
-                        style: const TextStyle(
-                          fontFamily: 'CenturyGothic',
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
-                          color: AppColor.blackColor,
+                      ? const Text('No comments yet.')
+                      : ListView.builder(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemCount: comments.length,
+                          itemBuilder: (context, index) {
+                            final comment = comments[index];
+                            String formattedDate =
+                                DateFormat('yyyy-MM-dd – kk:mm').format(
+                                    DateTime.parse(comment['timestamp']));
+                            return Padding(
+                              padding: const EdgeInsets.only(bottom: 5.0),
+                              child: ListTile(
+                                title: Text(
+                                  comment['comment'] ?? '',
+                                  style: const TextStyle(
+                                    fontFamily: 'CenturyGothic',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    color: AppColor.blackColor,
+                                  ),
+                                ),
+                                subtitle: Text(
+                                  formattedDate,
+                                  style: const TextStyle(
+                                    fontFamily: 'CenturyGothic',
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w400,
+                                    color: AppColor.blackColor,
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
                         ),
-                      ),
-                      subtitle: Text(
-                        formattedDate,
-                        style: const TextStyle(
-                          fontFamily: 'CenturyGothic',
-                          fontSize: 10,
-                          fontWeight: FontWeight.w400,
-                          color: AppColor.blackColor,
-                        ),
-                      ),
-                    ),
-                  );
-                },
-              ),
               const VerticalSpeacing(16),
               const Text(
                 'Leave a comment',

@@ -29,7 +29,7 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
           icon: const Icon(Icons.check_circle,
               color: AppColor.primaryColor, size: 120),
           title: Text(
-            'Congratulation you\nupload your Post',
+            "Gefeliciteerd met het uploaden\n van je bericht",
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
@@ -71,38 +71,6 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
     getProviderInfoRepo.fetchCurrentFamilyInfo();
   }
 
-  // void applyBoldFormatting() {
-  //   final text = contentController.text;
-  //   final selection = contentController.selection;
-  //
-  //   if (selection.isValid) {
-  //     final selectedText = text.substring(selection.start, selection.end);
-  //     final newText =
-  //         '${text.substring(0, selection.start)}**$selectedText**${text.substring(selection.end)}';
-  //     contentController.text = newText;
-  //
-  //     // Move cursor back to the end of the newly formatted text
-  //     contentController.selection = TextSelection.collapsed(
-  //         offset: selection.start + selectedText.length + 4);
-  //   }
-  // }
-  //
-  // void applyItalicFormatting() {
-  //   final text = contentController.text;
-  //   final selection = contentController.selection;
-  //
-  //   if (selection.isValid) {
-  //     final selectedText = text.substring(selection.start, selection.end);
-  //     final newText =
-  //         '${text.substring(0, selection.start)}*$selectedText*${text.substring(selection.end)}';
-  //     contentController.text = newText;
-  //
-  //     // Move cursor back to the end of the newly formatted text
-  //     contentController.selection = TextSelection.collapsed(
-  //         offset: selection.start + selectedText.length + 2);
-  //   }
-  // }
-
   final bool status = false;
   @override
   Widget build(BuildContext context) {
@@ -113,11 +81,11 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: Text(
-          'Upload Your Post',
+          'Schrijf een Blogpost',
           style: GoogleFonts.getFont(
             "Poppins",
             textStyle: const TextStyle(
-              fontSize: 18,
+              fontSize: 16,
               fontWeight: FontWeight.w400,
               color: AppColor.creamyColor,
             ),
@@ -175,11 +143,11 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
                                   pickPost();
                                 },
                                 child: const CircleAvatar(
-                                  backgroundColor: AppColor.primaryColor,
+                                  backgroundColor: AppColor.lavenderColor,
                                   child: Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Icon(
-                                      Icons.photo_camera,
+                                      Icons.photo_camera_outlined,
                                       color: AppColor.creamyColor,
                                     ),
                                   ),
@@ -220,7 +188,7 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
                     TextFieldCustom(
                         controller: titleController,
                         maxLines: 1,
-                        hintText: 'Your title...'),
+                        hintText: 'Jouw titel...'),
                     Container(
                       height: 200,
                       width: double.infinity,
@@ -249,7 +217,7 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
                           maxLines: 10,
                           controller: contentController,
                           decoration: const InputDecoration(
-                            hintText: 'Your Content...',
+                            hintText: 'Jouw inhoud...',
                             border: InputBorder.none,
                           ),
                         ),
@@ -259,7 +227,7 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
                     RoundedButton(
                       buttonColor: AppColor.lavenderColor,
                       titleColor: AppColor.creamyColor,
-                      title: 'Continue',
+                      title: 'Uploaden',
                       onpress: () {
                         if (titleController.text.isNotEmpty ||
                             contentController.text.isNotEmpty) {
@@ -273,7 +241,7 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
                               status);
                         } else {
                           Utils.flushBarErrorMessage(
-                              "Please upload post", context);
+                              "Vul alle velden in", context);
                         }
                         // showCommunityDialog(context);
                       },
