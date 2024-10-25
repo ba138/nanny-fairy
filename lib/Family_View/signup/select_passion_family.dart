@@ -1,31 +1,30 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nanny_fairy/FamilyController/family_auth_controller.dart';
 import 'package:nanny_fairy/res/components/colors.dart';
 import 'package:nanny_fairy/res/components/rounded_button.dart';
 import 'package:nanny_fairy/res/components/widgets/vertical_spacing.dart';
-import 'package:nanny_fairy/utils/routes/routes_name.dart';
 import 'package:provider/provider.dart';
-import '../../../res/components/ToggleButtonSelectPassion.dart';
 import '../../utils/utils.dart';
 
 class SelectPassionFamilyView extends StatefulWidget {
-  const SelectPassionFamilyView({super.key,});
-
+  const SelectPassionFamilyView({
+    super.key,
+  });
 
   @override
-  State<SelectPassionFamilyView> createState() => _SelectPassionFamilyViewState();
+  State<SelectPassionFamilyView> createState() =>
+      _SelectPassionFamilyViewState();
 }
 
 class _SelectPassionFamilyViewState extends State<SelectPassionFamilyView> {
   final List<String> labels = [
-    'Animal care',
-    'Home sitter',
-    'Elderly care',
-    'Homework',
-    'Cleaning',
-    'Music lesson',
+    'Kinderoppas',
+    'Thuiszorg',
+    'Schoonmaakdiensten',
+    'Tuinonderhoud',
+    'Huisoppas',
+    'Dierenoppas',
   ];
   final List<String> selectedLabels = [];
 
@@ -45,7 +44,7 @@ class _SelectPassionFamilyViewState extends State<SelectPassionFamilyView> {
     return Scaffold(
       backgroundColor: AppColor.oceanColor,
       appBar: PreferredSize(
-        preferredSize: const Size.square(70),
+        preferredSize: const Size.square(50),
         child: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0.0,
@@ -59,11 +58,11 @@ class _SelectPassionFamilyViewState extends State<SelectPassionFamilyView> {
             },
           ),
           title: Text(
-            'Select your preference',
+            'Selecteer de Diensten die Je Biedt',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 20,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: AppColor.whiteColor,
               ),
@@ -89,7 +88,7 @@ class _SelectPassionFamilyViewState extends State<SelectPassionFamilyView> {
             children: [
               const VerticalSpeacing(26),
               Text(
-                'Register as a provider',
+                'Kies de Diensten die Je Aanbiedt',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(
@@ -138,7 +137,7 @@ class _SelectPassionFamilyViewState extends State<SelectPassionFamilyView> {
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     label,
@@ -171,14 +170,14 @@ class _SelectPassionFamilyViewState extends State<SelectPassionFamilyView> {
                 ),
               ),
               RoundedButton(
-                title: 'Register',
+                title: 'Opslaan',
                 onpress: () {
                   if (labels.isNotEmpty) {
                     authViewModelFamily.savePassion(
                         passionList: selectedLabels, context: context);
                   } else {
                     Utils.flushBarErrorMessage(
-                        "Please Select the Passion", context);
+                        "Selecteer de diensten", context);
                   }
                 },
               ),
