@@ -77,7 +77,7 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
           ),
         ),
         title: const Text(
-          "Reviews",
+          "Beoordelingen",
           style: TextStyle(
             fontFamily: 'CenturyGothic',
             fontSize: 18,
@@ -90,7 +90,8 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
         child: _isLoading
             ? const Center(child: CircularProgressIndicator())
             : reviews.isEmpty
-                ? const Center(child: Text('No reviews available.'))
+                ? const Center(
+                    child: Text('Er zijn geen beoordelingen beschikbaar.'))
                 : Padding(
                     padding: const EdgeInsets.only(
                       left: 20,
@@ -126,7 +127,7 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
                                   ),
                                   const VerticalSpeacing(10),
                                   Text(
-                                    "${reviews.length} reviews",
+                                    "${reviews.length} beoordelingen",
                                     style: const TextStyle(
                                       fontFamily: 'CenturyGothic',
                                       fontSize: 14,

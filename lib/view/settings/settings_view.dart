@@ -33,7 +33,7 @@ class _SettingsViewState extends State<SettingsView> {
       appBar: AppBar(
         backgroundColor: AppColor.creamyColor,
         title: Text(
-          'Settings',
+          'Instellingen',
           style: GoogleFonts.getFont(
             "Poppins",
             textStyle: const TextStyle(

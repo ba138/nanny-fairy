@@ -37,7 +37,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
       appBar: AppBar(
         backgroundColor: AppColor.creamyColor,
         title: Text(
-          'Settings',
+          'Instellingen',
           style: GoogleFonts.getFont(
             "Poppins",
             textStyle: const TextStyle(
@@ -68,13 +68,13 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
               },
               child: Container(
                 height: 28,
-                width: 45,
+                width: 90,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(4),
                     color: AppColor.lavenderColor),
                 child: const Center(
                   child: Text(
-                    'Edit',
+                    'Bewerking',
                     style: TextStyle(
                       fontSize: 16,
                       color: AppColor.creamyColor,
@@ -119,6 +119,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      const VerticalSpeacing(30),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -126,7 +127,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Availability',
+                                'Beschikbaarheid',
                                 style: GoogleFonts.getFont(
                                   "Poppins",
                                   textStyle: const TextStyle(
@@ -134,14 +135,6 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
                                     fontWeight: FontWeight.w400,
                                     color: AppColor.blackColor,
                                   ),
-                                ),
-                              ),
-                              const SizedBox(height: 8),
-                              const Text(
-                                'Officia irure irure an',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: AppColor.grayColor,
                                 ),
                               ),
                             ],
@@ -297,7 +290,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Timing',
+                                  'Tijdstip',
                                   style: GoogleFonts.getFont(
                                     "Poppins",
                                     textStyle: const TextStyle(
@@ -314,7 +307,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Morning',
+                                  'Ochtend',
                                   style: GoogleFonts.getFont(
                                     "Poppins",
                                     textStyle: const TextStyle(
@@ -343,7 +336,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Afternoon',
+                                  'Middag',
                                   style: GoogleFonts.getFont(
                                     "Poppins",
                                     textStyle: const TextStyle(
@@ -372,7 +365,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Evening',
+                                  'Avond',
                                   style: GoogleFonts.getFont(
                                     "Poppins",
                                     textStyle: const TextStyle(
@@ -407,7 +400,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
               ),
               const VerticalSpeacing(16.0),
               Text(
-                'Notification',
+                'Kennisgeving',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(
@@ -447,7 +440,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Email',
+                        'E-mail',
                         style: GoogleFonts.getFont(
                           "Poppins",
                           textStyle: const TextStyle(
@@ -460,7 +453,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
                       const VerticalSpeacing(16.0),
                       const ToggleWidget(title: 'promotioneel'),
                       const VerticalSpeacing(16.0),
-                      const ToggleWidget(title: 'Status updates over bookigen'),
+                      const ToggleWidget(title: 'Statusupdates over boeking'),
                     ],
                   ),
                 ),
@@ -470,7 +463,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Account',
+                    'Rekening',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -513,7 +506,7 @@ class _SettingsFamilyViewState extends State<SettingsFamilyView> {
                     children: [
                       const VerticalSpeacing(16.0),
                       Text(
-                        'email address',
+                        'E-mailadres',
                         style: GoogleFonts.getFont(
                           "Poppins",
                           textStyle: const TextStyle(
