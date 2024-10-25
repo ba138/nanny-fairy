@@ -64,11 +64,11 @@ class _BookedViewState extends State<BookedView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.secondaryBgColor,
+      backgroundColor: AppColor.creamyColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
-          backgroundColor: AppColor.primaryColor,
+          backgroundColor: AppColor.lavenderColor,
           automaticallyImplyLeading: false,
           title: Text(
             'Completed Booked',
@@ -77,7 +77,7 @@ class _BookedViewState extends State<BookedView> {
               textStyle: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: AppColor.whiteColor,
+                color: AppColor.creamyColor,
               ),
             ),
           ),

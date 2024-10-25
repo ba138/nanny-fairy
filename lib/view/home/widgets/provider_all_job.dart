@@ -57,9 +57,12 @@ class _ProviderAllJobState extends State<ProviderAllJob> {
         Provider.of<ProviderDistanceViewModel>(context, listen: false);
     // ignore: deprecated_member_use
     return WillPopScope(
+
       onWillPop: _onWillPop,
       child: Scaffold(
+        backgroundColor: AppColor.creamyColor,
         appBar: AppBar(
+          backgroundColor: AppColor.creamyColor,
           leading: IconButton(
             icon: const Icon(
               Icons.west,

@@ -20,17 +20,17 @@ class CommunituCartWidgetFamily extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColor.whiteColor,
+        color: AppColor.creamyColor,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
           strokeAlign: BorderSide.strokeAlignCenter,
-          color: const Color(0xff1B81BC)
+          color: AppColor.lavenderColor
               .withOpacity(0.10), // Stroke color with 10% opacity
           width: 1,
         ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xff1B81BC)
+            color: AppColor.lavenderColor
                 .withOpacity(0.1), // Drop shadow color with 4% opacity
             blurRadius: 2,
             offset: const Offset(1, 2),
@@ -73,7 +73,7 @@ class CommunituCartWidgetFamily extends StatelessWidget {
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(12),
                         bottomLeft: Radius.circular(12)),
-                    color: AppColor.avatarColor,
+                    color: AppColor.peachColor,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(4.0),
@@ -85,7 +85,7 @@ class CommunituCartWidgetFamily extends StatelessWidget {
                           textStyle: const TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
-                            color: AppColor.whiteColor,
+                            color: AppColor.creamyColor,
                           ),
                         ),
                       ),

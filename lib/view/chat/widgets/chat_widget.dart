@@ -144,7 +144,7 @@ class ChatWidget extends StatelessWidget {
                         width: 20,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10.0),
-                            color: AppColor.primaryColor),
+                            color: AppColor.chatLavenderColor),
                       )
                     : const SizedBox(),
               ],

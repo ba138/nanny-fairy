@@ -35,7 +35,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          backgroundColor: AppColor.whiteColor,
+          backgroundColor: AppColor.creamyColor,
           shape: const RoundedRectangleBorder(),
           content: Column(
             mainAxisSize: MainAxisSize.min,
@@ -81,7 +81,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
         height: 103,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: AppColor.whiteColor,
+          color: AppColor.creamyColor,
           borderRadius: BorderRadius.circular(10.0),
           border: Border.all(
             strokeAlign: BorderSide.strokeAlignCenter,
@@ -166,7 +166,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
                                 padding: const EdgeInsets.only(left: 4),
                                 child: CardButton(
                                   title: widget.passion[index],
-                                  color: AppColor.avatarColor,
+                                  color: AppColor.peachColor,
                                   onTap: () {
                                     // Add your onTap functionality here
                                   },
@@ -193,7 +193,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
                   width: 78,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(32),
-                    color: AppColor.primaryColor,
+                    color: AppColor.lavenderColor,
                   ),
                   child: Center(
                     child: Text(
@@ -203,7 +203,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
                         textStyle: const TextStyle(
                           fontSize: 9,
                           fontWeight: FontWeight.w400,
-                          color: AppColor.whiteColor,
+                          color: AppColor.creamyColor,
                         ),
                       ),
                     ),

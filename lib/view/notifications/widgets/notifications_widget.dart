@@ -3,7 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../res/components/colors.dart';
 
 class NotificationsWidget extends StatelessWidget {
-  const NotificationsWidget({super.key, required this.providerName, required this.notificationDetail});
+  const NotificationsWidget(
+      {super.key,
+      required this.providerName,
+      required this.notificationDetail});
 
   final String providerName;
   final String notificationDetail;
@@ -14,7 +17,7 @@ class NotificationsWidget extends StatelessWidget {
       height: 94,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: AppColor.whiteColor,
+        color: AppColor.creamyColor,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
           strokeAlign: BorderSide.strokeAlignCenter,
@@ -37,13 +40,13 @@ class NotificationsWidget extends StatelessWidget {
           height: 50,
           width: 50,
           decoration: BoxDecoration(
-            color: AppColor.primaryColor,
+            color: AppColor.lavenderColor,
             borderRadius: BorderRadius.circular(25),
           ),
           child: const Center(
             child: Icon(
               Icons.notifications,
-              color: AppColor.whiteColor,
+              color: AppColor.creamyColor,
             ),
           ),
         ),
@@ -59,7 +62,7 @@ class NotificationsWidget extends StatelessWidget {
           ),
         ),
         subtitle: Text(
-         notificationDetail,
+          notificationDetail,
           style: GoogleFonts.getFont(
             "Poppins",
             textStyle: const TextStyle(

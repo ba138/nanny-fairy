@@ -7,8 +7,6 @@ import 'package:provider/provider.dart';
 
 import 'package:nanny_fairy/Repository/provider_chat_repository.dart';
 import 'package:nanny_fairy/ViewModel/provider_chat_view_model.dart';
-import 'package:nanny_fairy/res/components/widgets/shimmer_effect.dart';
-
 import '../../../res/components/colors.dart';
 
 class ChatScreenWidget extends StatefulWidget {
@@ -41,6 +39,16 @@ class ChatMessage {
 
 class ChatScreenState extends State<ChatScreenWidget> {
   final TextEditingController _textController = TextEditingController();
+  final ScrollController scrollController = ScrollController();
+  void scrollToBottom() {
+    if (scrollController.hasClients) {
+      scrollController.animateTo(
+        scrollController.position.maxScrollExtent,
+        duration: const Duration(milliseconds: 100),
+        curve: Curves.linearToEaseOut,
+      );
+    }
+  }
 
   Widget _buildMessage(String message, String senderId) {
     var auth = FirebaseAuth.instance;
@@ -60,7 +68,7 @@ class ChatScreenState extends State<ChatScreenWidget> {
           padding: const EdgeInsets.all(16.0),
           decoration: BoxDecoration(
             color: senderId == auth.currentUser!.uid
-                ? AppColor.primaryColor
+                ? AppColor.blossomColor
                 : AppColor.blackColor,
             borderRadius: BorderRadius.circular(12.0),
           ),
@@ -74,21 +82,14 @@ class ChatScreenState extends State<ChatScreenWidget> {
   }
 
   @override
+  void dispose() {
+    scrollController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final chatController = Provider.of<ProvidersChatController>(context);
-    final ScrollController scrollController = ScrollController();
-
-    void scrollToBottom() {
-      if (scrollController.hasClients) {
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          scrollController.animateTo(
-            scrollController.position.maxScrollExtent,
-            duration: const Duration(milliseconds: 300),
-            curve: Curves.easeOut,
-          );
-        });
-      }
-    }
 
     return Column(
       children: <Widget>[
@@ -119,11 +120,7 @@ class ChatScreenState extends State<ChatScreenWidget> {
               return chats;
             }),
             builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return const Center(
-                    child:
-                        CircularProgressIndicator()); // Replace with your loading widget
-              } else if (snapshot.hasError) {
+              if (snapshot.hasError) {
                 return Center(child: Text('Error: ${snapshot.error}'));
               } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
                 return const Center(child: Text('No messages found.'));
@@ -175,7 +172,7 @@ class ChatScreenState extends State<ChatScreenWidget> {
           IconButton(
             icon: const Icon(
               Icons.send,
-              color: AppColor.primaryColor,
+              color: AppColor.blossomColor,
             ),
             onPressed: () {
               if (_textController.text.isNotEmpty) {

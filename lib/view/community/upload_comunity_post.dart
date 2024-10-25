@@ -108,7 +108,7 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
   Widget build(BuildContext context) {
     final communityController = Provider.of<CommunityViewViewModel>(context);
     return Scaffold(
-      backgroundColor: AppColor.primaryColor,
+      backgroundColor: AppColor.lavenderColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
@@ -119,7 +119,7 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
             textStyle: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w400,
-              color: AppColor.whiteColor,
+              color: AppColor.creamyColor,
             ),
           ),
         ),
@@ -130,14 +130,14 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
             },
             icon: const Icon(
               Icons.west,
-              color: AppColor.whiteColor,
+              color: AppColor.creamyColor,
             )),
       ),
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColor.creamyColor,
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30),
           ),
@@ -180,7 +180,7 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
                                     padding: EdgeInsets.all(8.0),
                                     child: Icon(
                                       Icons.photo_camera,
-                                      color: AppColor.whiteColor,
+                                      color: AppColor.creamyColor,
                                     ),
                                   ),
                                 ),
@@ -204,12 +204,12 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
                                   pickPost();
                                 },
                                 child: const CircleAvatar(
-                                  backgroundColor: AppColor.primaryColor,
+                                  backgroundColor: AppColor.lavenderColor,
                                   child: Padding(
                                     padding: EdgeInsets.all(8.0),
                                     child: Icon(
                                       Icons.photo_camera,
-                                      color: AppColor.whiteColor,
+                                      color: AppColor.creamyColor,
                                     ),
                                   ),
                                 ),
@@ -225,7 +225,7 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
                       height: 200,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: AppColor.whiteColor,
+                        color: AppColor.creamyColor,
                         borderRadius: BorderRadius.circular(6),
                         border: Border.all(
                           strokeAlign: BorderSide.strokeAlignCenter,
@@ -256,26 +256,9 @@ class _UploadComunityPostState extends State<UploadComunityPost> {
                       ),
                     ),
                     const VerticalSpeacing(30.0),
-                    // Row(
-                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //   children: [
-                    //     ElevatedButton(
-                    //       onPressed: () {
-                    //         // Apply bold formatting
-                    //         applyBoldFormatting();
-                    //       },
-                    //       child: const Text('Bold'),
-                    //     ),
-                    //     ElevatedButton(
-                    //       onPressed: () {
-                    //         // Apply italic formatting
-                    //         applyItalicFormatting();
-                    //       },
-                    //       child: const Text('Italic'),
-                    //     ),
-                    //   ],
-                    // ),
                     RoundedButton(
+                      buttonColor: AppColor.lavenderColor,
+                      titleColor: AppColor.creamyColor,
                       title: 'Continue',
                       onpress: () {
                         if (titleController.text.isNotEmpty ||

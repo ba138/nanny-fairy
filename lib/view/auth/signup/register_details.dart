@@ -78,7 +78,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
     final distanceViewModel =
         Provider.of<PlaceViewModel>(context, listen: false);
     return Scaffold(
-      backgroundColor: AppColor.primaryColor,
+      backgroundColor: AppColor.oceanColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
@@ -87,7 +87,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
           leading: IconButton(
             icon: const Icon(
               Icons.west,
-              color: AppColor.whiteColor,
+              color: AppColor.authCreamColor,
             ),
             onPressed: () {
               Navigator.pop(context);
@@ -100,7 +100,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
               textStyle: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: AppColor.whiteColor,
+                color: AppColor.authCreamColor,
               ),
             ),
           ),
@@ -110,7 +110,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
         height: double.infinity,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: AppColor.whiteColor,
+          color: AppColor.authCreamColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30.0),
           ),
@@ -159,7 +159,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                       margin: const EdgeInsets.symmetric(vertical: 10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
-                        color: AppColor.whiteColor,
+                        color: AppColor.authCreamColor,
                         border: Border.all(
                           strokeAlign: BorderSide.strokeAlignCenter,
                           color: const Color(0xff1B81BC).withOpacity(
@@ -264,8 +264,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                     RoundedCheckbox(
                       value: isChecked,
                       onChanged: _handleCheckboxChanged,
-                      activeColor: AppColor
-                          .primaryColor, // Change this to your desired color
+                      activeColor: AppColor.oceanColor,
                     ),
                     const SizedBox(width: 8),
                     Text(
@@ -289,7 +288,7 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                     RoundedCheckbox(
                       value: isChecked2,
                       onChanged: _handleCheckboxChanged2,
-                      activeColor: AppColor.primaryColor,
+                      activeColor: AppColor.oceanColor,
                     ),
                     const SizedBox(width: 8),
                     Text(

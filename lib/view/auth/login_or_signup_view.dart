@@ -11,6 +11,7 @@ class LoginOrSignupView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.authCreamColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 20, right: 20),
@@ -49,7 +50,7 @@ class LoginOrSignupView extends StatelessWidget {
                             textStyle: const TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.w600,
-                              color: AppColor.primaryColor,
+                              color: AppColor.oceanColor,
                             ),
                           ),
                         ),

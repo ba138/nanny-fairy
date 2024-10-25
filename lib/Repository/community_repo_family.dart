@@ -146,6 +146,7 @@ class CommunityRepoFamily {
             "content": post.child('content').value ?? '',
             "userId": post.child('userId').value ?? '',
             "postId": post.child('postId').value ?? '',
+            "status": post.child("status").value ?? '',
           });
         }
         return posts;

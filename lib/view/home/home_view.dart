@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nanny_fairy/Repository/home_ui_repostory.dart';
-import 'package:nanny_fairy/ViewModel/provider_distance_view_model.dart';
 import 'package:nanny_fairy/ViewModel/provider_home_view_model.dart';
 import 'package:nanny_fairy/res/components/colors.dart';
 import 'package:nanny_fairy/res/components/searchbar.dart';
@@ -24,16 +23,10 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   @override
-  void initState() {
-    super.initState();
-    // Fetch users when the widget initializes
-  }
-
-  @override
   Widget build(BuildContext context) {
     final homeViewModel = Provider.of<ProviderHomeViewModel>(context);
-
     return Scaffold(
+      backgroundColor: AppColor.creamyColor,
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Column(
@@ -45,7 +38,7 @@ class _HomeViewState extends State<HomeView> {
                   height: 179,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    color: AppColor.primaryColor,
+                    color: AppColor.lavenderColor,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20),
                       bottomRight: Radius.circular(20),
@@ -72,7 +65,7 @@ class _HomeViewState extends State<HomeView> {
                                   textStyle: const TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.w500,
-                                    color: AppColor.whiteColor,
+                                    color: AppColor.creamyColor,
                                   ),
                                 ),
                               ),
@@ -83,7 +76,7 @@ class _HomeViewState extends State<HomeView> {
                                   textStyle: const TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500,
-                                    color: AppColor.whiteColor,
+                                    color: AppColor.creamyColor,
                                   ),
                                 ),
                               ),
@@ -112,7 +105,7 @@ class _HomeViewState extends State<HomeView> {
                                 textStyle: const TextStyle(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,
-                                  color: AppColor.whiteColor,
+                                  color: AppColor.creamyColor,
                                 ),
                               ),
                             ),
@@ -123,7 +116,7 @@ class _HomeViewState extends State<HomeView> {
                                 textStyle: const TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w500,
-                                  color: AppColor.whiteColor,
+                                  color: AppColor.creamyColor,
                                 ),
                               ),
                             ),

@@ -77,7 +77,7 @@ class _RegisterDetailsFamilyState extends State<RegisterDetailsFamily> {
     final distanceViewModel =
         Provider.of<PlaceViewModel>(context, listen: false);
     return Scaffold(
-      backgroundColor: AppColor.primaryColor,
+      backgroundColor: AppColor.oceanColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
@@ -86,7 +86,7 @@ class _RegisterDetailsFamilyState extends State<RegisterDetailsFamily> {
           leading: IconButton(
             icon: const Icon(
               Icons.west,
-              color: AppColor.whiteColor,
+              color: AppColor.authCreamColor,
             ),
             onPressed: () {
               Navigator.pop(context);
@@ -99,7 +99,7 @@ class _RegisterDetailsFamilyState extends State<RegisterDetailsFamily> {
               textStyle: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: AppColor.whiteColor,
+                color: AppColor.authCreamColor,
               ),
             ),
           ),
@@ -109,7 +109,7 @@ class _RegisterDetailsFamilyState extends State<RegisterDetailsFamily> {
         height: double.infinity,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: AppColor.whiteColor,
+          color: AppColor.authCreamColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30.0),
           ),
@@ -158,7 +158,7 @@ class _RegisterDetailsFamilyState extends State<RegisterDetailsFamily> {
                       margin: const EdgeInsets.symmetric(vertical: 10),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
-                        color: AppColor.whiteColor,
+                        color: AppColor.authCreamColor,
                         border: Border.all(
                           strokeAlign: BorderSide.strokeAlignCenter,
                           color: const Color(0xff1B81BC).withOpacity(

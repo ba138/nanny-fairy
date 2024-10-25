@@ -57,7 +57,7 @@ class _FamilyChatViewState extends State<FamilyChatView> {
   final uUid = const Uuid().v1();
   final familyId = FirebaseAuth.instance.currentUser!.uid;
   bool _isLoading = false;
-  String _buttonText = 'Hiring';
+  String _buttonText = 'Hire';
   bool _isLocked = false;
   Future<void> _initializeButtonText() async {
     try {
@@ -66,7 +66,7 @@ class _FamilyChatViewState extends State<FamilyChatView> {
 
       // Update _buttonText based on the fetched status
       setState(() {
-        _buttonText = status ?? 'Hiring';
+        _buttonText = status ?? 'Hire';
       });
     } catch (e) {
       // Handle errors
@@ -190,7 +190,7 @@ class _FamilyChatViewState extends State<FamilyChatView> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 const Icon(Icons.verified_outlined,
-                    color: AppColor.primaryColor, size: 100),
+                    color: AppColor.chatLavenderColor, size: 100),
                 const SizedBox(height: 16),
                 Text(
                   'Confirm hiring this provider to start the service and notify them of your choice.',
@@ -261,7 +261,7 @@ class _FamilyChatViewState extends State<FamilyChatView> {
         return false;
       },
       child: Scaffold(
-        backgroundColor: AppColor.primaryColor,
+        backgroundColor: AppColor.chatLavenderColor,
         appBar: AppBar(
           toolbarHeight: 100,
           backgroundColor: Colors.transparent,
@@ -278,7 +278,7 @@ class _FamilyChatViewState extends State<FamilyChatView> {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: Colors.blue,
+                        color: AppColor.chatLavenderColor,
                         width: 2,
                       ),
                     ),
@@ -303,7 +303,7 @@ class _FamilyChatViewState extends State<FamilyChatView> {
                               color: Colors.green,
                               border: Border.all(
                                 width: 2,
-                                color: AppColor.primaryColor,
+                                color: AppColor.chatLavenderColor,
                               ), // Online status indicator color
                             ),
                           ),
@@ -340,7 +340,7 @@ class _FamilyChatViewState extends State<FamilyChatView> {
                   ),
                 ],
               ),
-              _buttonText == "Hiring"
+              _buttonText == "Hire"
                   ? InkWell(
                       onTap: _isLocked
                           ? null
@@ -350,13 +350,16 @@ class _FamilyChatViewState extends State<FamilyChatView> {
                       child: Container(
                         height: 26,
                         width: 82,
-                        color: AppColor.whiteColor,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6),
+                          color: AppColor.whiteColor,
+                        ),
                         child: Center(
                           child: Text(
                             _buttonText,
                             style: const TextStyle(
                               fontSize: 10,
-                              color: AppColor.primaryColor,
+                              color: AppColor.chatLavenderColor,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
@@ -374,13 +377,13 @@ class _FamilyChatViewState extends State<FamilyChatView> {
                           child: Container(
                             height: 26,
                             width: 82,
-                            color: AppColor.whiteColor,
+                            color: AppColor.creamyColor,
                             child: Center(
                               child: Text(
                                 _buttonText,
                                 style: const TextStyle(
                                   fontSize: 10,
-                                  color: AppColor.primaryColor,
+                                  color: AppColor.chatLavenderColor,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
@@ -398,11 +401,11 @@ class _FamilyChatViewState extends State<FamilyChatView> {
                                     builder: (context) => FamilyRating(
                                       providerId: widget.id,
                                       familyId: familyId,
-                                      familyProfile:
+                                      familyProfile: widget.profilePic,
+                                      familyName: widget.name,
+                                      providerProfile:
                                           widget.currentUserProfilePic,
-                                      familyName: widget.currentUserName,
-                                      providerProfile: widget.profilePic,
-                                      providerName: widget.name,
+                                      providerName: widget.currentUserName,
                                     ),
                                   ),
                                 );
@@ -416,7 +419,7 @@ class _FamilyChatViewState extends State<FamilyChatView> {
                                     'Write Review',
                                     style: TextStyle(
                                       fontSize: 10,
-                                      color: AppColor.primaryColor,
+                                      color: AppColor.chatLavenderColor,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
@@ -427,29 +430,26 @@ class _FamilyChatViewState extends State<FamilyChatView> {
             ],
           ),
         ),
-        body: LoadingManager(
-          isLoading: _isLoading,
-          child: Container(
-            height: double.infinity,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              color: AppColor.whiteColor,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30.0),
-              ),
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            color: AppColor.whiteColor,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30.0),
             ),
-            child: FamilyChatScreenWidget(
-              id: widget.id,
-              isSeen: widget.isSeen,
-              currentUserName: widget.currentUserName,
-              currentUserProfile: widget.currentUserProfilePic,
-              providerName: widget.name,
-              providerProfilePic: widget.profilePic,
-              providerRating: widget.providerRatings,
-              providerTotalRating: widget.providerTotalRatings,
-              education: widget.education,
-              hourlyRate: widget.horlyRate,
-            ),
+          ),
+          child: FamilyChatScreenWidget(
+            id: widget.id,
+            isSeen: widget.isSeen,
+            currentUserName: widget.currentUserName,
+            currentUserProfile: widget.currentUserProfilePic,
+            providerName: widget.name,
+            providerProfilePic: widget.profilePic,
+            providerRating: widget.providerRatings,
+            providerTotalRating: widget.providerTotalRatings,
+            education: widget.education,
+            hourlyRate: widget.horlyRate,
           ),
         ),
       ),

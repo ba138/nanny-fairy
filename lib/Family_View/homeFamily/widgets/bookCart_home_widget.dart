@@ -43,7 +43,7 @@ class _BookingCartWidgetHomeState extends State<BookingCartWidgetHome> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          backgroundColor: AppColor.whiteColor,
+          backgroundColor: AppColor.lavenderColor,
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -88,17 +88,17 @@ class _BookingCartWidgetHomeState extends State<BookingCartWidgetHome> {
         height: 131,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: AppColor.whiteColor,
+          color: AppColor.creamyColor,
           borderRadius: BorderRadius.circular(10.0),
           border: Border.all(
             strokeAlign: BorderSide.strokeAlignCenter,
-            color: const Color(0xff1B81BC)
+            color: AppColor.lavenderColor
                 .withOpacity(0.10), // Stroke color with 10% opacity
             width: 1,
           ),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xff1B81BC)
+              color: AppColor.lavenderColor
                   .withOpacity(0.1), // Drop shadow color with 4% opacity
               blurRadius: 2,
               offset: const Offset(1, 2),
@@ -246,7 +246,7 @@ class _BookingCartWidgetHomeState extends State<BookingCartWidgetHome> {
                     width: 68,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(32),
-                      color: AppColor.primaryColor,
+                      color: AppColor.lavenderColor,
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
@@ -259,7 +259,7 @@ class _BookingCartWidgetHomeState extends State<BookingCartWidgetHome> {
                             textStyle: const TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w400,
-                              color: AppColor.whiteColor,
+                              color: AppColor.creamyColor,
                             ),
                           ),
                         ),

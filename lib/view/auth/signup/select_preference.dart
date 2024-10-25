@@ -57,6 +57,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
     final authViewModel = Provider.of<AuthViewModel>(context);
 
     return Scaffold(
+      backgroundColor: AppColor.authCreamColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
@@ -140,7 +141,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
                   const VerticalSpeacing(10),
                   Container(
                     decoration: BoxDecoration(
-                      color: AppColor.whiteColor,
+                      color: AppColor.authCreamColor,
                       border: Border.all(
                         strokeAlign: BorderSide.strokeAlignCenter,
                         color: const Color(0xff1B81BC)
@@ -160,7 +161,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
                     child: Padding(
                       padding: const EdgeInsets.only(left: 8, right: 8.0),
                       child: DropdownButton(
-                        dropdownColor: AppColor.whiteColor,
+                        dropdownColor: AppColor.authCreamColor,
                         isExpanded: true,
                         icon: const Icon(Icons.expand_more),
                         underline: const SizedBox(),

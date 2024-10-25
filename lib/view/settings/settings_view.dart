@@ -29,9 +29,9 @@ class _SettingsViewState extends State<SettingsView> {
     final getProviderInfo = Provider.of<GetFamilyInfoController>(context);
 
     return Scaffold(
-      backgroundColor: AppColor.secondaryBgColor,
+      backgroundColor: AppColor.creamyColor,
       appBar: AppBar(
-        backgroundColor: AppColor.secondaryBgColor,
+        backgroundColor: AppColor.creamyColor,
         title: Text(
           'Settings',
           style: GoogleFonts.getFont(
@@ -58,7 +58,6 @@ class _SettingsViewState extends State<SettingsView> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const VerticalSpeacing(16.0),
             Text(
               'Notification',
               style: GoogleFonts.getFont(
@@ -75,17 +74,17 @@ class _SettingsViewState extends State<SettingsView> {
               height: 146,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: AppColor.whiteColor,
+                color: AppColor.creamyColor,
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
                   strokeAlign: BorderSide.strokeAlignCenter,
-                  color: const Color(0xff1B81BC)
+                  color: AppColor.lavenderColor
                       .withOpacity(0.10), // Stroke color with 10% opacity
                   width: 1,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: const Color(0xff1B81BC)
+                    color: AppColor.lavenderColor
                         .withOpacity(0.1), // Drop shadow color with 4% opacity
                     blurRadius: 2,
                     offset: const Offset(1, 2),
@@ -133,18 +132,6 @@ class _SettingsViewState extends State<SettingsView> {
                     ),
                   ),
                 ),
-
-                // Text(
-                //   'Deactivr of verwijderen',
-                //   style: GoogleFonts.getFont(
-                //     "Poppins",
-                //     textStyle: const TextStyle(
-                //       fontSize: 16,
-                //       fontWeight: FontWeight.w400,
-                //       color: AppColor.primaryColor,
-                //     ),
-                //   ),
-                // ),
               ],
             ),
             const VerticalSpeacing(10.0),
@@ -152,17 +139,17 @@ class _SettingsViewState extends State<SettingsView> {
               height: 146,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: AppColor.whiteColor,
+                color: AppColor.creamyColor,
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
                   strokeAlign: BorderSide.strokeAlignCenter,
-                  color: const Color(0xff1B81BC)
+                  color: AppColor.lavenderColor
                       .withOpacity(0.10), // Stroke color with 10% opacity
                   width: 1,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: const Color(0xff1B81BC)
+                    color: AppColor.lavenderColor
                         .withOpacity(0.1), // Drop shadow color with 10% opacity
                     blurRadius: 2,
                     offset: const Offset(1, 2),

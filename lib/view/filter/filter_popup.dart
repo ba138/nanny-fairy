@@ -54,7 +54,7 @@ class _FilterPopUpState extends State<FilterPopUp> {
           Container(
             height: 116,
             width: double.infinity,
-            color: AppColor.primaryColor,
+            color: AppColor.lavenderColor,
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.only(left: 16.0, right: 16.0),
@@ -67,7 +67,7 @@ class _FilterPopUpState extends State<FilterPopUp> {
                       },
                       icon: const Icon(
                         Icons.close,
-                        color: AppColor.whiteColor,
+                        color: AppColor.creamyColor,
                       ),
                     ),
                     const Text(
@@ -76,7 +76,7 @@ class _FilterPopUpState extends State<FilterPopUp> {
                         fontFamily: 'CenturyGothic',
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
-                        color: AppColor.whiteColor,
+                        color: AppColor.creamyColor,
                       ),
                     ),
                     InkWell(
@@ -92,7 +92,7 @@ class _FilterPopUpState extends State<FilterPopUp> {
                           fontFamily: 'CenturyGothic',
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
-                          color: AppColor.whiteColor,
+                          color: AppColor.creamyColor,
                         ),
                       ),
                     ),
@@ -144,12 +144,12 @@ class _FilterPopUpState extends State<FilterPopUp> {
                   initialRating: 2,
                   minRating: 1,
                   allowHalfRating: true,
-                  glowColor: Colors.amber,
+                  glowColor: AppColor.peachColor,
                   itemCount: 5,
                   itemSize: 30,
                   itemBuilder: (context, _) => const Icon(
                     Icons.star_rate_rounded,
-                    color: Colors.amber,
+                    color: AppColor.peachColor,
                   ),
                   onRatingUpdate: (rating) {
                     totalRating = rating;
@@ -159,6 +159,8 @@ class _FilterPopUpState extends State<FilterPopUp> {
                 Consumer<ProviderDistanceViewModel>(
                   builder: (context, filteredViewModel, child) {
                     return RoundedButton(
+                      buttonColor: AppColor.lavenderColor,
+                      titleColor: AppColor.creamyColor,
                       title: 'Apply Filters',
                       onpress: () {
                         if (query.isNotEmpty) {
@@ -211,7 +213,7 @@ class FilterButton extends StatelessWidget {
         width: 100,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6),
-          color: isSelected ? AppColor.primaryColor : Colors.transparent,
+          color: isSelected ? AppColor.lavenderColor : Colors.transparent,
           border: Border.all(color: AppColor.borderColor, width: 1),
         ),
         child: Center(
@@ -221,7 +223,7 @@ class FilterButton extends StatelessWidget {
               fontFamily: 'CenturyGothic',
               fontSize: 14,
               fontWeight: FontWeight.w400,
-              color: isSelected ? AppColor.whiteColor : AppColor.blackColor,
+              color: isSelected ? AppColor.creamyColor : AppColor.blackColor,
             ),
           ),
         ),

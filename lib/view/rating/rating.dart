@@ -62,9 +62,9 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.secondaryBgColor,
+      backgroundColor: AppColor.creamyColor,
       appBar: AppBar(
-        backgroundColor: AppColor.primaryColor,
+        backgroundColor: AppColor.lavenderColor,
         elevation: 0,
         centerTitle: true,
         leading: IconButton(
@@ -73,7 +73,7 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
           },
           icon: const Icon(
             Icons.arrow_back,
-            color: AppColor.whiteColor,
+            color: AppColor.creamyColor,
           ),
         ),
         title: const Text(
@@ -82,7 +82,7 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
             fontFamily: 'CenturyGothic',
             fontSize: 18,
             fontWeight: FontWeight.w400,
-            color: AppColor.whiteColor,
+            color: AppColor.creamyColor,
           ),
         ),
       ),
@@ -110,7 +110,7 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
                                   Container(
                                     height: 60,
                                     width: 60,
-                                    color: AppColor.primaryColor,
+                                    color: AppColor.lavenderColor,
                                     child: Center(
                                       child: Text(
                                         calculateAverageRating(reviews)
@@ -119,7 +119,7 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
                                           fontFamily: 'CenturyGothic',
                                           fontSize: 22,
                                           fontWeight: FontWeight.w400,
-                                          color: AppColor.whiteColor,
+                                          color: AppColor.creamyColor,
                                         ),
                                       ),
                                     ),
@@ -138,27 +138,27 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
                                     children: [
                                       Icon(
                                         Icons.star,
-                                        color: Colors.amber,
+                                        color: AppColor.peachColor,
                                         size: 18,
                                       ),
                                       Icon(
                                         Icons.star,
-                                        color: Colors.amber,
+                                        color: AppColor.peachColor,
                                         size: 18,
                                       ),
                                       Icon(
                                         Icons.star,
-                                        color: Colors.amber,
+                                        color: AppColor.peachColor,
                                         size: 18,
                                       ),
                                       Icon(
                                         Icons.star,
-                                        color: Colors.amber,
+                                        color: AppColor.peachColor,
                                         size: 18,
                                       ),
                                       Icon(
                                         Icons.star,
-                                        color: Colors.amber,
+                                        color: AppColor.peachColor,
                                         size: 18,
                                       ),
                                     ],
@@ -185,7 +185,7 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
                                         animationDuration: 1000,
                                         width: 160,
                                         percent: 0.8,
-                                        progressColor: AppColor.primaryColor,
+                                        progressColor: AppColor.lavenderColor,
                                         backgroundColor: Colors.grey.shade300,
                                       ),
                                       const Text(
@@ -216,7 +216,7 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
                                         animationDuration: 1000,
                                         width: 160,
                                         percent: 0.7,
-                                        progressColor: AppColor.primaryColor,
+                                        progressColor: AppColor.lavenderColor,
                                         backgroundColor: Colors.grey.shade300,
                                       ),
                                       const Text(
@@ -247,7 +247,7 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
                                         animationDuration: 1000,
                                         width: 160,
                                         percent: 0.6,
-                                        progressColor: AppColor.primaryColor,
+                                        progressColor: AppColor.lavenderColor,
                                         backgroundColor: Colors.grey.shade300,
                                       ),
                                       const Text(
@@ -278,7 +278,7 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
                                         animationDuration: 1000,
                                         width: 160,
                                         percent: 0.5,
-                                        progressColor: AppColor.primaryColor,
+                                        progressColor: AppColor.lavenderColor,
                                         backgroundColor: Colors.grey.shade300,
                                       ),
                                       const Text(
@@ -309,7 +309,7 @@ class _TotalRatingScreenState extends State<TotalRatingScreen> {
                                         animationDuration: 1000,
                                         width: 160,
                                         percent: 0.4,
-                                        progressColor: AppColor.primaryColor,
+                                        progressColor: AppColor.lavenderColor,
                                         backgroundColor: Colors.grey.shade300,
                                       ),
                                       const Text(

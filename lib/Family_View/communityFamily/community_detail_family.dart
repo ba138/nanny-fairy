@@ -78,6 +78,7 @@ class _CommunityDetailViewFamilyState extends State<CommunityDetailViewFamily> {
         '.......................Post Id: ${widget.postId}................');
 
     return Scaffold(
+      backgroundColor: AppColor.creamyColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
@@ -203,6 +204,8 @@ class _CommunityDetailViewFamilyState extends State<CommunityDetailViewFamily> {
               ),
               const VerticalSpeacing(16),
               RoundedButton(
+                buttonColor: AppColor.lavenderColor,
+                titleColor: AppColor.creamyColor,
                 title: 'Post',
                 onpress: _addComment,
               ),

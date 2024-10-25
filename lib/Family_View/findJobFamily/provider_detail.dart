@@ -108,7 +108,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          backgroundColor: AppColor.whiteColor,
+          backgroundColor: AppColor.creamyColor,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(12),
@@ -132,7 +132,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                     borderRadius: BorderRadius.circular(
                       12,
                     ),
-                    color: AppColor.primaryColor,
+                    color: AppColor.lavenderColor,
                   ),
                   child: Center(
                     child: Image.asset(
@@ -159,6 +159,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                 Padding(
                   padding: const EdgeInsets.only(left: 16.0, right: 16.0),
                   child: RoundedButton(
+                    buttonColor: AppColor.lavenderColor,
                     title: 'Subscribe and Chat',
                     onpress: () {
                       Navigator.push(
@@ -204,14 +205,14 @@ class _ProviderDetailsState extends State<ProviderDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.primaryColor,
+      backgroundColor: AppColor.lavenderColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         leading: IconButton(
           icon: const Icon(
             Icons.west,
-            color: AppColor.whiteColor,
+            color: AppColor.creamyColor,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -224,7 +225,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
             textStyle: const TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w400,
-              color: AppColor.whiteColor,
+              color: AppColor.creamyColor,
             ),
           ),
         ),
@@ -238,7 +239,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
             child: Container(
               height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColor.creamyColor,
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30)),
@@ -272,7 +273,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const Icon(Icons.star,
-                                color: Colors.amber, size: 20),
+                                color: AppColor.peachColor, size: 20),
                             const SizedBox(width: 4),
                             Text(
                               '${widget.ratings} (${widget.totalRatings} Reviews)',
@@ -416,14 +417,14 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                                 const SizedBox(width: 16),
                                 Container(
                                   decoration: BoxDecoration(
-                                      color: AppColor.avatarColor,
+                                      color: AppColor.peachColor,
                                       borderRadius: BorderRadius.circular(4)),
                                   child: Padding(
                                     padding: const EdgeInsets.all(2.0),
                                     child: Column(
                                       children: [
                                         const Icon(Icons.school_outlined,
-                                            color: AppColor.whiteColor),
+                                            color: AppColor.creamyColor),
                                         Text(
                                           widget.degree,
                                           style: GoogleFonts.getFont(
@@ -431,7 +432,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                                             textStyle: const TextStyle(
                                               fontSize: 10,
                                               fontWeight: FontWeight.w600,
-                                              color: Colors.white,
+                                              color: AppColor.creamyColor,
                                             ),
                                           ),
                                         ),
@@ -501,10 +502,10 @@ class _ProviderDetailsState extends State<ProviderDetails> {
 
                             if (_isExpanded)
                               Container(
-                                height: 216,
+                                height: MediaQuery.of(context).size.height / 4,
                                 width: double.infinity,
                                 decoration: const BoxDecoration(
-                                  color: AppColor.whiteColor,
+                                  color: AppColor.creamyColor,
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.all(10.0),
@@ -534,13 +535,15 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                                               textStyle: const TextStyle(
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.w400,
-                                                color: AppColor.primaryColor,
+                                                color: AppColor.lavenderColor,
                                               ),
                                             ),
                                           ),
                                         ],
                                       ),
-                                      const Divider(),
+                                      const Divider(
+                                        color: AppColor.lavenderColor,
+                                      ),
                                       const VerticalSpeacing(16),
                                       Row(
                                         mainAxisAlignment:
@@ -564,13 +567,15 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                                               textStyle: const TextStyle(
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.w400,
-                                                color: AppColor.primaryColor,
+                                                color: AppColor.lavenderColor,
                                               ),
                                             ),
                                           ),
                                         ],
                                       ),
-                                      const Divider(),
+                                      const Divider(
+                                        color: AppColor.lavenderColor,
+                                      ),
                                       const VerticalSpeacing(16),
                                       Row(
                                         mainAxisAlignment:
@@ -594,7 +599,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                                               textStyle: const TextStyle(
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.w400,
-                                                color: AppColor.primaryColor,
+                                                color: AppColor.lavenderColor,
                                               ),
                                             ),
                                           ),
@@ -604,7 +609,9 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                                   ),
                                 ),
                               ),
-                            const Divider(),
+                            const Divider(
+                              color: AppColor.lavenderColor,
+                            ),
                             const VerticalSpeacing(16),
                             //Family rating Portion
                             Row(
@@ -621,17 +628,6 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                                     ),
                                   ),
                                 ),
-                                // Text(
-                                //   'More Review',
-                                //   style: GoogleFonts.getFont(
-                                //     "Poppins",
-                                //     textStyle: const TextStyle(
-                                //       fontSize: 14,
-                                //       fontWeight: FontWeight.w400,
-                                //       color: AppColor.primaryColor,
-                                //     ),
-                                //   ),
-                                // ),
                               ],
                             ),
                             const VerticalSpeacing(16.0),
@@ -639,7 +635,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                               height: 90,
                               child: SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
-                                physics: ScrollPhysics(),
+                                physics: const ScrollPhysics(),
                                 child: Row(
                                   children: reviewCards,
                                 ),
@@ -649,6 +645,8 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                         ),
                         const VerticalSpeacing(26),
                         RoundedButton(
+                            buttonColor: AppColor.lavenderColor,
+                            titleColor: AppColor.creamyColor,
                             title: 'Chat With Provider',
                             onpress: () async {
                               var paymentInfo =
@@ -735,7 +733,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
     return Container(
       margin: const EdgeInsets.only(right: 10), // Space between cards
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColor.creamyColor,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
@@ -803,7 +801,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
             const SizedBox(width: 5),
             const Icon(
               Icons.star,
-              color: Colors.amber,
+              color: AppColor.peachColor,
               size: 20,
             ),
             Text(
@@ -811,10 +809,9 @@ class _ProviderDetailsState extends State<ProviderDetails> {
               style: GoogleFonts.getFont(
                 "Poppins",
                 textStyle: const TextStyle(
-                  fontSize: 10,
-                  fontWeight: FontWeight.w400,
-                  color: Colors.orange,
-                ),
+                    fontSize: 10,
+                    fontWeight: FontWeight.w400,
+                    color: AppColor.peachColor),
               ),
             ),
           ],
@@ -833,7 +830,7 @@ class SkillContainerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: AppColor.avatarColor, borderRadius: BorderRadius.circular(4)),
+          color: AppColor.peachColor, borderRadius: BorderRadius.circular(4)),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -845,7 +842,7 @@ class SkillContainerWidget extends StatelessWidget {
                 textStyle: const TextStyle(
                   fontSize: 10,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white,
+                  color: AppColor.creamyColor,
                 ),
               ),
             ),
@@ -856,7 +853,7 @@ class SkillContainerWidget extends StatelessWidget {
                 textStyle: const TextStyle(
                   fontSize: 10,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white,
+                  color: AppColor.creamyColor,
                 ),
               ),
             ),

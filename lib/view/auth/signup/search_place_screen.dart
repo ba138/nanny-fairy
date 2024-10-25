@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nanny_fairy/ViewModel/place_view_model.dart';
+import 'package:nanny_fairy/res/components/colors.dart';
 import 'package:nanny_fairy/view/chat/widgets/predicate_tile.dart';
 import 'package:provider/provider.dart';
 
@@ -11,37 +12,6 @@ class SearchPlacesScreen extends StatefulWidget {
 }
 
 class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
-  // List<PredictedPlaces> placePredictedList = [];
-  // findPlaceAutoCompleteSearch(String inputText) async {
-  //   if (inputText.length > 1) {
-  //     String components = 'country:PK|administrative_area:GB';
-  //     String urlAutoCompleteSearch =
-  //         'https://maps.googleapis.com/maps/api/place/queryautocomplete/json?input=$inputText&key=AIzaSyCBUyZVjnq9IGxH9Zu6ACNRIJXtkfZ2iuQ&components=$components';
-  //     var responseAutoCompleteSearch =
-  //         await RequestAssistant.getRequest(urlAutoCompleteSearch);
-  //     debugPrint("this is search Response : $responseAutoCompleteSearch");
-  //     if (responseAutoCompleteSearch == 'failed') {
-  //       return;
-  //     }
-  //     if (responseAutoCompleteSearch['status'] == "OK") {
-  //       var placePredictions = responseAutoCompleteSearch["predictions"];
-  //       if (placePredictions is List) {
-  //         var placePredictionsList = placePredictions
-  //             .map((jsonData) => PredictedPlaces.fromJson(jsonData))
-  //             .toList();
-  //         debugPrint(
-  //           "Place Predictions List: ${placePredictionsList.toString()}",
-  //         );
-
-  //         setState(() {
-  //           placePredictedList = placePredictionsList;
-  //         });
-  //         debugPrint("Updated Place Predicted List: $placePredictedList");
-  //       }
-  //     }
-  //   }
-  // }
-
   @override
   Widget build(BuildContext context) {
     final distanceViewModel =
@@ -52,7 +22,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
       },
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: AppColor.creamyColor,
           centerTitle: true,
           title: const Text(
             'Set Address',
@@ -80,7 +50,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                 child: Container(
                   height: 46,
                   decoration: const BoxDecoration(
-                    color: Colors.white,
+                    color: AppColor.creamyColor,
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black12,
@@ -100,7 +70,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                     decoration: const InputDecoration(
                       hintText: 'Search Address Here',
                       filled: true,
-                      fillColor: Colors.white,
+                      fillColor: AppColor.creamyColor,
                       border: InputBorder.none,
                       contentPadding:
                           EdgeInsets.only(left: 11, top: 8, bottom: 8),

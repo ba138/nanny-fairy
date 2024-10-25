@@ -44,14 +44,14 @@ class _UploadImageState extends State<UploadImage> {
     final authViewModel = Provider.of<AuthViewModel>(context);
 
     return Scaffold(
-      backgroundColor: AppColor.primaryColor,
+      backgroundColor: AppColor.oceanColor,
       body: Stack(
         children: [
           Container(
             height: MediaQuery.of(context).size.height,
             width: double.infinity,
             decoration: const BoxDecoration(
-              color: AppColor.whiteColor,
+              color: AppColor.authCreamColor,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30.0),
               ),
@@ -80,13 +80,13 @@ class _UploadImageState extends State<UploadImage> {
                       height: 200,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: AppColor.whiteColor,
+                        color: AppColor.authCreamColor,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
                           strokeAlign: BorderSide.strokeAlignCenter,
                           color: !_isWordCountValid
                               ? Colors.red
-                              : Colors.white, // Show red if invalid
+                              : AppColor.authCreamColor, // Show red if invalid
                           width: 1,
                         ),
                         boxShadow: [
@@ -143,7 +143,10 @@ class _UploadImageState extends State<UploadImage> {
                               _isWordCountValid && profilePic != null;
                           if (bioController.text.isNotEmpty && isValid) {
                             authViewModel.saveProfileAndBio(
-                                context, profilePic, bioController.text,);
+                              context,
+                              profilePic,
+                              bioController.text,
+                            );
                             Provider.of<ProviderDistanceViewModel>(context,
                                     listen: false)
                                 .fetchFamiliesFromFirebaseData();
@@ -161,17 +164,17 @@ class _UploadImageState extends State<UploadImage> {
           ),
           // Top container that acts as AppBar
           Container(
-            color: AppColor.primaryColor,
-            height: 250, // Adjust the height to accommodate the avatar overlap
+            color: AppColor.oceanColor,
+            height: 250,
             child: Column(
               children: [
-                const SizedBox(height: 50), // Adjust to add padding at the top
+                const SizedBox(height: 50),
                 Row(
                   children: [
                     IconButton(
                       icon: const Icon(
                         Icons.west,
-                        color: AppColor.whiteColor,
+                        color: AppColor.authCreamColor,
                       ),
                       onPressed: () {
                         Navigator.pop(context);
@@ -185,7 +188,7 @@ class _UploadImageState extends State<UploadImage> {
                         textStyle: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w400,
-                          color: AppColor.whiteColor,
+                          color: AppColor.authCreamColor,
                         ),
                       ),
                     ),
@@ -206,13 +209,13 @@ class _UploadImageState extends State<UploadImage> {
               decoration: BoxDecoration(
                   color: AppColor.avatarColor,
                   borderRadius: BorderRadius.circular(60),
-                  border: Border.all(width: 4, color: AppColor.whiteColor)),
+                  border: Border.all(width: 4, color: AppColor.authCreamColor)),
               child: Center(
                 child: profilePic == null
                     ? Image.asset(
                         'images/profile.png',
                         fit: BoxFit.cover,
-                        color: AppColor.whiteColor,
+                        color: AppColor.authCreamColor,
                       )
                     : Container(
                         height: 120,
@@ -241,7 +244,7 @@ class _UploadImageState extends State<UploadImage> {
                   width: 32,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: AppColor.primaryColor),
+                      color: AppColor.oceanColor),
                   child: Center(
                     child: IconButton(
                       onPressed: () {
@@ -250,7 +253,7 @@ class _UploadImageState extends State<UploadImage> {
                       icon: const Icon(
                         Icons.camera_alt_outlined,
                         size: 18,
-                        color: AppColor.whiteColor,
+                        color: AppColor.authCreamColor,
                       ),
                     ),
                   ),
@@ -261,7 +264,7 @@ class _UploadImageState extends State<UploadImage> {
                   width: 32,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: AppColor.primaryColor),
+                      color: AppColor.oceanColor),
                   child: Center(
                     child: IconButton(
                       onPressed: () {
@@ -270,7 +273,7 @@ class _UploadImageState extends State<UploadImage> {
                       icon: const Icon(
                         Icons.save_as_outlined,
                         size: 18,
-                        color: AppColor.whiteColor,
+                        color: AppColor.authCreamColor,
                       ),
                     ),
                   ),

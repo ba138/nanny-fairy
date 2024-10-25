@@ -17,7 +17,7 @@ class FamilyChatList extends StatelessWidget {
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
-          backgroundColor: AppColor.primaryColor,
+          backgroundColor: AppColor.chatLavenderColor,
           automaticallyImplyLeading: false,
           title: const Text(
             'Message',

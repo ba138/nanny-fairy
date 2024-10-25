@@ -49,7 +49,7 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          backgroundColor: AppColor.whiteColor,
+          backgroundColor: AppColor.creamyColor,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(12),
@@ -71,7 +71,7 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
                             .infinity, // Fill the width of the parent container
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: AppColor.primaryColor,
+                          color: AppColor.lavenderColor,
                         ),
                         child: Center(
                           child: Image.asset(
@@ -87,7 +87,7 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
                             .infinity, // Fill the width of the parent container
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: AppColor.primaryColor,
+                          color: AppColor.lavenderColor,
                         ),
                         child: Center(
                           child: Image.network(
@@ -114,6 +114,8 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
                 Padding(
                   padding: const EdgeInsets.only(left: 16.0, right: 16.0),
                   child: RoundedButton(
+                    buttonColor: AppColor.lavenderColor,
+                    titleColor: AppColor.creamyColor,
                     title: 'Subscribe and Chat',
                     onpress: () {
                       debugPrint("This is reciever Name:${widget.name}");
@@ -149,12 +151,12 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColor.primaryColor,
+        backgroundColor: AppColor.lavenderColor,
         elevation: 0.0,
         leading: IconButton(
           icon: const Icon(
             Icons.west,
-            color: AppColor.whiteColor,
+            color: AppColor.creamyColor,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -167,7 +169,7 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
             textStyle: const TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w400,
-              color: AppColor.whiteColor,
+              color: AppColor.creamyColor,
             ),
           ),
         ),
@@ -183,7 +185,7 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
                   height: 150,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    color: AppColor.primaryColor,
+                    color: AppColor.lavenderColor,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20),
                       bottomRight: Radius.circular(20),
@@ -199,7 +201,7 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
                     padding: const EdgeInsets.symmetric(
                         vertical: 16.0, horizontal: 16.0),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: AppColor.creamyColor,
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
@@ -379,6 +381,8 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
             Padding(
               padding: const EdgeInsets.only(left: 32.0, right: 32.0),
               child: RoundedButton(
+                buttonColor: AppColor.lavenderColor,
+                titleColor: AppColor.creamyColor,
                 title: 'Chat With Family',
                 onpress: () async {
                   var paymentInfo = await getCurrentUserPaymentInfo();

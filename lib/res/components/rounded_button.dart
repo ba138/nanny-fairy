@@ -7,11 +7,16 @@ class RoundedButton extends StatelessWidget {
   final String title;
   final bool loading;
   final VoidCallback onpress;
-  const RoundedButton({
+  Color? buttonColor;
+  Color? titleColor;
+
+  RoundedButton({
     super.key,
     required this.title,
     required this.onpress,
     this.loading = false,
+    this.buttonColor,
+    this.titleColor,
   });
 
   @override
@@ -22,27 +27,25 @@ class RoundedButton extends StatelessWidget {
         height: 46.0,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: AppColor.primaryColor,
+          color: buttonColor ?? AppColor.oceanColor,
           borderRadius: BorderRadius.circular(32),
-          
         ),
-       
         child: Center(
           child: loading
               ? const CircularProgressIndicator(
-            color: AppColor.whiteColor,
-          )
+                  color: AppColor.creamyColor,
+                )
               : Text(
-            title,
-            style: GoogleFonts.getFont(
-              "Poppins",
-              textStyle: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-                color: AppColor.whiteColor,
-              ),
-            ),
-          ),
+                  title,
+                  style: GoogleFonts.getFont(
+                    "Poppins",
+                    textStyle: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: titleColor ?? AppColor.authCreamColor,
+                    ),
+                  ),
+                ),
         ),
       ),
     );

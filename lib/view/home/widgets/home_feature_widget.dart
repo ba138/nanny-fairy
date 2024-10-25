@@ -62,7 +62,7 @@ class HomeFeatureContainer extends StatelessWidget {
                 textStyle: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
-                  color: AppColor.primaryColor,
+                  color: AppColor.lavenderColor,
                 ),
               ),
             ),

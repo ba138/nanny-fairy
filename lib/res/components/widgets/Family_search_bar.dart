@@ -74,15 +74,15 @@ class _FamilySearchBarProviderState extends State<FamilySearchBarProvider> {
             height: 50,
             width: 200,
             decoration: BoxDecoration(
-              color: AppColor.whiteColor,
+              color: AppColor.creamyColor,
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
-                color: const Color(0xff1B81BC).withOpacity(0.10),
+                color: AppColor.lavenderColor.withOpacity(0.10),
                 width: 1,
               ),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xff1B81BC).withOpacity(0.1),
+                  color: AppColor.lavenderColor.withOpacity(0.1),
                   blurRadius: 2,
                   offset: const Offset(1, 2),
                   spreadRadius: 1,
@@ -128,15 +128,15 @@ class _FamilySearchBarProviderState extends State<FamilySearchBarProvider> {
             height: 50,
             width: 56,
             decoration: BoxDecoration(
-              color: AppColor.whiteColor,
+              color: AppColor.creamyColor,
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
-                color: const Color(0xff1B81BC).withOpacity(0.10),
+                color: AppColor.lavenderColor.withOpacity(0.10),
                 width: 1,
               ),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xff1B81BC).withOpacity(0.1),
+                  color: AppColor.lavenderColor.withOpacity(0.1),
                   blurRadius: 2,
                   offset: const Offset(1, 2),
                   spreadRadius: 1,
@@ -146,7 +146,7 @@ class _FamilySearchBarProviderState extends State<FamilySearchBarProvider> {
             child: const Center(
               child: Icon(
                 Icons.filter_alt_outlined,
-                color: AppColor.primaryColor,
+                color: AppColor.lavenderColor,
               ),
             ),
           ),
@@ -160,15 +160,15 @@ class _FamilySearchBarProviderState extends State<FamilySearchBarProvider> {
             height: 50,
             width: 56,
             decoration: BoxDecoration(
-              color: AppColor.whiteColor,
+              color: AppColor.creamyColor,
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
-                color: const Color(0xff1B81BC).withOpacity(0.10),
+                color: AppColor.lavenderColor.withOpacity(0.10),
                 width: 1,
               ),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xff1B81BC).withOpacity(0.1),
+                  color: AppColor.lavenderColor.withOpacity(0.1),
                   blurRadius: 2,
                   offset: const Offset(1, 2),
                   spreadRadius: 1,
@@ -183,6 +183,8 @@ class _FamilySearchBarProviderState extends State<FamilySearchBarProvider> {
                   builder: (context, uiState, distanceViewModel, child) {
                     return DropdownButtonHideUnderline(
                       child: DropdownButton<String>(
+                        dropdownColor: AppColor.creamyColor,
+                        focusColor: AppColor.lavenderColor,
                         value: familyDistance ?? selectedKM,
                         icon: const SizedBox.shrink(),
                         style: GoogleFonts.getFont(
@@ -190,7 +192,7 @@ class _FamilySearchBarProviderState extends State<FamilySearchBarProvider> {
                           textStyle: const TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w600,
-                            color: AppColor.primaryColor,
+                            color: AppColor.lavenderColor,
                           ),
                         ),
                         onChanged: (String? newValue) async {

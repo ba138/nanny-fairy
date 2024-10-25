@@ -1,9 +1,12 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:convert';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart'; // Add this import for ChangeNotifier
 import 'package:http/http.dart' as http;
 import 'package:nanny_fairy/Family_View/findJobFamily/family_all_jobs_view.dart';
+import 'package:nanny_fairy/res/components/colors.dart';
 
 class FamilyDistanceRepository extends ChangeNotifier {
   List<Map<String, dynamic>> _distanceFilterProviders = [];
@@ -84,11 +87,11 @@ class FamilyDistanceRepository extends ChangeNotifier {
       if (address != null) {
         return address;
       } else {
-        print('No address found for the current family.');
+        debugPrint('No address found for the current family.');
         return null;
       }
     } catch (e) {
-      print('Error fetching family address: $e');
+      debugPrint('Error fetching family address: $e');
       return null;
     }
   }
@@ -135,12 +138,15 @@ class FamilyDistanceRepository extends ChangeNotifier {
       barrierDismissible: false, // Prevents dialog from closing on tap outside
       builder: (BuildContext context) {
         return const Dialog(
+          backgroundColor: AppColor.creamyColor,
           child: Padding(
             padding: EdgeInsets.all(20.0),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                CircularProgressIndicator(),
+                CircularProgressIndicator(
+                  color: AppColor.lavenderColor,
+                ),
                 SizedBox(width: 20),
                 Text("Loading..."),
               ],
@@ -160,7 +166,7 @@ class FamilyDistanceRepository extends ChangeNotifier {
       String? familyAddress = await getFamilyAddress();
 
       if (familyAddress == null || familyAddress.isEmpty) {
-        print('No valid family address found');
+        debugPrint('No valid family address found');
         Navigator.of(context).pop();
         return; // Exit if no family address is found
       }
@@ -188,7 +194,7 @@ class FamilyDistanceRepository extends ChangeNotifier {
             provider['status'].toString().isNotEmpty) {
           // This block will only execute if all the conditions are true
         } else {
-          print(
+          debugPrint(
               'Provider ${provider['firstName']} ${provider['lastName']} with address $providerAddress is null, empty, or invalid. Skipping.');
           continue;
         }
@@ -201,7 +207,7 @@ class FamilyDistanceRepository extends ChangeNotifier {
         // Check if the provider is within the specified distance
         if (distance <= maxDistanceKm) {
           if (uniqueProviders.containsKey(providerUid)) {
-            print(
+            debugPrint(
                 'Duplicate provider found: ${provider['firstName']} ${provider['lastName']}');
           }
 
@@ -221,7 +227,7 @@ class FamilyDistanceRepository extends ChangeNotifier {
         notifyListeners(); // Notify listeners that the data has been updated
       }
     } catch (e) {
-      print('Error filtering providers by distance: $e');
+      debugPrint('Error filtering providers by distance: $e');
       Navigator.of(context).pop();
     }
   }
@@ -325,7 +331,7 @@ class FamilyDistanceRepository extends ChangeNotifier {
     required List<String> selectedPassions,
     required Map<String, Map<String, bool>> selectedAvailability,
   }) async {
-    List<Map<String, dynamic>> _filteredProviders = [];
+    List<Map<String, dynamic>> filteredProviders = [];
 
     // Show loading dialog
     showDialog(
@@ -342,7 +348,7 @@ class FamilyDistanceRepository extends ChangeNotifier {
       // Step 1: Fetch the family address for distance calculation
       String? familyAddress = await getFamilyAddress();
       if (familyAddress == null || familyAddress.isEmpty) {
-        print('No valid family address found');
+        debugPrint('No valid family address found');
         Navigator.of(context).pop(); // Close the loading dialog
         return;
       }
@@ -428,17 +434,17 @@ class FamilyDistanceRepository extends ChangeNotifier {
           rateFilteredProviders.isEmpty) {
         debugPrint(
             "No providers match after all filters. Showing only distance filtered providers...");
-        _filteredProviders =
+        filteredProviders =
             distanceFilteredProviders; // Only show distance-filtered providers
       } else {
-        _filteredProviders = passionFilteredProviders.isNotEmpty
+        filteredProviders = passionFilteredProviders.isNotEmpty
             ? passionFilteredProviders
             : ratingFilteredProviders.isNotEmpty
                 ? ratingFilteredProviders
                 : rateFilteredProviders;
       }
 
-      debugPrint("Final filtered providers: ${_filteredProviders.length}");
+      debugPrint("Final filtered providers: ${filteredProviders.length}");
 
       // Step 9: Close the loading dialog
       Navigator.of(context).pop();
@@ -446,8 +452,7 @@ class FamilyDistanceRepository extends ChangeNotifier {
       // Step 10: Navigate to FamilyAllJobsView with the filtered providers
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) =>
-              FamilyAllJobsView(providers: _filteredProviders),
+          builder: (context) => FamilyAllJobsView(providers: filteredProviders),
         ),
       );
     } catch (e) {

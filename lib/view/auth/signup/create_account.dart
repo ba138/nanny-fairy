@@ -34,7 +34,7 @@ class _CreateAccountState extends State<CreateAccount> {
     final authViewModel = Provider.of<AuthViewModel>(context);
 
     return Scaffold(
-        backgroundColor: AppColor.primaryColor,
+        backgroundColor: AppColor.oceanColor,
         body: SafeArea(
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -49,7 +49,7 @@ class _CreateAccountState extends State<CreateAccount> {
                         children: [
                           IconButton(
                             icon: const Icon(Icons.west,
-                                color: AppColor.whiteColor),
+                                color: AppColor.authCreamColor),
                             onPressed: () {
                               Navigator.pop(context);
                             },
@@ -62,7 +62,7 @@ class _CreateAccountState extends State<CreateAccount> {
                               textStyle: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
-                                color: AppColor.whiteColor,
+                                color: AppColor.authCreamColor,
                               ),
                             ),
                           ),
@@ -76,12 +76,12 @@ class _CreateAccountState extends State<CreateAccount> {
                             color: AppColor.avatarColor,
                             borderRadius: BorderRadius.circular(47),
                             border: Border.all(
-                                width: 4, color: AppColor.whiteColor)),
+                                width: 4, color: AppColor.authCreamColor)),
                         child: const Center(
                           child: Icon(
                             Icons.lock_outline,
                             size: 40,
-                            color: AppColor.whiteColor,
+                            color: AppColor.authCreamColor,
                           ),
                         ),
                       ),
@@ -94,7 +94,7 @@ class _CreateAccountState extends State<CreateAccount> {
                           textStyle: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
-                            color: AppColor.whiteColor,
+                            color: AppColor.authCreamColor,
                           ),
                         ),
                       ),
@@ -106,7 +106,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   height: MediaQuery.of(context).size.height,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    color: AppColor.whiteColor,
+                    color: AppColor.authCreamColor,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30.0),
                     ),

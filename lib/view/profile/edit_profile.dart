@@ -97,7 +97,7 @@ class _EditProfileState extends State<EditProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.primaryColor,
+      backgroundColor: AppColor.lavenderColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
@@ -109,7 +109,7 @@ class _EditProfileState extends State<EditProfile> {
               },
               icon: const Icon(
                 Icons.west,
-                color: AppColor.whiteColor,
+                color: AppColor.creamyColor,
               )),
           title: Text(
             'Edit Profile',
@@ -118,7 +118,7 @@ class _EditProfileState extends State<EditProfile> {
               textStyle: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: AppColor.whiteColor,
+                color: AppColor.creamyColor,
               ),
             ),
           ),
@@ -129,7 +129,7 @@ class _EditProfileState extends State<EditProfile> {
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: AppColor.whiteColor,
+          color: AppColor.creamyColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30.0),
           ),
@@ -189,6 +189,8 @@ class _EditProfileState extends State<EditProfile> {
                     hintText: 'Skills...'),
                 const VerticalSpeacing(16.0),
                 RoundedButton(
+                    buttonColor: AppColor.lavenderColor,
+                    titleColor: AppColor.creamyColor,
                     title: 'Update Profile',
                     onpress: () {
                       _updateProfile();

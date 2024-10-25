@@ -37,17 +37,17 @@ class _BookingCartWidgetFamilyState extends State<BookingCartWidgetFamily> {
       padding: const EdgeInsets.only(bottom: 0.0),
       child: Container(
         decoration: BoxDecoration(
-          color: AppColor.whiteColor,
+          color: AppColor.creamyColor,
           borderRadius: BorderRadius.circular(10.0),
           border: Border.all(
             strokeAlign: BorderSide.strokeAlignCenter,
-            color: const Color(0xff1B81BC)
+            color: AppColor.lavenderColor
                 .withOpacity(0.10), // Stroke color with 10% opacity
             width: 1,
           ),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xff1B81BC)
+              color: AppColor.lavenderColor
                   .withOpacity(0.1), // Drop shadow color with 4% opacity
               blurRadius: 2,
               offset: const Offset(1, 2),
@@ -192,7 +192,7 @@ class _BookingCartWidgetFamilyState extends State<BookingCartWidgetFamily> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(32),
-                        color: AppColor.primaryColor,
+                        color: AppColor.lavenderColor,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
@@ -205,7 +205,7 @@ class _BookingCartWidgetFamilyState extends State<BookingCartWidgetFamily> {
                               textStyle: const TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
-                                color: AppColor.whiteColor,
+                                color: AppColor.creamyColor,
                               ),
                             ),
                           ),

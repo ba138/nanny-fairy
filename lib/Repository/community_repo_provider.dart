@@ -144,6 +144,7 @@ class CommunityRepoProvider {
         List<Map<String, dynamic>> posts = [];
         for (var post in snapshot.children) {
           posts.add({
+            "status": post.child('status').value ?? '',
             "post": post.child('post').value ?? '',
             "title": post.child('title').value ?? '',
             "content": post.child('content').value ?? '',

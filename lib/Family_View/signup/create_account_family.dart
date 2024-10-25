@@ -4,7 +4,6 @@ import 'package:nanny_fairy/FamilyController/family_auth_controller.dart';
 import 'package:nanny_fairy/res/components/rounded_button.dart';
 import 'package:nanny_fairy/res/components/widgets/custom_text_field.dart';
 import 'package:nanny_fairy/res/components/widgets/vertical_spacing.dart';
-import 'package:nanny_fairy/utils/routes/routes_name.dart';
 import 'package:provider/provider.dart';
 import '../../../res/components/colors.dart';
 import '../../utils/utils.dart';
@@ -34,7 +33,7 @@ class _CreateAccountFamilyState extends State<CreateAccountFamily> {
   Widget build(BuildContext context) {
     final authViewModelFamily = Provider.of<FamilyAuthController>(context);
     return Scaffold(
-        backgroundColor: AppColor.primaryColor,
+        backgroundColor: AppColor.oceanColor,
         body: SafeArea(
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -49,7 +48,7 @@ class _CreateAccountFamilyState extends State<CreateAccountFamily> {
                         children: [
                           IconButton(
                             icon: const Icon(Icons.west,
-                                color: AppColor.whiteColor),
+                                color: AppColor.authCreamColor),
                             onPressed: () {
                               Navigator.pop(context);
                             },
@@ -62,7 +61,7 @@ class _CreateAccountFamilyState extends State<CreateAccountFamily> {
                               textStyle: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w400,
-                                color: AppColor.whiteColor,
+                                color: AppColor.authCreamColor,
                               ),
                             ),
                           ),
@@ -76,12 +75,12 @@ class _CreateAccountFamilyState extends State<CreateAccountFamily> {
                             color: AppColor.avatarColor,
                             borderRadius: BorderRadius.circular(47),
                             border: Border.all(
-                                width: 4, color: AppColor.whiteColor)),
+                                width: 4, color: AppColor.authCreamColor)),
                         child: const Center(
                           child: Icon(
                             Icons.lock_outline,
                             size: 40,
-                            color: AppColor.whiteColor,
+                            color: AppColor.authCreamColor,
                           ),
                         ),
                       ),
@@ -94,7 +93,7 @@ class _CreateAccountFamilyState extends State<CreateAccountFamily> {
                           textStyle: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
-                            color: AppColor.whiteColor,
+                            color: AppColor.authCreamColor,
                           ),
                         ),
                       ),
@@ -106,7 +105,7 @@ class _CreateAccountFamilyState extends State<CreateAccountFamily> {
                   height: MediaQuery.of(context).size.height,
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    color: AppColor.whiteColor,
+                    color: AppColor.authCreamColor,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30.0),
                     ),

@@ -69,7 +69,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
             height: 50,
             width: 200,
             decoration: BoxDecoration(
-              color: AppColor.whiteColor,
+              color: AppColor.creamyColor,
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
                 color: const Color(0xff1B81BC).withOpacity(0.10),
@@ -131,7 +131,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
             height: 50,
             width: 56,
             decoration: BoxDecoration(
-              color: AppColor.whiteColor,
+              color: AppColor.creamyColor,
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
                 color: const Color(0xff1B81BC).withOpacity(0.10),
@@ -149,7 +149,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
             child: const Center(
               child: Icon(
                 Icons.filter_alt_outlined,
-                color: AppColor.primaryColor,
+                color: AppColor.lavenderColor,
               ),
             ),
           ),
@@ -163,7 +163,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
             height: 50,
             width: 56,
             decoration: BoxDecoration(
-              color: AppColor.whiteColor,
+              color: AppColor.creamyColor,
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
                 color: const Color(0xff1B81BC).withOpacity(0.10),
@@ -188,12 +188,13 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
                         child: DropdownButton<String>(
                           value: providerDistance ?? selectedKM,
                           icon: const SizedBox.shrink(),
+                          dropdownColor: AppColor.creamyColor,
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
-                              color: AppColor.primaryColor,
+                              color: AppColor.lavenderColor,
                             ),
                           ),
                           onChanged: (String? newValue) async {

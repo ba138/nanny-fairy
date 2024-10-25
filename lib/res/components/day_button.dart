@@ -1,5 +1,3 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nanny_fairy/res/components/colors.dart';
 
@@ -42,9 +40,11 @@ class _DayButtonState extends State<DayButton> {
         height: 23,
         width: 22,
         decoration: BoxDecoration(
-          color: _isSelected ? AppColor.primaryColor : AppColor.secondaryBgColor,
+          color: _isSelected ? AppColor.oceanColor : AppColor.authCreamColor,
           borderRadius: BorderRadius.circular(6),
-          border: Border.all(color: _isSelected ?  AppColor.blackColor:  AppColor.blackColor,width: 0.5),
+          border: Border.all(
+              color: _isSelected ? AppColor.blackColor : AppColor.blackColor,
+              width: 0.5),
         ),
         // padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
         child: Center(
@@ -52,7 +52,7 @@ class _DayButtonState extends State<DayButton> {
             widget.day,
             style: TextStyle(
               fontSize: 14,
-              color: _isSelected ? Colors.white : Colors.black,
+              color: _isSelected ? AppColor.authCreamColor : Colors.black,
               // fontWeight: FontWeight.w500,
             ),
           ),
