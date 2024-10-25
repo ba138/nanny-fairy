@@ -62,9 +62,9 @@ class _TotalRatingsFamilyState extends State<TotalRatingsFamily> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.creamyColor,
+      backgroundColor: AppColor.secondaryBgColor,
       appBar: AppBar(
-        backgroundColor: AppColor.lavenderColor,
+        backgroundColor: AppColor.primaryColor,
         elevation: 0,
         centerTitle: true,
         leading: IconButton(
@@ -73,7 +73,7 @@ class _TotalRatingsFamilyState extends State<TotalRatingsFamily> {
           },
           icon: const Icon(
             Icons.arrow_back,
-            color: AppColor.creamyColor,
+            color: AppColor.whiteColor,
           ),
         ),
         title: const Text(
@@ -82,7 +82,7 @@ class _TotalRatingsFamilyState extends State<TotalRatingsFamily> {
             fontFamily: 'CenturyGothic',
             fontSize: 18,
             fontWeight: FontWeight.w400,
-            color: AppColor.creamyColor,
+            color: AppColor.whiteColor,
           ),
         ),
       ),
@@ -110,7 +110,7 @@ class _TotalRatingsFamilyState extends State<TotalRatingsFamily> {
                                   Container(
                                     height: 60,
                                     width: 60,
-                                    color: AppColor.lavenderColor,
+                                    color: AppColor.primaryColor,
                                     child: Center(
                                       child: Text(
                                         calculateAverageRating(reviews)
@@ -119,7 +119,7 @@ class _TotalRatingsFamilyState extends State<TotalRatingsFamily> {
                                           fontFamily: 'CenturyGothic',
                                           fontSize: 22,
                                           fontWeight: FontWeight.w400,
-                                          color: AppColor.creamyColor,
+                                          color: AppColor.whiteColor,
                                         ),
                                       ),
                                     ),
@@ -138,27 +138,27 @@ class _TotalRatingsFamilyState extends State<TotalRatingsFamily> {
                                     children: [
                                       Icon(
                                         Icons.star,
-                                        color: AppColor.peachColor,
+                                        color: Colors.amber,
                                         size: 18,
                                       ),
                                       Icon(
                                         Icons.star,
-                                        color: AppColor.peachColor,
+                                        color: Colors.amber,
                                         size: 18,
                                       ),
                                       Icon(
                                         Icons.star,
-                                        color: AppColor.peachColor,
+                                        color: Colors.amber,
                                         size: 18,
                                       ),
                                       Icon(
                                         Icons.star,
-                                        color: AppColor.peachColor,
+                                        color: Colors.amber,
                                         size: 18,
                                       ),
                                       Icon(
                                         Icons.star,
-                                        color: AppColor.peachColor,
+                                        color: Colors.amber,
                                         size: 18,
                                       ),
                                     ],
@@ -185,9 +185,8 @@ class _TotalRatingsFamilyState extends State<TotalRatingsFamily> {
                                         animationDuration: 1000,
                                         width: 160,
                                         percent: 0.8,
-                                        progressColor: AppColor.lavenderColor,
-                                        backgroundColor: AppColor.lavenderColor
-                                            .withOpacity(0.2),
+                                        progressColor: AppColor.primaryColor,
+                                        backgroundColor: Colors.grey.shade300,
                                       ),
                                       const Text(
                                         "200",
@@ -213,13 +212,13 @@ class _TotalRatingsFamilyState extends State<TotalRatingsFamily> {
                                         ),
                                       ),
                                       LinearPercentIndicator(
-                                          animation: true,
-                                          animationDuration: 1000,
-                                          width: 160,
-                                          percent: 0.7,
-                                          progressColor: AppColor.lavenderColor,
-                                          backgroundColor:
-                                              AppColor.lavenderColor),
+                                        animation: true,
+                                        animationDuration: 1000,
+                                        width: 160,
+                                        percent: 0.7,
+                                        progressColor: AppColor.primaryColor,
+                                        backgroundColor: Colors.grey.shade300,
+                                      ),
                                       const Text(
                                         "150",
                                         style: TextStyle(
@@ -244,13 +243,13 @@ class _TotalRatingsFamilyState extends State<TotalRatingsFamily> {
                                         ),
                                       ),
                                       LinearPercentIndicator(
-                                          animation: true,
-                                          animationDuration: 1000,
-                                          width: 160,
-                                          percent: 0.6,
-                                          progressColor: AppColor.lavenderColor,
-                                          backgroundColor:
-                                              AppColor.lavenderColor),
+                                        animation: true,
+                                        animationDuration: 1000,
+                                        width: 160,
+                                        percent: 0.6,
+                                        progressColor: AppColor.primaryColor,
+                                        backgroundColor: Colors.grey.shade300,
+                                      ),
                                       const Text(
                                         "90",
                                         style: TextStyle(
@@ -275,13 +274,13 @@ class _TotalRatingsFamilyState extends State<TotalRatingsFamily> {
                                         ),
                                       ),
                                       LinearPercentIndicator(
-                                          animation: true,
-                                          animationDuration: 1000,
-                                          width: 160,
-                                          percent: 0.5,
-                                          progressColor: AppColor.lavenderColor,
-                                          backgroundColor:
-                                              AppColor.lavenderColor),
+                                        animation: true,
+                                        animationDuration: 1000,
+                                        width: 160,
+                                        percent: 0.5,
+                                        progressColor: AppColor.primaryColor,
+                                        backgroundColor: Colors.grey.shade300,
+                                      ),
                                       const Text(
                                         "30",
                                         style: TextStyle(
@@ -306,13 +305,13 @@ class _TotalRatingsFamilyState extends State<TotalRatingsFamily> {
                                         ),
                                       ),
                                       LinearPercentIndicator(
-                                          animation: true,
-                                          animationDuration: 1000,
-                                          width: 160,
-                                          percent: 0.4,
-                                          progressColor: AppColor.lavenderColor,
-                                          backgroundColor:
-                                              AppColor.lavenderColor),
+                                        animation: true,
+                                        animationDuration: 1000,
+                                        width: 160,
+                                        percent: 0.4,
+                                        progressColor: AppColor.primaryColor,
+                                        backgroundColor: Colors.grey.shade300,
+                                      ),
                                       const Text(
                                         "10",
                                         style: TextStyle(

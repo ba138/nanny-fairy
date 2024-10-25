@@ -44,14 +44,14 @@ class _UploadImageState extends State<UploadImage> {
     final authViewModel = Provider.of<AuthViewModel>(context);
 
     return Scaffold(
-      backgroundColor: AppColor.oceanColor,
+      backgroundColor: AppColor.primaryColor,
       body: Stack(
         children: [
           Container(
             height: MediaQuery.of(context).size.height,
             width: double.infinity,
             decoration: const BoxDecoration(
-              color: AppColor.authCreamColor,
+              color: AppColor.whiteColor,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30.0),
               ),
@@ -64,7 +64,7 @@ class _UploadImageState extends State<UploadImage> {
                   children: [
                     VerticalSpeacing(MediaQuery.of(context).size.height * 0.5),
                     Text(
-                      'Stel jezelf kort voor',
+                      'Write an introduction to yourself',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.getFont(
                         "Poppins",
@@ -80,13 +80,13 @@ class _UploadImageState extends State<UploadImage> {
                       height: 200,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: AppColor.authCreamColor,
+                        color: AppColor.whiteColor,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
                           strokeAlign: BorderSide.strokeAlignCenter,
                           color: !_isWordCountValid
                               ? Colors.red
-                              : AppColor.authCreamColor, // Show red if invalid
+                              : Colors.white, // Show red if invalid
                           width: 1,
                         ),
                         boxShadow: [
@@ -108,7 +108,7 @@ class _UploadImageState extends State<UploadImage> {
                               int wordCount = _wordCount(value);
                               // Valid if word count is between 50 and 60
                               _isWordCountValid =
-                                  wordCount >= 20 && wordCount <= 5000;
+                                  wordCount >= 20 && wordCount <= 30;
                             });
                           },
                           decoration: const InputDecoration(
@@ -123,7 +123,7 @@ class _UploadImageState extends State<UploadImage> {
                       child: Padding(
                         padding: const EdgeInsets.only(top: 8.0, left: 10.0),
                         child: Text(
-                          'Voer minder dan 20 woorden in',
+                          'Please enter less than 20 words',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -137,22 +137,19 @@ class _UploadImageState extends State<UploadImage> {
                     ),
                     const VerticalSpeacing(40),
                     RoundedButton(
-                        title: 'Opslaan',
+                        title: 'Continue',
                         onpress: () {
                           bool isValid =
                               _isWordCountValid && profilePic != null;
                           if (bioController.text.isNotEmpty && isValid) {
                             authViewModel.saveProfileAndBio(
-                              context,
-                              profilePic,
-                              bioController.text,
-                            );
+                                context, profilePic, bioController.text,);
                             Provider.of<ProviderDistanceViewModel>(context,
                                     listen: false)
                                 .fetchFamiliesFromFirebaseData();
                           } else {
                             Utils.flushBarErrorMessage(
-                              "Vul het formulier correct in.",
+                              "Please complete the form correctly.",
                               context,
                             );
                           }
@@ -164,17 +161,17 @@ class _UploadImageState extends State<UploadImage> {
           ),
           // Top container that acts as AppBar
           Container(
-            color: AppColor.oceanColor,
-            height: 250,
+            color: AppColor.primaryColor,
+            height: 250, // Adjust the height to accommodate the avatar overlap
             child: Column(
               children: [
-                const SizedBox(height: 50),
+                const SizedBox(height: 50), // Adjust to add padding at the top
                 Row(
                   children: [
                     IconButton(
                       icon: const Icon(
                         Icons.west,
-                        color: AppColor.authCreamColor,
+                        color: AppColor.whiteColor,
                       ),
                       onPressed: () {
                         Navigator.pop(context);
@@ -182,13 +179,13 @@ class _UploadImageState extends State<UploadImage> {
                     ),
                     const SizedBox(width: 50),
                     Text(
-                      'Profiel Foto en Bio',
+                      'Upload Image',
                       style: GoogleFonts.getFont(
                         "Poppins",
                         textStyle: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w400,
-                          color: AppColor.authCreamColor,
+                          color: AppColor.whiteColor,
                         ),
                       ),
                     ),
@@ -209,13 +206,13 @@ class _UploadImageState extends State<UploadImage> {
               decoration: BoxDecoration(
                   color: AppColor.avatarColor,
                   borderRadius: BorderRadius.circular(60),
-                  border: Border.all(width: 4, color: AppColor.authCreamColor)),
+                  border: Border.all(width: 4, color: AppColor.whiteColor)),
               child: Center(
                 child: profilePic == null
                     ? Image.asset(
                         'images/profile.png',
                         fit: BoxFit.cover,
-                        color: AppColor.authCreamColor,
+                        color: AppColor.whiteColor,
                       )
                     : Container(
                         height: 120,
@@ -244,7 +241,7 @@ class _UploadImageState extends State<UploadImage> {
                   width: 32,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: AppColor.oceanColor),
+                      color: AppColor.primaryColor),
                   child: Center(
                     child: IconButton(
                       onPressed: () {
@@ -253,7 +250,7 @@ class _UploadImageState extends State<UploadImage> {
                       icon: const Icon(
                         Icons.camera_alt_outlined,
                         size: 18,
-                        color: AppColor.authCreamColor,
+                        color: AppColor.whiteColor,
                       ),
                     ),
                   ),
@@ -264,7 +261,7 @@ class _UploadImageState extends State<UploadImage> {
                   width: 32,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: AppColor.oceanColor),
+                      color: AppColor.primaryColor),
                   child: Center(
                     child: IconButton(
                       onPressed: () {
@@ -273,7 +270,7 @@ class _UploadImageState extends State<UploadImage> {
                       icon: const Icon(
                         Icons.save_as_outlined,
                         size: 18,
-                        color: AppColor.authCreamColor,
+                        color: AppColor.whiteColor,
                       ),
                     ),
                   ),

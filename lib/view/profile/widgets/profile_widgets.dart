@@ -37,7 +37,7 @@ class ProfileWidgets extends StatelessWidget {
           child: Center(
             child: Icon(
               icon,
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
             ),
           ),
         ),

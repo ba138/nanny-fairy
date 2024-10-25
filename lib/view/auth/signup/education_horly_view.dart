@@ -30,7 +30,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
     final authViewModel = Provider.of<AuthViewModel>(context);
 
     return Scaffold(
-      backgroundColor: AppColor.oceanColor,
+      backgroundColor: AppColor.primaryColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
@@ -39,20 +39,20 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
           leading: IconButton(
             icon: const Icon(
               Icons.west,
-              color: AppColor.authCreamColor,
+              color: AppColor.whiteColor,
             ),
             onPressed: () {
               Navigator.pop(context);
             },
           ),
           title: Text(
-            'Vul Je Opleiding en Uurtarief In',
+            'Enter your education & hours',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
-                color: AppColor.authCreamColor,
+                color: AppColor.whiteColor,
               ),
             ),
           ),
@@ -65,7 +65,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
           decoration: const BoxDecoration(
-            color: AppColor.authCreamColor,
+            color: AppColor.whiteColor,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(30.0),
             ),
@@ -76,7 +76,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Opleidingsniveau',
+                  'Enter your education',
                   style: GoogleFonts.getFont(
                     "Poppins",
                     textStyle: const TextStyle(
@@ -91,9 +91,10 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                   height: 184,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: AppColor.authCreamColor,
+                    color: AppColor.whiteColor,
                     borderRadius: BorderRadius.circular(12.0),
-                    border: Border.all(width: 0.5, color: AppColor.oceanColor),
+                    border:
+                        Border.all(width: 0.5, color: AppColor.primaryColor),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 10.0, right: 10),
@@ -105,7 +106,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                             size: 60, color: AppColor.avatarColor),
                         const VerticalSpeacing(12.0),
                         Text(
-                          'Selecteer Je Opleidingsniveau',
+                          'Enter your Education',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -117,10 +118,11 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                         ),
                         const VerticalSpeacing(16.0),
                         TextFieldCustom(
+
                           controller: educationController,
                           prefixIcon: const Icon(Icons.school_outlined),
                           maxLines: 1,
-                          hintText: 'Selecteer Je Opleidingsniveau',
+                          hintText: 'Enter your education',
                         ),
                       ],
                     ),
@@ -128,7 +130,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                 ),
                 const VerticalSpeacing(16),
                 Text(
-                  'EVoer je gewenste uurtarief in',
+                  'Enter your hours rate',
                   style: GoogleFonts.getFont(
                     "Poppins",
                     textStyle: const TextStyle(
@@ -143,9 +145,10 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                   height: 184,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: AppColor.authCreamColor,
+                    color: AppColor.whiteColor,
                     borderRadius: BorderRadius.circular(12.0),
-                    border: Border.all(width: 0.5, color: AppColor.oceanColor),
+                    border:
+                        Border.all(width: 0.5, color: AppColor.primaryColor),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 10.0, right: 10),
@@ -157,7 +160,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                             size: 60, color: AppColor.avatarColor),
                         const VerticalSpeacing(12.0),
                         Text(
-                          'Uurtarief',
+                          'Enter your rate',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -173,7 +176,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                           controller: hoursRateController,
                           prefixIcon: const Icon(Icons.euro_outlined),
                           maxLines: 1,
-                          hintText: 'Uurtarief',
+                          hintText: 'Enter your rate',
                         ),
                       ],
                     ),
@@ -181,7 +184,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                 ),
                 const VerticalSpeacing(46.0),
                 RoundedButton(
-                    title: 'Opslaan',
+                    title: 'Register',
                     onpress: () {
                       if (educationController.text.isNotEmpty ||
                           hoursRateController.text.isNotEmpty) {

@@ -34,9 +34,8 @@ class _ProfileViewFamilyState extends State<ProfileViewFamily> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.creamyColor,
       appBar: AppBar(
-        backgroundColor: AppColor.lavenderColor,
+        backgroundColor: AppColor.primaryColor,
         elevation: 0.0,
         title: const Text(
           'Profile ',
@@ -44,7 +43,7 @@ class _ProfileViewFamilyState extends State<ProfileViewFamily> {
             fontFamily: 'CenturyGothic',
             fontSize: 18,
             fontWeight: FontWeight.w400,
-            color: AppColor.creamyColor,
+            color: AppColor.whiteColor,
           ),
         ),
         centerTitle: true,
@@ -86,7 +85,7 @@ class _ProfileViewFamilyState extends State<ProfileViewFamily> {
           bottomLeft: Radius.circular(0),
           bottomRight: Radius.circular(0),
         ),
-        color: AppColor.lavenderColor,
+        color: AppColor.primaryColor,
       ),
     );
   }
@@ -127,7 +126,7 @@ class _ProfileViewFamilyState extends State<ProfileViewFamily> {
                       textStyle: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
-                        color: AppColor.creamyColor,
+                        color: AppColor.whiteColor,
                       ),
                     ),
                   ),
@@ -147,17 +146,17 @@ class _ProfileViewFamilyState extends State<ProfileViewFamily> {
       height: MediaQuery.of(context).size.height * 0.6,
       width: MediaQuery.of(context).size.width * 0.9,
       decoration: BoxDecoration(
-        color: AppColor.creamyColor,
+        color: AppColor.whiteColor,
         borderRadius: BorderRadius.circular(10.0),
         border: Border.all(
           strokeAlign: BorderSide.strokeAlignCenter,
-          color: AppColor.lavenderColor
+          color: const Color(0xff1B81BC)
               .withOpacity(0.10), // Stroke color with 10% opacity
           width: 1,
         ),
         boxShadow: [
           BoxShadow(
-            color: AppColor.lavenderColor
+            color: const Color(0xff1B81BC)
                 .withOpacity(0.1), // Drop shadow color with 4% opacity
             blurRadius: 2,
             offset: const Offset(1, 2),

@@ -64,9 +64,8 @@ class _FamilyNotificationsViewState extends State<FamilyNotificationsView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.creamyColor,
       appBar: AppBar(
-        backgroundColor: AppColor.lavenderColor,
+        backgroundColor: AppColor.primaryColor,
         title: Text(
           'Notifications',
           style: GoogleFonts.getFont(
@@ -74,7 +73,7 @@ class _FamilyNotificationsViewState extends State<FamilyNotificationsView> {
             textStyle: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w400,
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
             ),
           ),
         ),
@@ -85,7 +84,7 @@ class _FamilyNotificationsViewState extends State<FamilyNotificationsView> {
             },
             icon: const Icon(
               Icons.west,
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
             )),
       ),
       body: _isLoading

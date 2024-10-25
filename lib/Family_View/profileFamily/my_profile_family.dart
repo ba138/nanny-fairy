@@ -1,5 +1,3 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nanny_fairy/FamilyController/get_family_info_controller.dart';
@@ -30,7 +28,7 @@ class _MyProfileFamilyState extends State<MyProfileFamily> {
   Widget build(BuildContext context) {
     final getFamilyInfo = Provider.of<GetFamilyInfoController>(context);
     return Scaffold(
-      backgroundColor: AppColor.lavenderColor,
+      backgroundColor: AppColor.primaryColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
@@ -41,7 +39,7 @@ class _MyProfileFamilyState extends State<MyProfileFamily> {
             textStyle: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w400,
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
             ),
           ),
         ),
@@ -52,7 +50,7 @@ class _MyProfileFamilyState extends State<MyProfileFamily> {
           },
           icon: const Icon(
             Icons.west,
-            color: AppColor.creamyColor,
+            color: AppColor.whiteColor,
           ),
         ),
         actions: [
@@ -60,18 +58,20 @@ class _MyProfileFamilyState extends State<MyProfileFamily> {
             onPressed: () async {
               final familyData = await getFamilyInfo
                   .getFamilyInfo(); // Await the Future to complete
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => EditProfileFamily(
-                    familyData: familyData,
+              if (familyData != null) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => EditProfileFamily(
+                      familyData: familyData,
+                    ),
                   ),
-                ),
-              );
+                );
+              }
             },
             icon: const Icon(
               Icons.border_color_outlined,
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
             ),
           ),
         ],
@@ -80,7 +80,7 @@ class _MyProfileFamilyState extends State<MyProfileFamily> {
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: AppColor.creamyColor,
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30),
           ),
@@ -165,7 +165,6 @@ class ProfileItem extends StatelessWidget {
   final String value;
 
   const ProfileItem({
-    super.key,
     required this.icon,
     required this.label,
     required this.value,
@@ -180,7 +179,7 @@ class ProfileItem extends StatelessWidget {
         children: [
           Icon(
             icon,
-            color: AppColor.lavenderColor,
+            color: AppColor.primaryColor,
             size: 20,
           ),
           const SizedBox(width: 10),

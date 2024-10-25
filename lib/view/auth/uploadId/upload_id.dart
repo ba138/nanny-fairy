@@ -46,29 +46,29 @@ class _UploadIdState extends State<UploadId> {
     final authViewModel = Provider.of<AuthViewModel>(context);
 
     return Scaffold(
-      backgroundColor: AppColor.authCreamColor,
+      backgroundColor: AppColor.secondaryBgColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
-          backgroundColor: AppColor.oceanColor,
+          backgroundColor: AppColor.primaryColor,
           elevation: 0.0,
           leading: IconButton(
             icon: const Icon(
               Icons.west,
-              color: AppColor.authCreamColor,
+              color: AppColor.whiteColor,
             ),
             onPressed: () {
               Navigator.pop(context);
             },
           ),
           title: Text(
-            'Upload Je Identiteitsbewijs',
+            'Id Details',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 16,
+                fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: AppColor.authCreamColor,
+                color: AppColor.whiteColor,
               ),
             ),
           ),
@@ -84,7 +84,7 @@ class _UploadIdState extends State<UploadId> {
               height: 193,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: AppColor.authCreamColor,
+                color: AppColor.whiteColor,
                 borderRadius: BorderRadius.circular(6),
                 border: Border.all(
                   strokeAlign: BorderSide.strokeAlignCenter,
@@ -128,17 +128,17 @@ class _UploadIdState extends State<UploadId> {
                               width: 56,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(28),
-                                  color: AppColor.oceanColor),
+                                  color: AppColor.primaryColor),
                               child: const Center(
                                 child: Icon(
                                   Icons.image,
-                                  color: AppColor.authCreamColor,
+                                  color: AppColor.whiteColor,
                                 ),
                               ),
                             ),
                           ),
                           Text(
-                            'Voorkant ID of paspoorts',
+                            'please upload id front picture',
                             style: GoogleFonts.getFont(
                               "Poppins",
                               textStyle: const TextStyle(
@@ -158,7 +158,7 @@ class _UploadIdState extends State<UploadId> {
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
-                color: AppColor.authCreamColor,
+                color: AppColor.whiteColor,
                 border: Border.all(
                   strokeAlign: BorderSide.strokeAlignCenter,
                   color: const Color(0xff1B81BC)
@@ -202,18 +202,18 @@ class _UploadIdState extends State<UploadId> {
                                 width: 56,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(28),
-                                    color: AppColor.oceanColor),
+                                    color: AppColor.primaryColor),
                                 child: const Center(
                                   child: Icon(
                                     Icons.image,
-                                    color: AppColor.authCreamColor,
+                                    color: AppColor.whiteColor,
                                   ),
                                 ),
                               ),
                             ),
                           ),
                           Text(
-                            'Voorkant ID of paspoort',
+                            'please upload id back picture',
                             style: GoogleFonts.getFont(
                               "Poppins",
                               textStyle: const TextStyle(
@@ -229,7 +229,7 @@ class _UploadIdState extends State<UploadId> {
             ),
             const VerticalSpeacing(46.0),
             RoundedButton(
-                title: 'Opslaan',
+                title: 'Continue',
                 onpress: () {
                   authViewModel.saveIdImages(
                       context, frontImage, backImage, 'Unverified');

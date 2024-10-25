@@ -35,7 +35,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          backgroundColor: AppColor.creamyColor,
+          backgroundColor: AppColor.whiteColor,
           shape: const RoundedRectangleBorder(),
           content: Column(
             mainAxisSize: MainAxisSize.min,
@@ -81,7 +81,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
         height: 103,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: AppColor.creamyColor,
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.circular(10.0),
           border: Border.all(
             strokeAlign: BorderSide.strokeAlignCenter,
@@ -145,7 +145,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          '⭐${widget.ratings} (${widget.totalRatings} Beoordelingen)',
+                          '⭐${widget.ratings} (${widget.totalRatings} Reviews)',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -166,7 +166,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
                                 padding: const EdgeInsets.only(left: 4),
                                 child: CardButton(
                                   title: widget.passion[index],
-                                  color: AppColor.peachColor,
+                                  color: AppColor.avatarColor,
                                   onTap: () {
                                     // Add your onTap functionality here
                                   },
@@ -193,7 +193,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
                   width: 78,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(32),
-                    color: AppColor.lavenderColor,
+                    color: AppColor.primaryColor,
                   ),
                   child: Center(
                     child: Text(
@@ -203,7 +203,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
                         textStyle: const TextStyle(
                           fontSize: 9,
                           fontWeight: FontWeight.w400,
-                          color: AppColor.creamyColor,
+                          color: AppColor.whiteColor,
                         ),
                       ),
                     ),

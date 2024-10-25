@@ -20,7 +20,7 @@ class CommunituCartWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColor.creamyColor,
+        color: AppColor.whiteColor,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
           strokeAlign: BorderSide.strokeAlignCenter,
@@ -73,19 +73,19 @@ class CommunituCartWidget extends StatelessWidget {
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(12),
                         bottomLeft: Radius.circular(12)),
-                    color: AppColor.peachColor,
+                    color: AppColor.avatarColor,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(4.0),
                     child: Center(
                       child: Text(
-                        '$totalComments Opmerkingen',
+                        '$totalComments Comment',
                         style: GoogleFonts.getFont(
                           "Poppins",
                           textStyle: const TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
-                            color: AppColor.creamyColor,
+                            color: AppColor.whiteColor,
                           ),
                         ),
                       ),

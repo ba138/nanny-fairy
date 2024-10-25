@@ -16,12 +16,12 @@ class SelectPassionView extends StatefulWidget {
 
 class _SelectPassionViewState extends State<SelectPassionView> {
   final List<String> labels = [
-    'Kinderoppas',
-    'Thuiszorg',
-    'Schoonmaakdiensten',
-    'Tuinonderhoud',
-    'Huisoppas',
-    'Dierenoppas',
+    'Animal care',
+    'Home sitter',
+    'Elderly care',
+    'Homework',
+    'Cleaning',
+    'Music lesson',
   ];
   final List<String> selectedLabels = [];
 
@@ -39,7 +39,7 @@ class _SelectPassionViewState extends State<SelectPassionView> {
   Widget build(BuildContext context) {
     final authViewModel = Provider.of<AuthViewModel>(context);
     return Scaffold(
-      backgroundColor: AppColor.oceanColor,
+      backgroundColor: AppColor.primaryColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
@@ -48,20 +48,20 @@ class _SelectPassionViewState extends State<SelectPassionView> {
           leading: IconButton(
             icon: const Icon(
               Icons.west,
-              color: AppColor.authCreamColor,
+              color: AppColor.whiteColor,
             ),
             onPressed: () {
               Navigator.pop(context);
             },
           ),
           title: Text(
-            'Selecteer de Diensten die Je Biedt',
+            'Select your preference',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 16,
+                fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: AppColor.authCreamColor,
+                color: AppColor.whiteColor,
               ),
             ),
           ),
@@ -72,7 +72,7 @@ class _SelectPassionViewState extends State<SelectPassionView> {
         height: double.infinity,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: AppColor.authCreamColor,
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(30.0),
           ),
@@ -85,7 +85,7 @@ class _SelectPassionViewState extends State<SelectPassionView> {
             children: [
               const VerticalSpeacing(26),
               Text(
-                'Kies de Diensten die Je Aanbiedt',
+                'Register as a provider',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(
@@ -109,8 +109,8 @@ class _SelectPassionViewState extends State<SelectPassionView> {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: isSelected
-                                ? AppColor.oceanColor
-                                : AppColor.authCreamColor,
+                                ? AppColor.primaryColor
+                                : AppColor.whiteColor,
                             borderRadius: BorderRadius.circular(6),
                             border: Border.all(
                               strokeAlign: BorderSide.strokeAlignCenter,
@@ -167,7 +167,7 @@ class _SelectPassionViewState extends State<SelectPassionView> {
                 ),
               ),
               RoundedButton(
-                title: 'Opslaan',
+                title: 'Register',
                 onpress: () {
                   if (labels.isNotEmpty) {
                     authViewModel.savePassion(

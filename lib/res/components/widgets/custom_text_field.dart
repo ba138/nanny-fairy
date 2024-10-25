@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import '../colors.dart';
 
 class TextFieldCustom extends StatefulWidget {
-  const TextFieldCustom(
-      {super.key,
-      this.hintText,
-      required int maxLines,
-      this.controller,
-      this.keyboardType,
-      this.obscureText = false,
-      this.validator,
-      this.prefixIcon,
-      this.shadowColor});
+  const TextFieldCustom({
+    super.key,
+    this.hintText,
+    required int maxLines,
+    this.controller,
+    this.keyboardType,
+    this.obscureText = false,
+    this.validator,
+    this.prefixIcon,
+  });
 
   final TextEditingController? controller;
   final TextInputType? keyboardType;
@@ -20,7 +20,6 @@ class TextFieldCustom extends StatefulWidget {
   final String? hintText;
   final String? Function(String?)? validator;
   final Widget? prefixIcon;
-  final Color? shadowColor;
   @override
   State<TextFieldCustom> createState() => _TextFieldCustomState();
 }
@@ -35,21 +34,17 @@ class _TextFieldCustomState extends State<TextFieldCustom> {
       margin: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(6),
-        color: AppColor.authCreamColor,
+        color: AppColor.whiteColor,
         border: Border.all(
           strokeAlign: BorderSide.strokeAlignCenter,
-          color: widget.shadowColor == null
-              ? const Color(0xff1B81BC).withOpacity(0.10)
-              : AppColor.lavenderColor
-                  .withOpacity(0.1), // Stroke color with 10% opacity
+          color: const Color(0xff1B81BC)
+              .withOpacity(0.10), // Stroke color with 10% opacity
           width: 1,
         ),
         boxShadow: [
           BoxShadow(
-            color: widget.shadowColor == null
-                ? const Color(0xff1B81BC).withOpacity(0.1)
-                : AppColor.lavenderColor
-                    .withOpacity(0.1), // Drop shadow color with 4% opacity
+            color: const Color(0xff1B81BC)
+                .withOpacity(0.1), // Drop shadow color with 4% opacity
             blurRadius: 2,
             offset: const Offset(1, 2),
             spreadRadius: 1,
@@ -63,7 +58,7 @@ class _TextFieldCustomState extends State<TextFieldCustom> {
         controller: widget.controller,
         decoration: InputDecoration(
           prefixIcon: widget.prefixIcon,
-          prefixIconColor: AppColor.oceanColor,
+          prefixIconColor: AppColor.primaryColor,
           hintText: widget.hintText,
           filled: false,
           suffixIcon: widget.obscureText
@@ -73,7 +68,7 @@ class _TextFieldCustomState extends State<TextFieldCustom> {
                   },
                   child: Icon(
                     hidden ? Icons.visibility_off : Icons.visibility,
-                    color: hidden ? null : AppColor.oceanColor,
+                    color: hidden ? null : AppColor.primaryColor,
                     size: 30,
                   ),
                 )
@@ -83,11 +78,8 @@ class _TextFieldCustomState extends State<TextFieldCustom> {
             borderSide: BorderSide(color: Color(0xfff1f1f1)),
             borderRadius: BorderRadius.zero,
           ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-                color: widget.shadowColor == null
-                    ? Color(0xfff1f1f1)
-                    : AppColor.creamyColor),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xfff1f1f1)),
             borderRadius: BorderRadius.zero,
           ),
         ),

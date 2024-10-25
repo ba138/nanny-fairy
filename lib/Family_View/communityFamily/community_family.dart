@@ -34,9 +34,9 @@ class _CommunityViewFamilyState extends State<CommunityViewFamily> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        backgroundColor: AppColor.creamyColor,
+        backgroundColor: AppColor.secondaryBgColor,
         appBar: AppBar(
-          backgroundColor: AppColor.lavenderColor,
+          backgroundColor: AppColor.primaryColor,
           elevation: 0.0,
           automaticallyImplyLeading: false,
           title: Text(
@@ -46,7 +46,7 @@ class _CommunityViewFamilyState extends State<CommunityViewFamily> {
               textStyle: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w400,
-                color: AppColor.creamyColor,
+                color: AppColor.whiteColor,
               ),
             ),
           ),
@@ -62,7 +62,7 @@ class _CommunityViewFamilyState extends State<CommunityViewFamily> {
                   height: 31,
                   width: 97,
                   decoration: BoxDecoration(
-                    color: AppColor.creamyColor,
+                    color: AppColor.whiteColor,
                     borderRadius: BorderRadius.circular(4),
                   ),
                   child: Center(
@@ -73,7 +73,7 @@ class _CommunityViewFamilyState extends State<CommunityViewFamily> {
                         textStyle: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
-                          color: AppColor.lavenderColor,
+                          color: AppColor.primaryColor,
                         ),
                       ),
                     ),
@@ -83,9 +83,9 @@ class _CommunityViewFamilyState extends State<CommunityViewFamily> {
             ),
           ],
           bottom: const TabBar(
-            indicatorColor: AppColor.peachColor,
-            labelColor: AppColor.peachColor,
-            unselectedLabelColor: AppColor.creamyColor,
+            indicatorColor: AppColor.avatarColor,
+            labelColor: AppColor.avatarColor,
+            unselectedLabelColor: AppColor.whiteColor,
             tabs: [
               Tab(text: 'Topics'),
               Tab(text: 'My Posts'),

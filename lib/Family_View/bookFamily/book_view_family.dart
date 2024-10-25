@@ -67,11 +67,11 @@ class _BookedViewFamilyState extends State<BookedViewFamily> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.creamyColor,
+      backgroundColor: AppColor.secondaryBgColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
-          backgroundColor: AppColor.lavenderColor,
+          backgroundColor: AppColor.primaryColor,
           automaticallyImplyLeading: false,
           title: Text(
             'Completed Booked',
@@ -80,7 +80,7 @@ class _BookedViewFamilyState extends State<BookedViewFamily> {
               textStyle: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: AppColor.creamyColor,
+                color: AppColor.whiteColor,
               ),
             ),
           ),
@@ -102,7 +102,7 @@ class _BookedViewFamilyState extends State<BookedViewFamily> {
                         children: [
                           const VerticalSpeacing(20.0),
                           BookingCartWidgetFamily(
-                            primaryButtonColor: AppColor.peachColor,
+                            primaryButtonColor: AppColor.avatarColor,
                             ontapView: () {
                               // Handle tap if necessary
                             },

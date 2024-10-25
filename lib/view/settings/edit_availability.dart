@@ -50,7 +50,7 @@ class _EditAvailabilityViewState extends State<EditAvailabilityView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.lavenderColor,
+      backgroundColor: AppColor.primaryColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
@@ -59,7 +59,7 @@ class _EditAvailabilityViewState extends State<EditAvailabilityView> {
           leading: IconButton(
             icon: const Icon(
               Icons.west,
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
             ),
             onPressed: () {
               Navigator.pop(context);
@@ -72,7 +72,7 @@ class _EditAvailabilityViewState extends State<EditAvailabilityView> {
               textStyle: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: AppColor.creamyColor,
+                color: AppColor.whiteColor,
               ),
             ),
           ),
@@ -83,7 +83,7 @@ class _EditAvailabilityViewState extends State<EditAvailabilityView> {
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: AppColor.creamyColor,
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.only(topLeft: Radius.circular(20)),
         ),
         child: Padding(
@@ -95,7 +95,7 @@ class _EditAvailabilityViewState extends State<EditAvailabilityView> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: AppColor.creamyColor,
+                    color: AppColor.whiteColor,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
                       strokeAlign: BorderSide.strokeAlignCenter,
@@ -240,7 +240,7 @@ class _EditAvailabilityViewState extends State<EditAvailabilityView> {
                   height: 216,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: AppColor.creamyColor,
+                    color: AppColor.whiteColor,
                     borderRadius: BorderRadius.circular(12.0),
                     border: Border.all(
                       strokeAlign: BorderSide.strokeAlignCenter,
@@ -373,7 +373,6 @@ class _EditAvailabilityViewState extends State<EditAvailabilityView> {
     return GestureDetector(
       onTap: () async {
         TimeOfDay? selectedTime = await showTimePicker(
-          barrierColor: AppColor.creamyColor,
           context: context,
           initialTime: TimeOfDay.now(),
         );
@@ -387,7 +386,7 @@ class _EditAvailabilityViewState extends State<EditAvailabilityView> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 3.0),
         decoration: BoxDecoration(
-          color: AppColor.creamyColor,
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: AppColor.grayColor.withOpacity(0.5),
@@ -511,7 +510,7 @@ class AvailabilityCheckBox extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 4),
       decoration: BoxDecoration(
-        color: isAvailable ? AppColor.lavenderColor : Colors.transparent,
+        color: isAvailable ? AppColor.primaryColor : Colors.transparent,
         borderRadius: BorderRadius.circular(6),
         border: Border.all(color: AppColor.blackColor, width: 0.5),
       ),
@@ -521,7 +520,7 @@ class AvailabilityCheckBox extends StatelessWidget {
           ? const Icon(
               Icons.check,
               size: 16,
-              color: AppColor.creamyColor,
+              color: Colors.white,
             )
           : null,
     );

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../res/components/colors.dart';
@@ -34,12 +35,12 @@ class HomeFeatureContainerFamily extends StatelessWidget {
           color: bgColor,
           border: Border.all(
             strokeAlign: BorderSide.strokeAlignCenter,
-            color: AppColor.lavenderColor.withOpacity(0.10),
+            color: const Color(0xff1B81BC).withOpacity(0.10),
             width: 1,
           ),
           boxShadow: [
             BoxShadow(
-              color: AppColor.lavenderColor.withOpacity(0.1),
+              color: const Color(0xff1B81BC).withOpacity(0.1),
               blurRadius: 2,
               offset: const Offset(1, 2),
               spreadRadius: 1,
@@ -69,7 +70,7 @@ class HomeFeatureContainerFamily extends StatelessWidget {
                   textStyle: const TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
-                    color: AppColor.creamyColor,
+                    color: AppColor.whiteColor,
                   ),
                 ),
               ),

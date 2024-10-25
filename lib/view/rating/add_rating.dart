@@ -54,8 +54,8 @@ class _RatingState extends State<Rating> {
         'familyId': widget.familyId,
         'nodeId': uuid,
         'familyName': widget.familyName,
-        'providerProfile': widget.familyProfile,
-        'familyProfile': widget.providerProfile,
+        'providerProfile': widget.providerProfile,
+        'familyProfile': widget.familyProfile,
         'providerName': widget.providerName,
         'providerComment': commentController.text.isNotEmpty
             ? commentController.text

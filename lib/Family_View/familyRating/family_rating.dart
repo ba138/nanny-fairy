@@ -54,8 +54,8 @@ class _FamilyRatingState extends State<FamilyRating> {
         'familyId': widget.familyId,
         'nodeId': uuid,
         'familyName': widget.familyName,
-        'providerProfile': widget.familyProfile,
-        'familyProfile': widget.providerProfile,
+        'providerProfile': widget.providerProfile,
+        'familyProfile': widget.familyProfile,
         'providerName': widget.providerName,
         'FamilyComment': commentController.text.isNotEmpty
             ? commentController.text
@@ -89,7 +89,7 @@ class _FamilyRatingState extends State<FamilyRating> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.creamyColor,
+      backgroundColor: AppColor.secondaryBgColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -122,7 +122,7 @@ class _FamilyRatingState extends State<FamilyRating> {
                 children: [
                   const VerticalSpeacing(20),
                   Card(
-                    color: AppColor.creamyColor,
+                    color: AppColor.whiteColor,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 12, right: 12),
                       child: Column(
@@ -158,14 +158,14 @@ class _FamilyRatingState extends State<FamilyRating> {
                             initialRating: 0,
                             minRating: 1,
                             allowHalfRating: true,
-                            glowColor: AppColor.peachColor,
+                            glowColor: Colors.amber,
                             itemCount: 5,
                             itemSize: 55,
                             itemPadding:
                                 const EdgeInsets.symmetric(horizontal: 0),
                             itemBuilder: (context, _) => const Icon(
                               Icons.star_rate_rounded,
-                              color: AppColor.peachColor,
+                              color: Colors.amber,
                             ),
                             onRatingUpdate: (rating) {
                               countRatingStars = rating;
@@ -193,8 +193,6 @@ class _FamilyRatingState extends State<FamilyRating> {
                           ),
                           const VerticalSpeacing(30),
                           RoundedButton(
-                            buttonColor: AppColor.lavenderColor,
-                            titleColor: AppColor.creamyColor,
                             title: 'Submit Review',
                             onpress: () async {
                               await submitReview();

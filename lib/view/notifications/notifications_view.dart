@@ -64,7 +64,7 @@ class _NotificationsViewState extends State<NotificationsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColor.lavenderColor,
+        backgroundColor: AppColor.primaryColor,
         title: Text(
           'Notifications',
           style: GoogleFonts.getFont(
@@ -72,7 +72,7 @@ class _NotificationsViewState extends State<NotificationsView> {
             textStyle: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w400,
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
             ),
           ),
         ),
@@ -83,7 +83,7 @@ class _NotificationsViewState extends State<NotificationsView> {
             },
             icon: const Icon(
               Icons.west,
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
             )),
       ),
       body: _isLoading

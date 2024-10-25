@@ -1,8 +1,13 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: file_names
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'package:nanny_fairy/Repository/family_chat_repository.dart';
 import 'package:nanny_fairy/ViewModel/family_chat_view_model.dart';
+
 import '../../../res/components/colors.dart';
 
 class FamilyChatScreenWidget extends StatefulWidget {
@@ -45,17 +50,16 @@ class ChatMessage {
 class ChatScreenState extends State<FamilyChatScreenWidget> {
   final List<ChatMessage> _messages = <ChatMessage>[];
   final TextEditingController _textController = TextEditingController();
-  final ScrollController scrollController = ScrollController();
 
-  // void _handleSubmitted(String text) {
-  //   _textController.clear();
-  //   ChatMessage message = ChatMessage(
-  //       text: text,
-  //       isSender: true); // You can modify this to determine sender/receiver.
-  //   setState(() {
-  //     _messages.insert(0, message);
-  //   });
-  // }
+  void _handleSubmitted(String text) {
+    _textController.clear();
+    ChatMessage message = ChatMessage(
+        text: text,
+        isSender: true); // You can modify this to determine sender/receiver.
+    setState(() {
+      _messages.insert(0, message);
+    });
+  }
 
   Widget _buildMessage(String message, String senderId) {
     final chatController = Provider.of<FamilyChatController>(context);
@@ -73,7 +77,7 @@ class ChatScreenState extends State<FamilyChatScreenWidget> {
           padding: const EdgeInsets.all(16.0),
           decoration: BoxDecoration(
             color: senderId == auth.currentUser!.uid
-                ? AppColor.blossomColor
+                ? AppColor.primaryColor
                 : AppColor.blackColor,
             borderRadius: BorderRadius.circular(12.0),
           ),
@@ -87,24 +91,21 @@ class ChatScreenState extends State<FamilyChatScreenWidget> {
   }
 
   @override
-  void dispose() {
-    scrollController.dispose();
-    super.dispose();
-  }
-
-  void scrollToBottom() {
-    if (scrollController.hasClients) {
-      scrollController.animateTo(
-        scrollController.position.maxScrollExtent,
-        duration: const Duration(milliseconds: 100),
-        curve: Curves.linearToEaseOut,
-      );
-    }
-  }
-
-  @override
   Widget build(BuildContext context) {
     final chatController = Provider.of<FamilyChatController>(context);
+    final ScrollController scrollController = ScrollController();
+
+    void scrollToBottom() {
+      if (scrollController.hasClients) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          scrollController.animateTo(
+            scrollController.position.maxScrollExtent,
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeOut,
+          );
+        });
+      }
+    }
 
     return Column(
       children: <Widget>[
@@ -135,23 +136,22 @@ class ChatScreenState extends State<FamilyChatScreenWidget> {
               return chats;
             }),
             builder: (context, snapshot) {
-              if (snapshot.hasError) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(child: CircularProgressIndicator());
+              } else if (snapshot.hasError) {
                 return Center(child: Text('Error: ${snapshot.error}'));
               } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
                 return const Center(child: Text('No messages found.'));
               } else {
                 final chats = snapshot.data!;
-
-                // Scroll to bottom only when new data is received
-                WidgetsBinding.instance.addPostFrameCallback((_) {
-                  scrollToBottom();
-                });
-
+                WidgetsBinding.instance
+                    .addPostFrameCallback((_) => scrollToBottom());
                 return ListView.builder(
                   controller: scrollController,
                   itemCount: chats.length,
                   itemBuilder: (context, index) {
                     final chat = chats[index];
+
                     return _buildMessage(chat['message'], chat['senderId']);
                   },
                 );
@@ -180,6 +180,7 @@ class ChatScreenState extends State<FamilyChatScreenWidget> {
           Expanded(
             child: TextField(
               controller: _textController,
+              onSubmitted: _handleSubmitted,
               decoration: const InputDecoration(
                   hintText: 'Type a message...',
                   hintStyle: TextStyle(
@@ -190,9 +191,10 @@ class ChatScreenState extends State<FamilyChatScreenWidget> {
           IconButton(
             icon: const Icon(
               Icons.send,
-              color: AppColor.chatLavenderColor,
+              color: AppColor.primaryColor,
             ),
             onPressed: () {
+              debugPrint("This is the reciever name:${widget.providerName}");
               if (_textController.text.isNotEmpty) {
                 familyChatRepository.saveDataToContactsSubcollection(
                     _textController.text,

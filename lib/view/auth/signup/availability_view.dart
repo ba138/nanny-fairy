@@ -50,7 +50,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.oceanColor,
+      backgroundColor: AppColor.primaryColor,
       appBar: PreferredSize(
         preferredSize: const Size.square(70),
         child: AppBar(
@@ -59,20 +59,20 @@ class _AvailabilityViewState extends State<AvailabilityView> {
           leading: IconButton(
             icon: const Icon(
               Icons.west,
-              color: AppColor.authCreamColor,
+              color: AppColor.whiteColor,
             ),
             onPressed: () {
               Navigator.pop(context);
             },
           ),
           title: Text(
-            'Stel Je Beschikbaarheid In',
+            'Availability',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 16,
+                fontSize: 20,
                 fontWeight: FontWeight.w400,
-                color: AppColor.authCreamColor,
+                color: AppColor.whiteColor,
               ),
             ),
           ),
@@ -83,7 +83,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         decoration: const BoxDecoration(
-          color: AppColor.authCreamColor,
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.only(topLeft: Radius.circular(20)),
         ),
         child: Padding(
@@ -95,16 +95,18 @@ class _AvailabilityViewState extends State<AvailabilityView> {
               children: [
                 Container(
                   decoration: BoxDecoration(
-                    color: AppColor.authCreamColor,
+                    color: AppColor.whiteColor,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
                       strokeAlign: BorderSide.strokeAlignCenter,
-                      color: const Color(0xff1B81BC).withOpacity(0.10),
+                      color: const Color(0xff1B81BC)
+                          .withOpacity(0.10), // Stroke color with 10% opacity
                       width: 1,
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: const Color(0xff1B81BC).withOpacity(0.1),
+                        color: const Color(0xff1B81BC).withOpacity(
+                            0.1), // Drop shadow color with 4% opacity
                         blurRadius: 2,
                         offset: const Offset(1, 2),
                         spreadRadius: 1,
@@ -117,9 +119,10 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const SizedBox(height: 16),
+                        const SizedBox(
+                            height: 16), // Added spacing from the top
                         Text(
-                          'Beschikbaarheid',
+                          'Availability',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -127,6 +130,14 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                               fontWeight: FontWeight.w400,
                               color: AppColor.blackColor,
                             ),
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        const Text(
+                          'Officia irure irure an',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: AppColor.grayColor,
                           ),
                         ),
                         const SizedBox(height: 16),
@@ -140,7 +151,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                             ),
                             const SizedBox(width: 8),
                             DayButton(
-                              day: 'D',
+                              day: 'T',
                               isSelected: false,
                               onTap: (bool isSelected) {},
                             ),
@@ -152,25 +163,25 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                             ),
                             const SizedBox(width: 8),
                             DayButton(
-                              day: 'D',
+                              day: 'T',
                               isSelected: false,
                               onTap: (bool isSelected) {},
                             ),
                             const SizedBox(width: 8),
                             DayButton(
-                              day: 'V',
+                              day: 'F',
                               isSelected: false,
                               onTap: (bool isSelected) {},
                             ),
                             const SizedBox(width: 8),
                             DayButton(
-                              day: 'Z',
+                              day: 'S',
                               isSelected: false,
                               onTap: (bool isSelected) {},
                             ),
                             const SizedBox(width: 8),
                             DayButton(
-                              day: 'Z',
+                              day: 'S',
                               isSelected: false,
                               onTap: (bool isSelected) {},
                             ),
@@ -179,7 +190,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                         ),
                         const SizedBox(height: 16),
                         const AvailabilityRow(
-                          label: 'Ochtend',
+                          label: 'Morning',
                           availability: [
                             false,
                             false,
@@ -189,11 +200,11 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                             false,
                             false
                           ],
-                          timePeriod: 'Ochtend',
+                          timePeriod: 'morning',
                         ),
                         const Divider(),
                         const AvailabilityRow(
-                          label: 'Middag',
+                          label: 'Evening',
                           availability: [
                             false,
                             false,
@@ -203,11 +214,11 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                             false,
                             false
                           ],
-                          timePeriod: 'Middag',
+                          timePeriod: 'Evening',
                         ),
                         const Divider(),
                         const AvailabilityRow(
-                          label: 'Avond',
+                          label: 'Afternoon',
                           availability: [
                             false,
                             false,
@@ -217,7 +228,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                             false,
                             false
                           ],
-                          timePeriod: 'Middag',
+                          timePeriod: 'Afternoon',
                         ),
                         const VerticalSpeacing(10),
                       ],
@@ -229,7 +240,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                   height: 216,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: AppColor.authCreamColor,
+                    color: AppColor.whiteColor,
                     borderRadius: BorderRadius.circular(12.0),
                     border: Border.all(
                       strokeAlign: BorderSide.strokeAlignCenter,
@@ -257,7 +268,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Tijdschema',
+                              'Select Time',
                               style: GoogleFonts.getFont(
                                 "Poppins",
                                 textStyle: const TextStyle(
@@ -272,7 +283,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Ochtend',
+                                  'Morning   ',
                                   style: GoogleFonts.getFont(
                                     "Poppins",
                                     textStyle: const TextStyle(
@@ -282,10 +293,10 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                                     ),
                                   ),
                                 ),
-                                const Text('Van'),
-                                _timePicker('Ochtend', 'Start'),
-                                const Text('Tot'),
-                                _timePicker('Ochtend', 'End'),
+                                const Text('from'),
+                                _timePicker('Morning', 'Start'),
+                                const Text('to'),
+                                _timePicker('Morning', 'End'),
                               ],
                             ),
                             const SizedBox(height: 18),
@@ -293,7 +304,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Middag  ',
+                                  'Afternoon',
                                   style: GoogleFonts.getFont(
                                     "Poppins",
                                     textStyle: const TextStyle(
@@ -303,10 +314,10 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                                     ),
                                   ),
                                 ),
-                                const Text('Van'),
-                                _timePicker('Middag', 'Start'),
-                                const Text('Tot'),
-                                _timePicker('Middag', 'End'),
+                                const Text('from'),
+                                _timePicker('Afternoon', 'Start'),
+                                const Text('to'),
+                                _timePicker('Afternoon', 'End'),
                               ],
                             ),
                             const SizedBox(height: 18),
@@ -314,7 +325,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Avond     ',
+                                  'Evening   ',
                                   style: GoogleFonts.getFont(
                                     "Poppins",
                                     textStyle: const TextStyle(
@@ -324,10 +335,10 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                                     ),
                                   ),
                                 ),
-                                const Text('Van'),
-                                _timePicker('Avond', 'Start'),
-                                const Text('Tot'),
-                                _timePicker('Avond', 'End'),
+                                const Text('from'),
+                                _timePicker('Evening', 'Start'),
+                                const Text('to'),
+                                _timePicker('Evening', 'End'),
                               ],
                             ),
                           ],
@@ -338,7 +349,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                 ),
                 const VerticalSpeacing(46.0),
                 RoundedButton(
-                    title: 'Opslaan',
+                    title: 'Register',
                     onpress: () {
                       if (selectedTimes.isNotEmpty) {
                         Navigator.pushNamed(
@@ -362,7 +373,6 @@ class _AvailabilityViewState extends State<AvailabilityView> {
     return GestureDetector(
       onTap: () async {
         TimeOfDay? selectedTime = await showTimePicker(
-          barrierColor: AppColor.authCreamColor,
           context: context,
           initialTime: TimeOfDay.now(),
         );
@@ -376,14 +386,14 @@ class _AvailabilityViewState extends State<AvailabilityView> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 3.0),
         decoration: BoxDecoration(
-          color: AppColor.authCreamColor,
+          color: AppColor.whiteColor,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: AppColor.grayColor.withOpacity(0.5),
           ),
         ),
         child: Text(
-          selectedTimes['$period$type'] ?? 'Selecteer Tijd',
+          selectedTimes['$period$type'] ?? 'Select Time',
           style: const TextStyle(fontSize: 12, color: AppColor.blackColor),
         ),
       ),
@@ -500,7 +510,7 @@ class AvailabilityCheckBox extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 4),
       decoration: BoxDecoration(
-        color: isAvailable ? AppColor.oceanColor : Colors.transparent,
+        color: isAvailable ? AppColor.primaryColor : Colors.transparent,
         borderRadius: BorderRadius.circular(6),
         border: Border.all(color: AppColor.blackColor, width: 0.5),
       ),

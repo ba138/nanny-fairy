@@ -17,17 +17,17 @@ class FamilyNotificationsWidget extends StatelessWidget {
       height: 94,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: AppColor.creamyColor,
+        color: AppColor.whiteColor,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
           strokeAlign: BorderSide.strokeAlignCenter,
-          color: AppColor.lavenderColor
+          color: const Color(0xff1B81BC)
               .withOpacity(0.10), // Stroke color with 10% opacity
           width: 1,
         ),
         boxShadow: [
           BoxShadow(
-            color: AppColor.lavenderColor
+            color: const Color(0xff1B81BC)
                 .withOpacity(0.1), // Drop shadow color with 4% opacity
             blurRadius: 2,
             offset: const Offset(1, 2),
@@ -40,13 +40,13 @@ class FamilyNotificationsWidget extends StatelessWidget {
           height: 50,
           width: 50,
           decoration: BoxDecoration(
-            color: AppColor.lavenderColor,
+            color: AppColor.primaryColor,
             borderRadius: BorderRadius.circular(25),
           ),
           child: const Center(
             child: Icon(
               Icons.notifications,
-              color: AppColor.creamyColor,
+              color: AppColor.whiteColor,
             ),
           ),
         ),

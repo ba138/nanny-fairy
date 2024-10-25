@@ -30,9 +30,9 @@ class _ForgetPassFamilyState extends State<ForgetPassFamily> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.authCreamColor,
+      backgroundColor: AppColor.secondaryBgColor,
       appBar: AppBar(
-        backgroundColor: AppColor.authCreamColor,
+        backgroundColor: AppColor.whiteColor,
         leading: IconButton(
           icon: const Icon(
             Icons.west,
@@ -60,7 +60,7 @@ class _ForgetPassFamilyState extends State<ForgetPassFamily> {
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: double.infinity,
-          color: AppColor.authCreamColor,
+          color: AppColor.whiteColor,
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Padding(
