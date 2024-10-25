@@ -326,7 +326,7 @@ class AuthRepository {
           frontPic,
         );
       } else {
-        Utils.flushBarErrorMessage("Please pick The Id Front Pic", context);
+        Utils.flushBarErrorMessage("Kies alstublieft de Id Front Pic", context);
         Navigator.pop(context);
         return;
       }
@@ -337,7 +337,7 @@ class AuthRepository {
           backImage,
         );
       } else {
-        Utils.flushBarErrorMessage("Please pick The Id Back Pic", context);
+        Utils.flushBarErrorMessage("Kies alstublieft de Id Back Pic", context);
         Navigator.pop(context);
         return;
       }
@@ -349,7 +349,7 @@ class AuthRepository {
         "status": 'Unverified',
       });
       Navigator.of(context).pop();
-      Utils.toastMessage('Images saved successfully!');
+      Utils.toastMessage('Afbeeldingen succesvol opgeslagen!');
       debugPrint(userId);
       Navigator.pushNamed(
         context,

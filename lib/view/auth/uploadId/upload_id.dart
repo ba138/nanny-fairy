@@ -62,11 +62,11 @@ class _UploadIdState extends State<UploadId> {
             },
           ),
           title: Text(
-            'Id Details',
+            'Upload Je Identiteitsbewijs',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 20,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: AppColor.authCreamColor,
               ),
@@ -137,12 +137,13 @@ class _UploadIdState extends State<UploadId> {
                               ),
                             ),
                           ),
+                          const VerticalSpeacing(16),
                           Text(
-                            'please upload id front picture',
+                            'Voorkant ID of paspoort',
                             style: GoogleFonts.getFont(
                               "Poppins",
                               textStyle: const TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w400,
                                 color: AppColor.blackColor,
                               ),
@@ -212,12 +213,13 @@ class _UploadIdState extends State<UploadId> {
                               ),
                             ),
                           ),
+                          const VerticalSpeacing(16),
                           Text(
-                            'please upload id back picture',
+                            'Achterkant ID of Paspoort',
                             style: GoogleFonts.getFont(
                               "Poppins",
                               textStyle: const TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w400,
                                 color: AppColor.blackColor,
                               ),
@@ -229,7 +231,7 @@ class _UploadIdState extends State<UploadId> {
             ),
             const VerticalSpeacing(46.0),
             RoundedButton(
-                title: 'Continue',
+                title: 'Opslaan',
                 onpress: () {
                   authViewModel.saveIdImages(
                       context, frontImage, backImage, 'Unverified');

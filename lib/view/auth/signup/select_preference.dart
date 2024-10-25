@@ -71,7 +71,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
           },
         ),
         title: Text(
-          'Reference',
+          'Referentie',
           style: GoogleFonts.getFont(
             "Poppins",
             textStyle: const TextStyle(
@@ -96,11 +96,11 @@ class _SelectPreferenceState extends State<SelectPreference> {
                     controller: experinceController,
                     prefixIcon: const Icon(Icons.school_outlined),
                     maxLines: 1,
-                    hintText: 'Enter your experience',
+                    hintText: 'Vul uw ervaring in',
                   ),
                   const VerticalSpeacing(16.0),
                   Text(
-                    'Referance',
+                    'Referentie',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -112,7 +112,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
                   ),
                   const VerticalSpeacing(16.0),
                   Text(
-                    'Name',
+                    'Naam',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -125,10 +125,10 @@ class _SelectPreferenceState extends State<SelectPreference> {
                   TextFieldCustom(
                     controller: jobController,
                     maxLines: 1,
-                    hintText: 'Job',
+                    hintText: 'Functie',
                   ),
                   Text(
-                    'Which Skill You are provided',
+                    'Thuiszorg',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(
@@ -203,7 +203,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
                         ),
                         maxLines: 1,
                         controller: landController,
-                        hintText: 'Land',
+                        hintText: 'Telefoonnummer',
                       )),
                       const SizedBox(width: 10.0),
                       Expanded(
@@ -228,13 +228,13 @@ class _SelectPreferenceState extends State<SelectPreference> {
                         ),
                         maxLines: 1,
                         controller: phoneController,
-                        hintText: 'Mobile Number',
+                        hintText: 'Mobiel nummer',
                       )),
                     ],
                   ),
                   const VerticalSpeacing(60.0),
                   RoundedButton(
-                      title: 'Continue',
+                      title: 'Opslaan',
                       onpress: () {
                         if (experinceController.text.isNotEmpty ||
                             jobController.text.isNotEmpty ||
@@ -250,7 +250,7 @@ class _SelectPreferenceState extends State<SelectPreference> {
                           );
                         } else {
                           Utils.flushBarErrorMessage(
-                              'Please Fill all the Fields', context);
+                              'Vul alle velden in', context);
                         }
                       }),
                 ],
