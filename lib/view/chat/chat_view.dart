@@ -150,7 +150,7 @@ class _ChatViewState extends State<ChatView> {
                     color: AppColor.primaryColor, size: 100),
                 const SizedBox(height: 16),
                 Text(
-                  'Confirm your acceptance of this hiring offer to begin the service. The family will be notified of your decision.',
+                  'Bevestig uw acceptatie van dit aanbod om de dienst te beginnen. De familie wordt op de hoogte gebracht van uw beslissing.',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.getFont(
                     "Poppins",
@@ -169,7 +169,7 @@ class _ChatViewState extends State<ChatView> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: RoundedButton(
-                          title: 'Accept',
+                          title: 'Accepteren',
                           onpress: () async {
                             await acceptFamilyOffer();
                             Navigator.of(context).pop();
@@ -181,7 +181,7 @@ class _ChatViewState extends State<ChatView> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: RoundedButton(
-                          title: 'Cancel',
+                          title: 'Annuleren',
                           onpress: () {
                             Navigator.of(context).pop(); // Dismiss the dialog
                           },
@@ -342,7 +342,7 @@ class _ChatViewState extends State<ChatView> {
                             ),
                             child: const Center(
                               child: Text(
-                                'Write Review',
+                                'Give Review',
                                 style: TextStyle(
                                   fontSize: 10,
                                   color: AppColor.lavenderColor,

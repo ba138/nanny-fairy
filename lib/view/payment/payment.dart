@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:convert';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -61,7 +63,7 @@ class _PaymentViewState extends State<PaymentView> {
                   color: AppColor.lavenderColor, size: 150),
               const VerticalSpeacing(16),
               Text(
-                'Payment Done Congratulations You\n are subscribed now',
+                'Betaling Voltooid!',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.getFont(
                   "Poppins",
@@ -74,7 +76,7 @@ class _PaymentViewState extends State<PaymentView> {
               ),
               const VerticalSpeacing(30),
               RoundedButton(
-                title: 'Continue to Chat',
+                title: 'Chat nu',
                 buttonColor: AppColor.lavenderColor,
                 titleColor: AppColor.creamyColor,
                 onpress: () {
@@ -262,10 +264,10 @@ class _PaymentViewState extends State<PaymentView> {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         title: const Text(
-          'Add Payment Details ',
+          'Voltooi Je Betaling',
           style: TextStyle(
             fontFamily: 'CenturyGothic',
-            fontSize: 18,
+            fontSize: 16,
             fontWeight: FontWeight.w400,
             color: AppColor.blackColor,
           ),
@@ -292,7 +294,7 @@ class _PaymentViewState extends State<PaymentView> {
               children: [
                 const VerticalSpeacing(20),
                 const Text(
-                  'Select Payment Type',
+                  'Selecteer Betaalmethode',
                   textAlign: TextAlign.start,
                   style: TextStyle(
                     fontFamily: 'CenturyGothic',
@@ -352,7 +354,7 @@ class _PaymentViewState extends State<PaymentView> {
                                 ),
                                 const VerticalSpeacing(5),
                                 Text(
-                                  "IDLE",
+                                  "IDEAL",
                                   style: TextStyle(
                                       fontFamily: 'CenturyGothic',
                                       fontSize: 14,
@@ -413,7 +415,7 @@ class _PaymentViewState extends State<PaymentView> {
                                 ),
                                 const VerticalSpeacing(5),
                                 Text(
-                                  "Paypal",
+                                  "PayPal",
                                   style: TextStyle(
                                     fontFamily: 'CenturyGothic',
                                     fontSize: 14,
@@ -435,7 +437,7 @@ class _PaymentViewState extends State<PaymentView> {
                 RoundedButton(
                   buttonColor: AppColor.lavenderColor,
                   titleColor: AppColor.creamyColor,
-                  title: 'Pay',
+                  title: 'Betalen',
                   onpress: () {
                     if (firstButton) {
                       initIdlePayment();

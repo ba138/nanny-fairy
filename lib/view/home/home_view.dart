@@ -59,7 +59,7 @@ class _HomeViewState extends State<HomeView> {
                                     'https://play-lh.googleusercontent.com/jInS55DYPnTZq8GpylyLmK2L2cDmUoahVacfN_Js_TsOkBEoizKmAl5-p8iFeLiNjtE=w526-h296-rw'),
                               ),
                               title: Text(
-                                'WellCome',
+                                'Welkom',
                                 style: GoogleFonts.getFont(
                                   "Poppins",
                                   textStyle: const TextStyle(
@@ -99,7 +99,7 @@ class _HomeViewState extends State<HomeView> {
                                   'https://play-lh.googleusercontent.com/jInS55DYPnTZq8GpylyLmK2L2cDmUoahVacfN_Js_TsOkBEoizKmAl5-p8iFeLiNjtE=w526-h296-rw'),
                             ),
                             title: Text(
-                              'WellCome',
+                              'Welkom',
                               style: GoogleFonts.getFont(
                                 "Poppins",
                                 textStyle: const TextStyle(
@@ -136,8 +136,7 @@ class _HomeViewState extends State<HomeView> {
               ],
             ),
             const VerticalSpeacing(20.0),
-            // const HomeDefaultView(),
-            // const HomeSearchView(),
+
             Consumer<HomeUiSwithchRepository>(
               builder: (context, uiState, _) {
                 Widget selectedWidget;
@@ -149,9 +148,6 @@ class _HomeViewState extends State<HomeView> {
                   case UIType.DefaultSection:
                     selectedWidget = const HomeDefaultView();
                     break;
-                  // case UIType.DistanceSection:
-                  //   selectedWidget = const HomeDistanceView();
-                  //   break;
 
                   case UIType.FilterSection:
                     selectedWidget = const HomeFilterView();

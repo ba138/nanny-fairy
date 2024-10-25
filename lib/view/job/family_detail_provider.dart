@@ -64,42 +64,25 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                widget.profile == null
-                    ? Container(
-                        height: 150,
-                        width: double
-                            .infinity, // Fill the width of the parent container
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: AppColor.lavenderColor,
-                        ),
-                        child: Center(
-                          child: Image.asset(
-                            'images/popImg.png',
-                            width: 150,
-                            height: 150,
-                          ),
-                        ),
-                      )
-                    : Container(
-                        height: 150,
-                        width: double
-                            .infinity, // Fill the width of the parent container
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: AppColor.lavenderColor,
-                        ),
-                        child: Center(
-                          child: Image.network(
-                            widget.profile!,
-                            width: 150,
-                            height: 150,
-                          ),
-                        ),
-                      ),
+                Container(
+                  height: 150,
+                  width:
+                      double.infinity, // Fill the width of the parent container
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: AppColor.lavenderColor,
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      'images/popImg.png',
+                      width: 150,
+                      height: 150,
+                    ),
+                  ),
+                ),
                 const VerticalSpeacing(16),
                 Text(
-                  'Agree to Subscription of\n€2/month',
+                  'Accepteer abonnement\nvan €2 per maand',
                   textAlign: TextAlign.center,
                   style: GoogleFonts.getFont(
                     "Poppins",
@@ -116,9 +99,8 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
                   child: RoundedButton(
                     buttonColor: AppColor.lavenderColor,
                     titleColor: AppColor.creamyColor,
-                    title: 'Subscribe and Chat',
+                    title: 'Abonneer en chat',
                     onpress: () {
-                      debugPrint("This is reciever Name:${widget.name}");
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -163,11 +145,11 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
           },
         ),
         title: Text(
-          'Family Profile Detail',
+          'Gegevens',
           style: GoogleFonts.getFont(
             "Poppins",
             textStyle: const TextStyle(
-              fontSize: 20,
+              fontSize: 16,
               fontWeight: FontWeight.w400,
               color: AppColor.creamyColor,
             ),
@@ -236,7 +218,7 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
                                 color: Colors.amber, size: 20),
                             const SizedBox(width: 4),
                             Text(
-                              '${widget.ratings} (${widget.totalRatings} Reviews)',
+                              '${widget.ratings} (${widget.totalRatings} Beoordelingen)',
                               style: GoogleFonts.getFont(
                                 "Poppins",
                                 textStyle: const TextStyle(
@@ -383,7 +365,7 @@ class _FamilyDetailProviderState extends State<FamilyDetailProvider> {
               child: RoundedButton(
                 buttonColor: AppColor.lavenderColor,
                 titleColor: AppColor.creamyColor,
-                title: 'Chat With Family',
+                title: 'Chat',
                 onpress: () async {
                   var paymentInfo = await getCurrentUserPaymentInfo();
                   if (paymentInfo != null &&

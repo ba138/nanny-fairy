@@ -8,7 +8,9 @@ class HomeFeatureContainer extends StatelessWidget {
       {super.key,
       required this.img,
       required this.title,
-      required this.subTitle, required this.bgColor, required this.txColor});
+      required this.subTitle,
+      required this.bgColor,
+      required this.txColor});
   final String img;
   final String title;
   final String subTitle;
@@ -18,8 +20,8 @@ class HomeFeatureContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 139,
-      width: 147,
+      height: 160,
+      width: 160,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12.0),
         color: bgColor,
@@ -66,14 +68,17 @@ class HomeFeatureContainer extends StatelessWidget {
                 ),
               ),
             ),
-            Text(
-              subTitle,
-              style: GoogleFonts.getFont(
-                "Poppins",
-                textStyle:  TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  color: txColor,
+            Expanded(
+              child: Text(
+                subTitle,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.getFont(
+                  "Poppins",
+                  textStyle: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: txColor,
+                  ),
                 ),
               ),
             ),

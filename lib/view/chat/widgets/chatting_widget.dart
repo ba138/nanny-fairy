@@ -163,7 +163,7 @@ class ChatScreenState extends State<ChatScreenWidget> {
             child: TextField(
               controller: _textController,
               decoration: const InputDecoration(
-                  hintText: 'Type a message...',
+                  hintText: 'Typ een bericht...',
                   hintStyle: TextStyle(
                     color: AppColor.blackColor,
                   )),

@@ -133,7 +133,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '${widget.name}\nFamily',
+                          widget.name,
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -145,7 +145,7 @@ class _BookingCartWidgetState extends State<BookingCartWidget> {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          '⭐${widget.ratings} (${widget.totalRatings} Reviews)',
+                          '⭐${widget.ratings} (${widget.totalRatings} Beoordelingen)',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(

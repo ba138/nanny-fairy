@@ -61,24 +61,13 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'This month',
+                'Overzicht',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.w600,
                     color: AppColor.blackColor,
-                  ),
-                ),
-              ),
-              Text(
-                'All reports',
-                style: GoogleFonts.getFont(
-                  "Poppins",
-                  textStyle: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: AppColor.lavenderColor,
                   ),
                 ),
               ),
@@ -113,7 +102,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           txColor: AppColor.blackColor,
                           img: 'images/families.png',
                           title: snapshot.data!.length.toString(),
-                          subTitle: 'Total Families',
+                          subTitle: 'Opdrachten',
                           bgColor: AppColor.creamyColor,
                         );
                       } else {
@@ -121,7 +110,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           txColor: AppColor.blackColor,
                           img: 'images/families.png',
                           title: '0',
-                          subTitle: 'Total Families',
+                          subTitle: 'Opdrachten',
                           bgColor: AppColor.creamyColor,
                         );
                       }
@@ -146,7 +135,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           txColor: AppColor.blackColor,
                           img: 'images/chats.png',
                           title: snapshot.data!.length.toString(),
-                          subTitle: 'Total Chats',
+                          subTitle: 'Totaal aantal chats',
                           bgColor: AppColor.creamyColor,
                         );
                       } else {
@@ -154,7 +143,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           txColor: AppColor.blackColor,
                           img: 'images/chats.png',
                           title: '0',
-                          subTitle: 'Total Chats',
+                          subTitle: 'Totaal aantal chats',
                           bgColor: AppColor.creamyColor,
                         );
                       }
@@ -179,7 +168,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           txColor: AppColor.blackColor,
                           img: 'images/families.png',
                           title: snapshot.data!.length.toString(),
-                          subTitle: 'Total Posts',
+                          subTitle: 'berichten',
                           bgColor: AppColor.creamyColor,
                         );
                       } else {
@@ -187,7 +176,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           txColor: AppColor.blackColor,
                           img: 'images/families.png',
                           title: '0',
-                          subTitle: 'Total Posts',
+                          subTitle: 'berichten',
                           bgColor: AppColor.creamyColor,
                         );
                       }
@@ -214,11 +203,11 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'popular jobs',
+                        'Opdrachten bij jou in de buurt',
                         style: GoogleFonts.getFont(
                           "Poppins",
                           textStyle: const TextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                             fontWeight: FontWeight.w600,
                             color: AppColor.blackColor,
                           ),
@@ -236,11 +225,11 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           );
                         },
                         child: Text(
-                          'see all',
+                          'Bekijk alles',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
-                              fontSize: 16,
+                              fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: AppColor.lavenderColor,
                             ),
@@ -271,7 +260,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                                       double averageRating =
                                           calculateAverageRating(reviews);
                                       return BookingCartWidget(
-                                        primaryButtonTxt: 'View',
+                                        primaryButtonTxt: 'Bekijk',
                                         ontapView: () {
                                           Navigator.push(
                                             context,
@@ -308,7 +297,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                           height: MediaQuery.of(context).size.height / 2.6,
                           child: families.isEmpty
                               ? const Center(
-                                  child: Text("No Families Found"),
+                                  child: Text("Geen families gevonden"),
                                 )
                               : SingleChildScrollView(
                                   scrollDirection: Axis.vertical,
@@ -325,7 +314,7 @@ class _HomeDefaultViewState extends State<HomeDefaultView> {
                                       double averageRating =
                                           calculateAverageRating(reviews);
                                       return BookingCartWidget(
-                                        primaryButtonTxt: 'View',
+                                        primaryButtonTxt: 'Bekijk',
                                         ontapView: () {
                                           Navigator.push(
                                             context,

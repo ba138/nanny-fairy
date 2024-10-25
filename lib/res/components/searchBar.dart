@@ -18,8 +18,8 @@ class SearchBarProvider extends StatefulWidget {
 }
 
 class _SearchBarProviderState extends State<SearchBarProvider> {
-  String selectedKM = 'All';
-  final List<String> kM = ["All", '2', '4', '8', '12'];
+  String selectedKM = 'Alle';
+  final List<String> kM = ["Alle", '2', '4', '8', '12'];
 
   final FocusNode _searchFocusNode = FocusNode();
   final FocusNode _dropdownFocusNode = FocusNode();
@@ -101,7 +101,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
                             controller: searchController,
                             decoration: const InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Search Here',
+                              hintText: 'Zoek hier',
                               prefixIcon: Icon(
                                 Icons.search,
                                 color: AppColor.blackColor,
@@ -205,7 +205,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
                               });
 
                               try {
-                                if (selectedKM != "All") {
+                                if (selectedKM != "Alle") {
                                   await distanceRepo.filterFamiliesByDistance(
                                       providerDistance == null
                                           ? double.parse(selectedKM)
@@ -217,8 +217,10 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
                               } catch (e) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
-                                      content: Text(
-                                          'Failed to fetch nearby providers.')),
+                                    content: Text(
+                                      'Het is niet gelukt om aanbieders in de buurt op te halen',
+                                    ),
+                                  ),
                                 );
                               }
                             }
