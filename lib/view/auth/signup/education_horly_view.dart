@@ -46,7 +46,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
             },
           ),
           title: Text(
-            'Enter your education & hours',
+            'Vul Je Opleiding en Uurtarief In',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
@@ -76,7 +76,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Enter your education',
+                  'Opleidingsniveau',
                   style: GoogleFonts.getFont(
                     "Poppins",
                     textStyle: const TextStyle(
@@ -93,8 +93,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                   decoration: BoxDecoration(
                     color: AppColor.authCreamColor,
                     borderRadius: BorderRadius.circular(12.0),
-                    border:
-                        Border.all(width: 0.5, color: AppColor.oceanColor),
+                    border: Border.all(width: 0.5, color: AppColor.oceanColor),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 10.0, right: 10),
@@ -106,7 +105,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                             size: 60, color: AppColor.avatarColor),
                         const VerticalSpeacing(12.0),
                         Text(
-                          'Enter your Education',
+                          'Vul uw opleiding in',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -118,11 +117,10 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                         ),
                         const VerticalSpeacing(16.0),
                         TextFieldCustom(
-
                           controller: educationController,
                           prefixIcon: const Icon(Icons.school_outlined),
                           maxLines: 1,
-                          hintText: 'Enter your education',
+                          hintText: 'Vul uw opleiding in',
                         ),
                       ],
                     ),
@@ -130,7 +128,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                 ),
                 const VerticalSpeacing(16),
                 Text(
-                  'Enter your hours rate',
+                  'Voer je gewenste uurtarief in',
                   style: GoogleFonts.getFont(
                     "Poppins",
                     textStyle: const TextStyle(
@@ -147,8 +145,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                   decoration: BoxDecoration(
                     color: AppColor.authCreamColor,
                     borderRadius: BorderRadius.circular(12.0),
-                    border:
-                        Border.all(width: 0.5, color: AppColor.oceanColor),
+                    border: Border.all(width: 0.5, color: AppColor.oceanColor),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 10.0, right: 10),
@@ -160,7 +157,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                             size: 60, color: AppColor.avatarColor),
                         const VerticalSpeacing(12.0),
                         Text(
-                          'Enter your rate',
+                          'Uurtarief',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -176,7 +173,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                           controller: hoursRateController,
                           prefixIcon: const Icon(Icons.euro_outlined),
                           maxLines: 1,
-                          hintText: 'Enter your rate',
+                          hintText: 'Uurtarief',
                         ),
                       ],
                     ),
@@ -184,7 +181,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                 ),
                 const VerticalSpeacing(46.0),
                 RoundedButton(
-                    title: 'Register',
+                    title: 'Opslaan',
                     onpress: () {
                       if (educationController.text.isNotEmpty ||
                           hoursRateController.text.isNotEmpty) {
@@ -195,7 +192,7 @@ class _EducationHorlyViewState extends State<EducationHorlyView> {
                         );
                       } else {
                         Utils.flushBarErrorMessage(
-                            'Please Fill all the Fields', context);
+                            'Vul alle velden in', context);
                       }
                     }),
               ],
