@@ -66,7 +66,7 @@ class _NotificationsViewState extends State<NotificationsView> {
       appBar: AppBar(
         backgroundColor: AppColor.lavenderColor,
         title: Text(
-          'Notifications',
+          'Notificatie',
           style: GoogleFonts.getFont(
             "Poppins",
             textStyle: const TextStyle(
@@ -101,10 +101,10 @@ class _NotificationsViewState extends State<NotificationsView> {
 
                     if (status == 'Pending') {
                       notificationDetail =
-                          'You received an offer from $familyName.';
+                          'U heeft een aanbod ontvangen van $familyName.';
                     } else if (status == 'Completed') {
                       notificationDetail =
-                          'You accepted the offer by $familyName.';
+                          'Je hebt het aanbod geaccepteerd door $familyName.';
                     } else {
                       notificationDetail = 'Status: $status';
                     }
