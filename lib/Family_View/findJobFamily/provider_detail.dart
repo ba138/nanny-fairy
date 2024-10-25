@@ -219,11 +219,11 @@ class _ProviderDetailsState extends State<ProviderDetails> {
           },
         ),
         title: Text(
-          'Provider Profile Detail',
+          'Providerprofieldetails',
           style: GoogleFonts.getFont(
             "Poppins",
             textStyle: const TextStyle(
-              fontSize: 20,
+              fontSize: 16,
               fontWeight: FontWeight.w400,
               color: AppColor.creamyColor,
             ),
@@ -276,7 +276,7 @@ class _ProviderDetailsState extends State<ProviderDetails> {
                                 color: AppColor.peachColor, size: 20),
                             const SizedBox(width: 4),
                             Text(
-                              '${widget.ratings} (${widget.totalRatings} Reviews)',
+                              '${widget.ratings} (${widget.totalRatings} Recens)',
                               style: GoogleFonts.getFont(
                                 "Poppins",
                                 textStyle: const TextStyle(

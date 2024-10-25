@@ -142,7 +142,7 @@ class _BookingCartWidgetHomeState extends State<BookingCartWidgetHome> {
                       ),
                     ),
                     Text(
-                      '⭐${widget.ratings}(${widget.totalRatings} Reviews)',
+                      '⭐${widget.ratings}(${widget.totalRatings} Recens)',
                       style: GoogleFonts.getFont(
                         "Poppins",
                         textStyle: const TextStyle(
@@ -277,7 +277,7 @@ class _BookingCartWidgetHomeState extends State<BookingCartWidgetHome> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Online: Today',
+                    'online: Vandaag',
                     style: GoogleFonts.getFont(
                       "Poppins",
                       textStyle: const TextStyle(

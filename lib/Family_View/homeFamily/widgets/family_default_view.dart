@@ -51,12 +51,12 @@ class _FamilyDefaultViewState extends State<FamilyDefaultView> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'What are you looking for',
+                'Waar bent u naar op zoek',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
                     color: AppColor.blackColor,
                   ),
                 ),
@@ -185,12 +185,12 @@ class _FamilyDefaultViewState extends State<FamilyDefaultView> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                'What are you looking for',
+                                'Waar bent u naar op zoek',
                                 style: GoogleFonts.getFont(
                                   "Poppins",
                                   textStyle: const TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
                                     color: AppColor.blackColor,
                                   ),
                                 ),
@@ -208,11 +208,11 @@ class _FamilyDefaultViewState extends State<FamilyDefaultView> {
                                   );
                                 },
                                 child: Text(
-                                  'See All',
+                                  'Bekijk alles',
                                   style: GoogleFonts.getFont(
                                     "Poppins",
                                     textStyle: const TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.w600,
                                       color: AppColor.lavenderColor,
                                     ),
@@ -243,7 +243,7 @@ class _FamilyDefaultViewState extends State<FamilyDefaultView> {
                                           double averageRating =
                                               calculateAverageRating(reviews);
                                           return BookingCartWidgetHome(
-                                            primaryButtonTxt: 'View',
+                                            primaryButtonTxt: 'Bekijk',
                                             ontapView: () {
                                               Navigator.push(
                                                 context,

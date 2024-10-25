@@ -16,8 +16,8 @@ class FamilySearchBarProvider extends StatefulWidget {
 }
 
 class _FamilySearchBarProviderState extends State<FamilySearchBarProvider> {
-  String selectedKM = 'All';
-  final List<String> kM = ['All', "2", '4', '8', '12'];
+  String selectedKM = 'Alle';
+  final List<String> kM = ['Alle', "2", '4', '8', '12'];
 
   final FocusNode _searchFocusNode = FocusNode();
   final FocusNode _dropdownFocusNode = FocusNode();
@@ -45,15 +45,12 @@ class _FamilySearchBarProviderState extends State<FamilySearchBarProvider> {
     final searchText = searchController.text;
 
     // Debugging output
-    print('Search text: "$searchText"');
 
     if (searchText.isNotEmpty) {
-      print('Filtering by passions: $searchText');
       viewModel.filterProvidersByPassions(searchText, context);
-    } else if (selectedKM == "All") {
+    } else if (selectedKM == "Alle") {
       viewModel.fetchProviderDataFromFiebase();
     } else {
-      print('Filtering by distance: $selectedKM km');
       viewModel.filterProvidersByDistance(
           familyDistance == null
               ? double.parse(selectedKM)
@@ -105,7 +102,7 @@ class _FamilySearchBarProviderState extends State<FamilySearchBarProvider> {
                             controller: searchController,
                             decoration: const InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Search Here',
+                              hintText: 'Zoek hier',
                               prefixIcon: Icon(
                                 Icons.search,
                                 color: AppColor.blackColor,
@@ -203,7 +200,7 @@ class _FamilySearchBarProviderState extends State<FamilySearchBarProvider> {
                             });
                             try {
                               // Call the method to filter providers by distance
-                              if (selectedKM != "All") {
+                              if (selectedKM != "Alle") {
                                 await distanceViewModel
                                     .filterProvidersByDistance(
                                         double.parse(selectedKM), context);

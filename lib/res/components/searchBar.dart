@@ -49,7 +49,7 @@ class _SearchBarProviderState extends State<SearchBarProvider> {
     if (searchText.isNotEmpty) {
       viewModel.searchFamiliesByPassion(
           searchText, double.parse(selectedKM), context);
-    } else if (selectedKM == "All") {
+    } else if (selectedKM == "Alle") {
       viewModel.fetchFamiliesFromFirebaseData();
     } else {
       viewModel.distanceFilteredFamilies.clear();

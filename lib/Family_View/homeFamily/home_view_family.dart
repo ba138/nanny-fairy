@@ -61,7 +61,7 @@ class _HomeViewFamilyState extends State<HomeViewFamily> {
                                     'https://play-lh.googleusercontent.com/jInS55DYPnTZq8GpylyLmK2L2cDmUoahVacfN_Js_TsOkBEoizKmAl5-p8iFeLiNjtE=w526-h296-rw'),
                               ),
                               title: Text(
-                                'WellCome',
+                                'Welkom',
                                 style: GoogleFonts.getFont(
                                   "Poppins",
                                   textStyle: const TextStyle(
@@ -100,7 +100,7 @@ class _HomeViewFamilyState extends State<HomeViewFamily> {
                                   'https://play-lh.googleusercontent.com/jInS55DYPnTZq8GpylyLmK2L2cDmUoahVacfN_Js_TsOkBEoizKmAl5-p8iFeLiNjtE=w526-h296-rw'),
                             ),
                             title: Text(
-                              'WellCome',
+                              'Welkom',
                               style: GoogleFonts.getFont(
                                 "Poppins",
                                 textStyle: const TextStyle(
@@ -124,7 +124,8 @@ class _HomeViewFamilyState extends State<HomeViewFamily> {
                           ),
                         );
                       } else {
-                        return const Center(child: Text('No data available'));
+                        return const Center(
+                            child: Text('Geen gegevens beschikbaar'));
                       }
                     },
                   ),
@@ -151,10 +152,6 @@ class _HomeViewFamilyState extends State<HomeViewFamily> {
                   case FamilyHomeUiEnums.DefaultSection:
                     selectedWidget = const FamilyDefaultView();
                     break;
-
-                  // case FamilyHomeUiEnums.DistanceSection:
-                  //   selectedWidget = const FamilyDistanceFilterView();
-                  //   break;
                 }
 
                 return selectedWidget;
