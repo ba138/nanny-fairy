@@ -55,11 +55,11 @@ class _CreateAccountFamilyState extends State<CreateAccountFamily> {
                           ),
                           const SizedBox(width: 60),
                           Text(
-                            'Create Account',
+                            'Maak Wachtwoord Aan',
                             style: GoogleFonts.getFont(
                               "Poppins",
                               textStyle: const TextStyle(
-                                fontSize: 20,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w400,
                                 color: AppColor.authCreamColor,
                               ),
@@ -86,7 +86,7 @@ class _CreateAccountFamilyState extends State<CreateAccountFamily> {
                       ),
                       const VerticalSpeacing(10),
                       Text(
-                        'Create Account of\n Your App',
+                        'Maak een wachtwoord aan',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.getFont(
                           "Poppins",
@@ -119,22 +119,22 @@ class _CreateAccountFamilyState extends State<CreateAccountFamily> {
                             controller: emailController,
                             prefixIcon: const Icon(Icons.mail_outline),
                             maxLines: 1,
-                            hintText: 'Enter Email'),
+                            hintText: 'Voer e-mailadres in'),
                         TextFieldCustom(
                             obscureText: true,
                             controller: passwordController,
                             prefixIcon: const Icon(Icons.lock_outline),
                             maxLines: 1,
-                            hintText: 'Set A Password'),
+                            hintText: 'Voer je wachtwoord in'),
                         TextFieldCustom(
                             obscureText: true,
                             controller: confromPasswordController,
                             prefixIcon: const Icon(Icons.lock_outline),
                             maxLines: 1,
-                            hintText: 'Confirm Password'),
+                            hintText: 'Bevestig wachtwoord'),
                         const VerticalSpeacing(30),
                         RoundedButton(
-                          title: 'Confirm',
+                          title: 'Registreren',
                           onpress: () {
                             if (passwordController.text ==
                                 confromPasswordController.text) {
