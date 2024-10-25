@@ -47,7 +47,7 @@ class _BookingFamilyCardState extends State<BookingFamilyCard> {
               ),
               const VerticalSpeacing(16),
               Text(
-                'Agree to Subscription of\n€2/month',
+                'Akkoord gaan met Abonnement \nvan €2 per maand',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.getFont(
                   "Poppins",
@@ -62,7 +62,7 @@ class _BookingFamilyCardState extends State<BookingFamilyCard> {
               RoundedButton(
                 buttonColor: AppColor.lavenderColor,
                 titleColor: AppColor.creamyColor,
-                title: 'Subscribe and Chat',
+                title: 'Abonneren en chatten',
                 onpress: () {
                   Navigator.pushNamed(context, RoutesName.paymentView);
                 },
@@ -125,7 +125,7 @@ class _BookingFamilyCardState extends State<BookingFamilyCard> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          '${widget.name}\nFamily',
+                          widget.name,
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -136,7 +136,7 @@ class _BookingFamilyCardState extends State<BookingFamilyCard> {
                           ),
                         ),
                         Text(
-                          '⭐${widget.ratings}(${widget.totalRatings} Reviews)',
+                          '⭐${widget.ratings}(${widget.totalRatings} Beoordelingen)',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(

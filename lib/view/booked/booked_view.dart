@@ -66,16 +66,16 @@ class _BookedViewState extends State<BookedView> {
     return Scaffold(
       backgroundColor: AppColor.creamyColor,
       appBar: PreferredSize(
-        preferredSize: const Size.square(70),
+        preferredSize: const Size.square(50),
         child: AppBar(
           backgroundColor: AppColor.lavenderColor,
           automaticallyImplyLeading: false,
           title: Text(
-            'Completed Booked',
+            'Voltooide boekingen',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 20,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: AppColor.creamyColor,
               ),
@@ -108,7 +108,7 @@ class _BookedViewState extends State<BookedView> {
                         });
                       }
                       return BookingFamilyCard(
-                        primaryButtonTxt: 'Completed',
+                        primaryButtonTxt: 'Voltooid',
                         ontapView: () {
                           // Handle tap if necessary
                         },
