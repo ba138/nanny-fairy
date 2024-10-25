@@ -48,7 +48,7 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
     return Scaffold(
       backgroundColor: AppColor.authCreamColor,
       appBar: PreferredSize(
-        preferredSize: const Size.square(70),
+        preferredSize: const Size.square(50),
         child: AppBar(
           backgroundColor: AppColor.oceanColor,
           elevation: 0.0,
@@ -62,11 +62,11 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
             },
           ),
           title: Text(
-            'Id Details',
+            'Upload Je Identiteitsbewijs',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 20,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: AppColor.authCreamColor,
               ),
@@ -88,7 +88,7 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
                 borderRadius: BorderRadius.circular(6),
                 border: Border.all(
                   strokeAlign: BorderSide.strokeAlignCenter,
-                  color: const Color(0xff1B81BC)
+                  color: AppColor.lavenderColor
                       .withOpacity(0.10), // Stroke color with 10% opacity
                   width: 1,
                 ),
@@ -138,7 +138,7 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
                             ),
                           ),
                           Text(
-                            'please upload id front picture',
+                            'Voorkant ID of paspoort',
                             style: GoogleFonts.getFont(
                               "Poppins",
                               textStyle: const TextStyle(
@@ -167,7 +167,7 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: const Color(0xff1B81BC)
+                    color: AppColor.lavenderColor
                         .withOpacity(0.1), // Drop shadow color with 4% opacity
                     blurRadius: 2,
                     offset: const Offset(1, 2),
@@ -213,7 +213,7 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
                             ),
                           ),
                           Text(
-                            'please upload id back picture',
+                            'Achterkant ID of Paspoort',
                             style: GoogleFonts.getFont(
                               "Poppins",
                               textStyle: const TextStyle(
@@ -229,7 +229,7 @@ class _UploadIdFamilyState extends State<UploadIdFamily> {
             ),
             const VerticalSpeacing(46.0),
             RoundedButton(
-                title: 'Continue',
+                title: 'Opslaan',
                 onpress: () {
                   authController.saveIdImages(
                       context, frontImage, backImage, 'Unverified');

@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -226,7 +228,6 @@ class AuthRepositoryFamily {
       Navigator.of(context).pop();
 
       // Handle any errors that occur during save
-      print('Error saving passions: $e');
       Utils.flushBarErrorMessage('Failed to save passions', context);
     }
   }
@@ -264,7 +265,7 @@ class AuthRepositoryFamily {
           frontPic,
         );
       } else {
-        Utils.flushBarErrorMessage("Please pick The Id Front Pic", context);
+        Utils.flushBarErrorMessage("Kies alstublieft de Id Front Pic", context);
         Navigator.pop(context);
         return;
       }
@@ -275,7 +276,7 @@ class AuthRepositoryFamily {
           backImage,
         );
       } else {
-        Utils.flushBarErrorMessage("Please pick The Id Back Pic", context);
+        Utils.flushBarErrorMessage("Kies alstublieft de Id Back Pic", context);
         Navigator.pop(context);
         return;
       }
@@ -286,7 +287,7 @@ class AuthRepositoryFamily {
       });
       userRefData.update({"status": status});
       Navigator.of(context).pop();
-      Utils.toastMessage('Images saved successfully!');
+      Utils.toastMessage('Afbeeldingen succesvol opgeslagen!');
       debugPrint(userId);
       Navigator.pushNamedAndRemoveUntil(
         context,
@@ -297,8 +298,8 @@ class AuthRepositoryFamily {
       Navigator.of(context).pop();
 
       // Handle any errors that occur during save
-      print('Error saving images: $e');
-      Utils.flushBarErrorMessage('Failed to save Images', context);
+      Utils.flushBarErrorMessage(
+          'Afbeeldingen konden niet worden opgeslagen', context);
     }
   }
 
