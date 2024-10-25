@@ -207,11 +207,6 @@ class _RegisterDetailsState extends State<RegisterDetails> {
                     ),
                   );
                 }),
-                // TextFieldCustom(
-                //     controller: addressController,
-                //     prefixIcon: const Icon(Icons.location_on_outlined),
-                //     maxLines: 1,
-                //     hintText: 'Enter Address'),
                 const VerticalSpeacing(16),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

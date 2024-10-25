@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nanny_fairy/ViewModel/place_view_model.dart';
 import 'package:nanny_fairy/res/components/colors.dart';
 import 'package:nanny_fairy/view/chat/widgets/predicate_tile.dart';
@@ -24,10 +25,15 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
         appBar: AppBar(
           backgroundColor: AppColor.creamyColor,
           centerTitle: true,
-          title: const Text(
-            'Set Address',
-            style: TextStyle(
-              color: Colors.black,
+          title: Text(
+            'Adres instellen',
+            style: GoogleFonts.getFont(
+              "Poppins",
+              textStyle: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: AppColor.blackColor,
+              ),
             ),
           ),
           elevation: 0.0,
@@ -68,7 +74,7 @@ class _SearchPlacesScreenState extends State<SearchPlacesScreen> {
                       distanceViewModel.findPlaceAutoCompleteSearch(value);
                     },
                     decoration: const InputDecoration(
-                      hintText: 'Search Address Here',
+                      hintText: 'Zoek hier naar adres',
                       filled: true,
                       fillColor: AppColor.creamyColor,
                       border: InputBorder.none,

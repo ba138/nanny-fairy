@@ -16,12 +16,12 @@ class SelectPassionView extends StatefulWidget {
 
 class _SelectPassionViewState extends State<SelectPassionView> {
   final List<String> labels = [
-    'Animal care',
-    'Home sitter',
-    'Elderly care',
-    'Homework',
-    'Cleaning',
-    'Music lesson',
+    'Kinderoppas',
+    'Thuiszorg',
+    'Schoonmaakdiensten',
+    'Tuinonderhoud',
+    'Huisoppas',
+    'Dierenoppas',
   ];
   final List<String> selectedLabels = [];
 
@@ -55,11 +55,11 @@ class _SelectPassionViewState extends State<SelectPassionView> {
             },
           ),
           title: Text(
-            'Select your preference',
+            'Selecteer de Diensten die Je Biedt',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 20,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: AppColor.authCreamColor,
               ),
@@ -85,7 +85,7 @@ class _SelectPassionViewState extends State<SelectPassionView> {
             children: [
               const VerticalSpeacing(26),
               Text(
-                'Register as a provider',
+                'Kies de Diensten die Je Aanbiedt',
                 style: GoogleFonts.getFont(
                   "Poppins",
                   textStyle: const TextStyle(
@@ -167,14 +167,13 @@ class _SelectPassionViewState extends State<SelectPassionView> {
                 ),
               ),
               RoundedButton(
-                title: 'Register',
+                title: 'Opslaan',
                 onpress: () {
                   if (labels.isNotEmpty) {
                     authViewModel.savePassion(
                         passionList: selectedLabels, context: context);
                   } else {
-                    Utils.flushBarErrorMessage(
-                        "Please Select the Passion", context);
+                    Utils.flushBarErrorMessage("Selecteer de passie", context);
                   }
                 },
               ),

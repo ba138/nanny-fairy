@@ -23,14 +23,14 @@ class _SelectPreferenceState extends State<SelectPreference> {
 
   TextEditingController phoneController = TextEditingController();
 
-  String _btn2SelectedVal = "Animal care";
+  String _btn2SelectedVal = "Kinderoppas";
   static const menuItems = <String>[
-    'Animal care',
-    'home sitter',
-    'eiderly care',
-    'homework',
-    'cleanining',
-    'music lesson',
+    'Kinderoppas',
+    'Thuiszorg',
+    'Schoonmaakdiensten',
+    'Tuinonderhoud',
+    'Huisoppas',
+    'Dierenoppas',
   ];
   final List<DropdownMenuItem<String>> _dropDownMenuItems = menuItems
       .map(

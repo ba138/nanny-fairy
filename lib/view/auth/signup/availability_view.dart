@@ -66,11 +66,11 @@ class _AvailabilityViewState extends State<AvailabilityView> {
             },
           ),
           title: Text(
-            'Availability',
+            'Stel Je Beschikbaarheid In',
             style: GoogleFonts.getFont(
               "Poppins",
               textStyle: const TextStyle(
-                fontSize: 20,
+                fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: AppColor.authCreamColor,
               ),
@@ -119,7 +119,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                       children: [
                         const SizedBox(height: 16),
                         Text(
-                          'Availability',
+                          'Beschikbaarheid',
                           style: GoogleFonts.getFont(
                             "Poppins",
                             textStyle: const TextStyle(
@@ -130,14 +130,6 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                           ),
                         ),
                         const SizedBox(height: 8),
-                        const Text(
-                          'Officia irure irure an',
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: AppColor.grayColor,
-                          ),
-                        ),
-                        const SizedBox(height: 16),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -148,7 +140,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                             ),
                             const SizedBox(width: 8),
                             DayButton(
-                              day: 'T',
+                              day: 'D',
                               isSelected: false,
                               onTap: (bool isSelected) {},
                             ),
@@ -160,25 +152,25 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                             ),
                             const SizedBox(width: 8),
                             DayButton(
-                              day: 'T',
+                              day: 'D',
                               isSelected: false,
                               onTap: (bool isSelected) {},
                             ),
                             const SizedBox(width: 8),
                             DayButton(
-                              day: 'F',
+                              day: 'V',
                               isSelected: false,
                               onTap: (bool isSelected) {},
                             ),
                             const SizedBox(width: 8),
                             DayButton(
-                              day: 'S',
+                              day: 'Z',
                               isSelected: false,
                               onTap: (bool isSelected) {},
                             ),
                             const SizedBox(width: 8),
                             DayButton(
-                              day: 'S',
+                              day: 'Z',
                               isSelected: false,
                               onTap: (bool isSelected) {},
                             ),
@@ -187,7 +179,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                         ),
                         const SizedBox(height: 16),
                         const AvailabilityRow(
-                          label: 'Morning',
+                          label: 'Ochtend',
                           availability: [
                             false,
                             false,
@@ -197,11 +189,11 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                             false,
                             false
                           ],
-                          timePeriod: 'morning',
+                          timePeriod: 'Ochtend',
                         ),
                         const Divider(),
                         const AvailabilityRow(
-                          label: 'Evening',
+                          label: 'Middag',
                           availability: [
                             false,
                             false,
@@ -211,11 +203,11 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                             false,
                             false
                           ],
-                          timePeriod: 'Evening',
+                          timePeriod: 'Middag',
                         ),
                         const Divider(),
                         const AvailabilityRow(
-                          label: 'Afternoon',
+                          label: 'Avond',
                           availability: [
                             false,
                             false,
@@ -225,7 +217,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                             false,
                             false
                           ],
-                          timePeriod: 'Afternoon',
+                          timePeriod: 'Avond',
                         ),
                         const VerticalSpeacing(10),
                       ],
@@ -265,7 +257,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Select Time',
+                              'Tijdschema',
                               style: GoogleFonts.getFont(
                                 "Poppins",
                                 textStyle: const TextStyle(
@@ -280,7 +272,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Morning   ',
+                                  'Ochtend',
                                   style: GoogleFonts.getFont(
                                     "Poppins",
                                     textStyle: const TextStyle(
@@ -290,10 +282,10 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                                     ),
                                   ),
                                 ),
-                                const Text('from'),
-                                _timePicker('Morning', 'Start'),
-                                const Text('to'),
-                                _timePicker('Morning', 'End'),
+                                const Text('Van'),
+                                _timePicker('Ochtend', 'Start'),
+                                const Text('Tot'),
+                                _timePicker('Ochtend', 'End'),
                               ],
                             ),
                             const SizedBox(height: 18),
@@ -301,7 +293,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Afternoon',
+                                  'Middag ',
                                   style: GoogleFonts.getFont(
                                     "Poppins",
                                     textStyle: const TextStyle(
@@ -311,10 +303,10 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                                     ),
                                   ),
                                 ),
-                                const Text('from'),
-                                _timePicker('Afternoon', 'Start'),
-                                const Text('to'),
-                                _timePicker('Afternoon', 'End'),
+                                const Text('Van'),
+                                _timePicker('Middag', 'Start'),
+                                const Text('Tot'),
+                                _timePicker('Middag', 'End'),
                               ],
                             ),
                             const SizedBox(height: 18),
@@ -322,7 +314,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Evening   ',
+                                  'Avond   ',
                                   style: GoogleFonts.getFont(
                                     "Poppins",
                                     textStyle: const TextStyle(
@@ -332,10 +324,10 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                                     ),
                                   ),
                                 ),
-                                const Text('from'),
-                                _timePicker('Evening', 'Start'),
-                                const Text('to'),
-                                _timePicker('Evening', 'End'),
+                                const Text('Van'),
+                                _timePicker('Avond', 'Start'),
+                                const Text('Tot'),
+                                _timePicker('Avond', 'End'),
                               ],
                             ),
                           ],
@@ -346,14 +338,13 @@ class _AvailabilityViewState extends State<AvailabilityView> {
                 ),
                 const VerticalSpeacing(46.0),
                 RoundedButton(
-                    title: 'Register',
+                    title: 'Opslaan',
                     onpress: () {
                       if (selectedTimes.isNotEmpty) {
                         Navigator.pushNamed(
                             context, RoutesName.educationHorlyView);
                       } else {
-                        Utils.snackBar(
-                            'Please select the day and time', context);
+                        Utils.snackBar('Selecteer de dag en tijd', context);
                       }
                     }),
                 const VerticalSpeacing(40.0),
@@ -391,7 +382,7 @@ class _AvailabilityViewState extends State<AvailabilityView> {
           ),
         ),
         child: Text(
-          selectedTimes['$period$type'] ?? 'Select Time',
+          selectedTimes['$period$type'] ?? '00:00',
           style: const TextStyle(fontSize: 12, color: AppColor.blackColor),
         ),
       ),
